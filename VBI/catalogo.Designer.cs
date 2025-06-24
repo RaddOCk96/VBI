@@ -31,6 +31,7 @@
             label1 = new Label();
             button1 = new Button();
             comboBox1 = new ComboBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -59,12 +60,22 @@
             comboBox1.Size = new Size(8, 28);
             comboBox1.TabIndex = 2;
             // 
+            // button2
+            // 
+            button2.Location = new Point(470, 292);
+            button2.Name = "button2";
+            button2.Size = new Size(232, 85);
+            button2.TabIndex = 4;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // catalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -79,5 +90,6 @@
         private Label label1;
         private Button button1;
         private ComboBox comboBox1;
+        private Button button2;
     }
 }

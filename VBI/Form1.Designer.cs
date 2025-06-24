@@ -31,6 +31,7 @@
             label1 = new Label();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -62,12 +63,22 @@
             checkBox2.Text = "checkBox2";
             checkBox2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Location = new Point(51, 129);
+            button1.Name = "button1";
+            button1.Size = new Size(232, 85);
+            button1.TabIndex = 3;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
             Controls.Add(label1);
@@ -82,5 +93,6 @@
         private Label label1;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
+        private Button button1;
     }
 }
