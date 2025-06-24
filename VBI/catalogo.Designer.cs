@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -40,11 +41,22 @@
             label1.TabIndex = 0;
             label1.Text = "Hola io ";
             // 
+            // button1
+            // 
+            button1.Location = new Point(388, 202);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // catalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 192, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(label1);
             Name = "catalogo";
             Text = "catalogo";
@@ -55,5 +67,6 @@
         #endregion
 
         private Label label1;
+        private Button button1;
     }
 }
