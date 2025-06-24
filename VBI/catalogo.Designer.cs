@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             button1 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -50,12 +51,21 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(137, 83);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(8, 28);
+            comboBox1.TabIndex = 2;
+            // 
             // catalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "catalogo";
@@ -68,5 +78,6 @@
 
         private Label label1;
         private Button button1;
+        private ComboBox comboBox1;
     }
 }
