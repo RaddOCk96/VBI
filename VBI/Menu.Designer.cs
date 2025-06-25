@@ -28,30 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Spectral SemiBold", 49.8000031F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(560, 335);
-            label1.Name = "label1";
-            label1.Size = new Size(274, 128);
-            label1.TabIndex = 0;
-            label1.Text = "ViBio";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Croissant One", 70.2000046F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Croissant One", 80.2000046F, FontStyle.Bold);
             label2.ForeColor = Color.DarkGreen;
-            label2.Location = new Point(726, 52);
+            label2.Location = new Point(707, 80);
             label2.Name = "label2";
-            label2.Size = new Size(412, 167);
+            label2.Size = new Size(466, 190);
             label2.TabIndex = 1;
             label2.Text = "ViBio";
+            label2.Click += label2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.SeaGreen;
+            button1.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(828, 325);
+            button1.Name = "button1";
+            button1.Size = new Size(226, 75);
+            button1.TabIndex = 2;
+            button1.Text = "Inicio ";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.SeaGreen;
+            button2.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(828, 424);
+            button2.Name = "button2";
+            button2.Size = new Size(226, 75);
+            button2.TabIndex = 3;
+            button2.Text = "Inicio ";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(828, 522);
+            button3.Name = "button3";
+            button3.Size = new Size(226, 75);
+            button3.TabIndex = 4;
+            button3.Text = "Inicio ";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Croissant One", 40F);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(110, 66);
+            label1.Name = "label1";
+            label1.Size = new Size(536, 95);
+            label1.TabIndex = 5;
+            label1.Text = "Bienvenido a ";
             // 
             // Menu
             // 
@@ -59,8 +100,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
-            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label2);
+            ForeColor = Color.DarkOliveGreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Menu";
@@ -71,8 +116,10 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Label label1;
     }
 }
