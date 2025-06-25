@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c4dxEG81ca0=",
+  "dgSpecHash": "CZoZ0f1GKpQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\fksam\\Source\\Repos\\VBI\\VBI\\VBI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\fksam\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+  ],
   "logs": []
 }
