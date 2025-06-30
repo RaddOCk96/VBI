@@ -30,55 +30,64 @@
         {
             label1 = new Label();
             button1 = new Button();
-            comboBox1 = new ComboBox();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(160, 169);
+            label1.Font = new Font("Croissant One", 40.1999969F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(405, 62);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(490, 95);
             label1.TabIndex = 0;
-            label1.Text = "Hola io ";
+            label1.Text = "Ecosistemas ";
             // 
             // button1
             // 
-            button1.Location = new Point(388, 202);
+            button1.Font = new Font("Spectral", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(206, 208);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(387, 205);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(137, 83);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(8, 28);
-            comboBox1.TabIndex = 2;
-            // 
             // button2
             // 
-            button2.Location = new Point(470, 292);
+            button2.Font = new Font("Spectral SemiBold", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(695, 208);
             button2.Name = "button2";
-            button2.Size = new Size(232, 85);
-            button2.TabIndex = 4;
+            button2.Size = new Size(387, 205);
+            button2.TabIndex = 2;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Spectral SemiBold", 23.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Location = new Point(446, 449);
+            button3.Name = "button3";
+            button3.Size = new Size(387, 205);
+            button3.TabIndex = 3;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
             // 
             // catalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 192, 0);
-            ClientSize = new Size(800, 450);
+            BackColor = Color.SpringGreen;
+            ClientSize = new Size(1283, 691);
+            Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "catalogo";
             Text = "catalogo";
             ResumeLayout(false);
@@ -89,7 +98,7 @@
 
         private Label label1;
         private Button button1;
-        private ComboBox comboBox1;
         private Button button2;
+        private Button button3;
     }
 }
