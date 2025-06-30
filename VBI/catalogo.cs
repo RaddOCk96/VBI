@@ -21,5 +21,19 @@ namespace VBI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Menu ventana = new Menu();
+            ventana.StartPosition = this.StartPosition;
+            ventana.Size = this.Size;
+            ventana.Show();
+            this.Close();
+        }
     }
 }

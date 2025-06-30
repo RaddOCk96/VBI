@@ -20,7 +20,6 @@ C:\Users\fksam\Source\Repos\VBI\VBI\bin\Debug\net8.0-windows\VBI.runtimeconfig.j
 C:\Users\fksam\Source\Repos\VBI\VBI\bin\Debug\net8.0-windows\VBI.dll
 C:\Users\fksam\Source\Repos\VBI\VBI\bin\Debug\net8.0-windows\VBI.pdb
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.catalogo.resources
-C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Form1.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.csproj.GenerateResource.cache
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.AssemblyInfoInputs.cache
@@ -32,3 +31,8 @@ C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\refint\VBI.dll
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.pdb
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.genruntimeconfig.cache
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\ref\VBI.dll
+C:\Users\fksam\Source\Repos\VBI\VBI\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.csproj.AssemblyReference.cache
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Animales_Terrestres.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Menu.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.csproj.Up2Date

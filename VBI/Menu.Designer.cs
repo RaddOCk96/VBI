@@ -58,6 +58,7 @@
             button1.TabIndex = 2;
             button1.Text = "Inicio ";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -68,7 +69,7 @@
             button2.Name = "button2";
             button2.Size = new Size(226, 75);
             button2.TabIndex = 3;
-            button2.Text = "Inicio ";
+            button2.Text = "Crédotos";
             button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -80,7 +81,7 @@
             button3.Name = "button3";
             button3.Size = new Size(226, 75);
             button3.TabIndex = 4;
-            button3.Text = "Inicio ";
+            button3.Text = "Salir ";
             button3.UseVisualStyleBackColor = false;
             // 
             // label1

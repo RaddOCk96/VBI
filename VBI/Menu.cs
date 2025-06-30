@@ -21,5 +21,14 @@ namespace VBI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            catalogo ventana1 = new catalogo();
+            ventana1.StartPosition = this.StartPosition;
+            ventana1.Size = this.Size;
+            ventana1.Show();
+            this.Hide();
+        }
     }
 }
