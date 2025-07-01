@@ -54,8 +54,7 @@
               "RelativeToolTip": "VBI\\Menu.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T17:48:49.111Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -98,10 +97,6 @@
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Fuentes.cs",
@@ -124,8 +119,7 @@
               "RelativeToolTip": "VBI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:48:53.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T17:48:53.315Z"
             },
             {
               "$type": "Document",
@@ -136,8 +130,7 @@
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Fuentes.cs [Dise\u00F1o]",
               "RelativeToolTip": "VBI\\Fuentes.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:48:51.157Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-01T17:48:51.157Z"
             },
             {
               "$type": "Document",
@@ -148,8 +141,7 @@
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Creditos.cs [Dise\u00F1o]",
               "RelativeToolTip": "VBI\\Creditos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:48:47.548Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-01T17:48:47.548Z"
             },
             {
               "$type": "Document",
@@ -171,8 +163,7 @@
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
               "RelativeToolTip": "VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:48:44.173Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-01T17:48:44.173Z"
             }
           ]
         }
