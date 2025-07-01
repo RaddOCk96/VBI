@@ -36,3 +36,5 @@ C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.csproj.Assembly
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Animales_Terrestres.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Menu.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.csproj.Up2Date
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Creditos.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Fuentes.resources

@@ -16,5 +16,28 @@ namespace VBI
         {
             InitializeComponent();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Fuentes ventanaS = new Fuentes();
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Size = this.Size;
+            ventanaS.Show();
+            this.Hide();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Menu ventanaS = new Menu();
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Size = this.Size;
+            ventanaS.Show();
+            this.Close();
+        }
     }
 }
