@@ -24,7 +24,11 @@ namespace VBI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Animales_Terrestres ventanaA = new Animales_Terrestres();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Size = this.Size;
+            ventanaA.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -34,6 +38,11 @@ namespace VBI
             ventana.Size = this.Size;
             ventana.Show();
             this.Close();
+        }
+
+        private void catalogo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

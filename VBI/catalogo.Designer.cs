@@ -82,7 +82,7 @@
             // 
             button4.Font = new Font("Spectral", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ControlText;
-            button4.Location = new Point(37, 594);
+            button4.Location = new Point(33, 604);
             button4.Name = "button4";
             button4.Size = new Size(141, 50);
             button4.TabIndex = 4;
@@ -104,7 +104,9 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "catalogo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "catalogo";
+            Load += catalogo_Load;
             ResumeLayout(false);
             PerformLayout();
         }

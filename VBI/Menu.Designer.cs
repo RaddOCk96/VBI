@@ -40,7 +40,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Croissant One", 80.2000046F, FontStyle.Bold);
             label2.ForeColor = Color.DarkGreen;
-            label2.Location = new Point(707, 80);
+            label2.Location = new Point(710, 85);
             label2.Name = "label2";
             label2.Size = new Size(466, 190);
             label2.TabIndex = 1;
@@ -52,7 +52,7 @@
             button1.BackColor = Color.SeaGreen;
             button1.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(828, 325);
+            button1.Location = new Point(821, 322);
             button1.Name = "button1";
             button1.Size = new Size(226, 75);
             button1.TabIndex = 2;
@@ -65,7 +65,7 @@
             button2.BackColor = Color.SeaGreen;
             button2.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(828, 424);
+            button2.Location = new Point(821, 431);
             button2.Name = "button2";
             button2.Size = new Size(226, 75);
             button2.TabIndex = 3;
@@ -77,7 +77,7 @@
             button3.BackColor = Color.SeaGreen;
             button3.Font = new Font("Spectral SemiBold", 18F, FontStyle.Bold);
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(828, 522);
+            button3.Location = new Point(821, 535);
             button3.Name = "button3";
             button3.Size = new Size(226, 75);
             button3.TabIndex = 4;
@@ -110,6 +110,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
