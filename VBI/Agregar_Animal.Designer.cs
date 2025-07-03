@@ -31,22 +31,22 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -100,14 +100,120 @@
             panel1.Size = new Size(1171, 558);
             panel1.TabIndex = 2;
             // 
-            // label2
+            // button2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(572, 141);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Nombre";
+            button2.Location = new Point(508, 564);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 15;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(631, 541);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 14;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(791, 717);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(125, 27);
+            textBox6.TabIndex = 13;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(90, 726);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(125, 27);
+            textBox5.TabIndex = 12;
+            textBox5.TextChanged += textBox5_TextChanged;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(720, 336);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(125, 27);
+            textBox4.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(725, 274);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(125, 27);
+            textBox3.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(725, 217);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(125, 27);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(726, 137);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 8;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(483, 701);
+            label9.Name = "label9";
+            label9.Size = new Size(119, 20);
+            label9.TabIndex = 7;
+            label9.Text = "Inserte imagen 2";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(203, 220);
+            label8.Name = "label8";
+            label8.Size = new Size(107, 20);
+            label8.TabIndex = 6;
+            label8.Text = "Inserte imágen";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(791, 663);
+            label7.Name = "label7";
+            label7.Size = new Size(59, 20);
+            label7.TabIndex = 5;
+            label7.Text = "Hábitat";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(111, 663);
+            label6.Name = "label6";
+            label6.Size = new Size(104, 20);
+            label6.TabIndex = 4;
+            label6.Text = "Características";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(572, 331);
+            label5.Name = "label5";
+            label5.Size = new Size(101, 20);
+            label5.TabIndex = 3;
+            label5.Text = "Reproducción";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(572, 277);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 20);
+            label4.TabIndex = 2;
+            label4.Text = "Alimentación";
             // 
             // label3
             // 
@@ -119,120 +225,14 @@
             label3.Text = "Nombre Científico";
             label3.Click += label3_Click;
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(572, 277);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Alimentación";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(572, 331);
-            label5.Name = "label5";
-            label5.Size = new Size(101, 20);
-            label5.TabIndex = 3;
-            label5.Text = "Reproducción";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(111, 663);
-            label6.Name = "label6";
-            label6.Size = new Size(104, 20);
-            label6.TabIndex = 4;
-            label6.Text = "Características";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(791, 663);
-            label7.Name = "label7";
-            label7.Size = new Size(59, 20);
-            label7.TabIndex = 5;
-            label7.Text = "Hábitat";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(203, 220);
-            label8.Name = "label8";
-            label8.Size = new Size(107, 20);
-            label8.TabIndex = 6;
-            label8.Text = "Inserte imágen";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(483, 701);
-            label9.Name = "label9";
-            label9.Size = new Size(119, 20);
-            label9.TabIndex = 7;
-            label9.Text = "Inserte imagen 2";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(726, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(725, 217);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(725, 274);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(720, 336);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(90, 726);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 12;
-            textBox5.TextChanged += textBox5_TextChanged;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(791, 717);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 13;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(631, 541);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 14;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(508, 564);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 15;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(572, 141);
+            label2.Name = "label2";
+            label2.Size = new Size(64, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre";
             // 
             // Agregar_Animal
             // 
@@ -245,6 +245,7 @@
             Controls.Add(iconPictureBox1);
             Name = "Agregar_Animal";
             Text = "Agregar_Animal";
+            Load += Agregar_Animal_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -31,5 +31,10 @@ namespace VBI
         {
 
         }
+
+        private void Agregar_Animal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

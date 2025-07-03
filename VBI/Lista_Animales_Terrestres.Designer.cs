@@ -30,10 +30,10 @@
         {
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
+            label1 = new Label();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -56,14 +56,24 @@
             // 
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(iconButton3);
             panel1.Controls.Add(iconButton2);
             panel1.Controls.Add(iconButton1);
-            panel1.Location = new Point(96, 83);
+            panel1.Location = new Point(96, 124);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1086, 608);
+            panel1.Size = new Size(1086, 567);
             panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Croissant One", 30F);
+            label1.Location = new Point(237, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(787, 71);
+            label1.TabIndex = 2;
+            label1.Text = "Lista de Animales Terrestres";
+            label1.Click += label1_Click;
             // 
             // iconButton3
             // 
@@ -101,31 +111,21 @@
             iconButton1.Text = "Agregar";
             iconButton1.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Croissant One", 30F);
-            label1.Location = new Point(160, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(787, 71);
-            label1.TabIndex = 2;
-            label1.Text = "Lista de Animales Terrestres";
-            label1.Click += label1_Click;
-            // 
             // Lista_Animales_Terrestres
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
+            Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(iconPictureBox1);
             Name = "Lista_Animales_Terrestres";
             Text = "Lista_Animales_Terrestres";
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
