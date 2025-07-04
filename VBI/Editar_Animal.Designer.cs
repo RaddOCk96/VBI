@@ -31,19 +31,19 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
-            button3 = new Button();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            btnEdImagen2 = new Button();
+            pbEdImagen2 = new PictureBox();
+            pbEdImagen1 = new PictureBox();
             panel2 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
-            textBox6 = new TextBox();
+            btnEdImagen = new Button();
+            btnEdGuardar = new Button();
+            txtEdHabitat = new TextBox();
             label3 = new Label();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtEdCaracteristicas = new TextBox();
+            txtEdReproduccion = new TextBox();
+            txtEdAlimentacion = new TextBox();
+            txtEdCientifico = new TextBox();
+            txtEdNombre = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -51,8 +51,8 @@
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbEdImagen2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbEdImagen1).BeginInit();
             SuspendLayout();
             // 
             // iconPictureBox1
@@ -82,19 +82,19 @@
             // panel1
             // 
             panel1.AutoScroll = true;
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnEdImagen2);
+            panel1.Controls.Add(pbEdImagen2);
+            panel1.Controls.Add(pbEdImagen1);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(btnEdImagen);
+            panel1.Controls.Add(btnEdGuardar);
+            panel1.Controls.Add(txtEdHabitat);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtEdCaracteristicas);
+            panel1.Controls.Add(txtEdReproduccion);
+            panel1.Controls.Add(txtEdAlimentacion);
+            panel1.Controls.Add(txtEdCientifico);
+            panel1.Controls.Add(txtEdNombre);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
@@ -105,31 +105,31 @@
             panel1.Size = new Size(1171, 559);
             panel1.TabIndex = 3;
             // 
-            // button3
+            // btnEdImagen2
             // 
-            button3.Font = new Font("Spectral", 10F);
-            button3.Location = new Point(497, 1041);
-            button3.Name = "button3";
-            button3.Size = new Size(163, 56);
-            button3.TabIndex = 19;
-            button3.Text = "Cargar Imagen";
-            button3.UseVisualStyleBackColor = true;
+            btnEdImagen2.Font = new Font("Spectral", 10F);
+            btnEdImagen2.Location = new Point(497, 1041);
+            btnEdImagen2.Name = "btnEdImagen2";
+            btnEdImagen2.Size = new Size(162, 33);
+            btnEdImagen2.TabIndex = 19;
+            btnEdImagen2.Text = "Cargar Imagen";
+            btnEdImagen2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // pbEdImagen2
             // 
-            pictureBox2.Location = new Point(403, 717);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(330, 301);
-            pictureBox2.TabIndex = 18;
-            pictureBox2.TabStop = false;
+            pbEdImagen2.Location = new Point(403, 717);
+            pbEdImagen2.Name = "pbEdImagen2";
+            pbEdImagen2.Size = new Size(330, 301);
+            pbEdImagen2.TabIndex = 18;
+            pbEdImagen2.TabStop = false;
             // 
-            // pictureBox1
+            // pbEdImagen1
             // 
-            pictureBox1.Location = new Point(127, 115);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(330, 301);
-            pictureBox1.TabIndex = 17;
-            pictureBox1.TabStop = false;
+            pbEdImagen1.Location = new Point(127, 115);
+            pbEdImagen1.Name = "pbEdImagen1";
+            pbEdImagen1.Size = new Size(330, 301);
+            pbEdImagen1.TabIndex = 17;
+            pbEdImagen1.TabStop = false;
             // 
             // panel2
             // 
@@ -138,34 +138,34 @@
             panel2.Size = new Size(1144, 30);
             panel2.TabIndex = 16;
             // 
-            // button2
+            // btnEdImagen
             // 
-            button2.Font = new Font("Spectral", 10F);
-            button2.Location = new Point(212, 443);
-            button2.Name = "button2";
-            button2.Size = new Size(162, 33);
-            button2.TabIndex = 15;
-            button2.Text = "Cargar Imagen";
-            button2.UseVisualStyleBackColor = true;
+            btnEdImagen.Font = new Font("Spectral", 10F);
+            btnEdImagen.Location = new Point(212, 443);
+            btnEdImagen.Name = "btnEdImagen";
+            btnEdImagen.Size = new Size(162, 33);
+            btnEdImagen.TabIndex = 15;
+            btnEdImagen.Text = "Cargar Imagen";
+            btnEdImagen.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEdGuardar
             // 
-            button1.Font = new Font("Spectral", 13F);
-            button1.Location = new Point(497, 1215);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 50);
-            button1.TabIndex = 14;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            btnEdGuardar.Font = new Font("Spectral", 13F);
+            btnEdGuardar.Location = new Point(497, 1215);
+            btnEdGuardar.Name = "btnEdGuardar";
+            btnEdGuardar.Size = new Size(163, 50);
+            btnEdGuardar.TabIndex = 14;
+            btnEdGuardar.Text = "Guardar";
+            btnEdGuardar.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtEdHabitat
             // 
-            textBox6.Font = new Font("Spectral", 12F);
-            textBox6.Location = new Point(807, 717);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(279, 301);
-            textBox6.TabIndex = 13;
+            txtEdHabitat.Font = new Font("Spectral", 12F);
+            txtEdHabitat.Location = new Point(807, 717);
+            txtEdHabitat.Multiline = true;
+            txtEdHabitat.Name = "txtEdHabitat";
+            txtEdHabitat.Size = new Size(279, 301);
+            txtEdHabitat.TabIndex = 13;
             // 
             // label3
             // 
@@ -177,48 +177,48 @@
             label3.TabIndex = 1;
             label3.Text = "Nombre Científico";
             // 
-            // textBox5
+            // txtEdCaracteristicas
             // 
-            textBox5.Font = new Font("Spectral", 12F);
-            textBox5.Location = new Point(70, 726);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(269, 282);
-            textBox5.TabIndex = 12;
+            txtEdCaracteristicas.Font = new Font("Spectral", 12F);
+            txtEdCaracteristicas.Location = new Point(70, 726);
+            txtEdCaracteristicas.Multiline = true;
+            txtEdCaracteristicas.Name = "txtEdCaracteristicas";
+            txtEdCaracteristicas.Size = new Size(269, 282);
+            txtEdCaracteristicas.TabIndex = 12;
             // 
-            // textBox4
+            // txtEdReproduccion
             // 
-            textBox4.Font = new Font("Spectral", 12F);
-            textBox4.Location = new Point(767, 403);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(248, 101);
-            textBox4.TabIndex = 11;
+            txtEdReproduccion.Font = new Font("Spectral", 12F);
+            txtEdReproduccion.Location = new Point(767, 403);
+            txtEdReproduccion.Multiline = true;
+            txtEdReproduccion.Name = "txtEdReproduccion";
+            txtEdReproduccion.Size = new Size(248, 101);
+            txtEdReproduccion.TabIndex = 11;
             // 
-            // textBox3
+            // txtEdAlimentacion
             // 
-            textBox3.Font = new Font("Spectral", 12F);
-            textBox3.Location = new Point(767, 264);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(248, 91);
-            textBox3.TabIndex = 10;
+            txtEdAlimentacion.Font = new Font("Spectral", 12F);
+            txtEdAlimentacion.Location = new Point(767, 264);
+            txtEdAlimentacion.Multiline = true;
+            txtEdAlimentacion.Name = "txtEdAlimentacion";
+            txtEdAlimentacion.Size = new Size(248, 91);
+            txtEdAlimentacion.TabIndex = 10;
             // 
-            // textBox2
+            // txtEdCientifico
             // 
-            textBox2.Font = new Font("Spectral", 12F);
-            textBox2.Location = new Point(767, 181);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(248, 38);
-            textBox2.TabIndex = 9;
+            txtEdCientifico.Font = new Font("Spectral", 12F);
+            txtEdCientifico.Location = new Point(767, 181);
+            txtEdCientifico.Name = "txtEdCientifico";
+            txtEdCientifico.Size = new Size(248, 38);
+            txtEdCientifico.TabIndex = 9;
             // 
-            // textBox1
+            // txtEdNombre
             // 
-            textBox1.Font = new Font("Spectral", 12F);
-            textBox1.Location = new Point(767, 100);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(248, 38);
-            textBox1.TabIndex = 8;
+            txtEdNombre.Font = new Font("Spectral", 12F);
+            txtEdNombre.Location = new Point(767, 100);
+            txtEdNombre.Name = "txtEdNombre";
+            txtEdNombre.Size = new Size(248, 38);
+            txtEdNombre.TabIndex = 8;
             // 
             // label7
             // 
@@ -284,8 +284,8 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbEdImagen2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbEdImagen1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -295,19 +295,19 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Label label1;
         private Panel panel1;
-        private Button button3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private Button btnEdImagen2;
+        private PictureBox pbEdImagen2;
+        private PictureBox pbEdImagen1;
         private Panel panel2;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox6;
+        private Button btnEdImagen;
+        private Button btnEdGuardar;
+        private TextBox txtEdHabitat;
         private Label label3;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtEdCaracteristicas;
+        private TextBox txtEdReproduccion;
+        private TextBox txtEdAlimentacion;
+        private TextBox txtEdCientifico;
+        private TextBox txtEdNombre;
         private Label label7;
         private Label label6;
         private Label label5;
