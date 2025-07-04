@@ -30,10 +30,10 @@
         {
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
-            label1 = new Label();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton1 = new FontAwesome.Sharp.IconButton();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -63,17 +63,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1086, 567);
             panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Croissant One", 30F);
-            label1.Location = new Point(237, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(787, 71);
-            label1.TabIndex = 2;
-            label1.Text = "Lista de Animales Terrestres";
-            label1.Click += label1_Click;
             // 
             // iconButton3
             // 
@@ -110,6 +99,17 @@
             iconButton1.TabIndex = 0;
             iconButton1.Text = "Agregar";
             iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Croissant One", 30F);
+            label1.Location = new Point(237, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(787, 71);
+            label1.TabIndex = 2;
+            label1.Text = "Lista de Animales Terrestres";
+            label1.Click += label1_Click;
             // 
             // Lista_Animales_Terrestres
             // 
