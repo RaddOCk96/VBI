@@ -31,28 +31,28 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
+            button3 = new Button();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            panel2 = new Panel();
             button2 = new Button();
             button1 = new Button();
             textBox6 = new TextBox();
+            label3 = new Label();
             textBox5 = new TextBox();
-            label7 = new Label();
-            label6 = new Label();
-            panel2 = new Panel();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            label3 = new Label();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // iconPictureBox1
@@ -106,6 +106,39 @@
             panel1.Size = new Size(1171, 559);
             panel1.TabIndex = 2;
             // 
+            // button3
+            // 
+            button3.Font = new Font("Spectral", 10F);
+            button3.Location = new Point(497, 1041);
+            button3.Name = "button3";
+            button3.Size = new Size(163, 56);
+            button3.TabIndex = 19;
+            button3.Text = "Cargar Imagen";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(403, 717);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(330, 301);
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(127, 115);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(330, 301);
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 1290);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1144, 30);
+            panel2.TabIndex = 16;
+            // 
             // button2
             // 
             button2.Font = new Font("Spectral", 10F);
@@ -119,9 +152,9 @@
             // button1
             // 
             button1.Font = new Font("Spectral", 13F);
-            button1.Location = new Point(512, 1247);
+            button1.Location = new Point(497, 1215);
             button1.Name = "button1";
-            button1.Size = new Size(117, 37);
+            button1.Size = new Size(163, 50);
             button1.TabIndex = 14;
             button1.Text = "Guardar";
             button1.UseVisualStyleBackColor = true;
@@ -135,6 +168,17 @@
             textBox6.Size = new Size(279, 301);
             textBox6.TabIndex = 13;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Spectral", 15F);
+            label3.Location = new Point(513, 174);
+            label3.Name = "label3";
+            label3.Size = new Size(233, 38);
+            label3.TabIndex = 1;
+            label3.Text = "Nombre Científico";
+            label3.Click += label3_Click;
+            // 
             // textBox5
             // 
             textBox5.Font = new Font("Spectral", 12F);
@@ -144,33 +188,6 @@
             textBox5.Size = new Size(269, 282);
             textBox5.TabIndex = 12;
             textBox5.TextChanged += textBox5_TextChanged;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Spectral", 15F);
-            label7.Location = new Point(896, 663);
-            label7.Name = "label7";
-            label7.Size = new Size(101, 38);
-            label7.TabIndex = 5;
-            label7.Text = "Hábitat";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Spectral", 15F);
-            label6.Location = new Point(118, 663);
-            label6.Name = "label6";
-            label6.Size = new Size(183, 38);
-            label6.TabIndex = 4;
-            label6.Text = "Características";
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(3, 1290);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1144, 30);
-            panel2.TabIndex = 16;
             // 
             // textBox4
             // 
@@ -198,13 +215,41 @@
             textBox2.Size = new Size(248, 38);
             textBox2.TabIndex = 9;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Spectral", 12F);
+            textBox1.Location = new Point(767, 100);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(248, 38);
+            textBox1.TabIndex = 8;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Spectral", 15F);
+            label7.Location = new Point(896, 663);
+            label7.Name = "label7";
+            label7.Size = new Size(107, 38);
+            label7.TabIndex = 5;
+            label7.Text = "Hábitat";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Spectral", 15F);
+            label6.Location = new Point(118, 663);
+            label6.Name = "label6";
+            label6.Size = new Size(190, 38);
+            label6.TabIndex = 4;
+            label6.Text = "Características";
+            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Spectral", 15F);
             label5.Location = new Point(514, 392);
             label5.Name = "label5";
-            label5.Size = new Size(173, 38);
+            label5.Size = new Size(178, 38);
             label5.TabIndex = 3;
             label5.Text = "Reproducción";
             // 
@@ -214,28 +259,9 @@
             label4.Font = new Font("Spectral", 15F);
             label4.Location = new Point(513, 257);
             label4.Name = "label4";
-            label4.Size = new Size(170, 38);
+            label4.Size = new Size(174, 38);
             label4.TabIndex = 2;
             label4.Text = "Alimentación";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Spectral", 12F);
-            textBox1.Location = new Point(767, 100);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(248, 38);
-            textBox1.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Spectral", 15F);
-            label3.Location = new Point(513, 174);
-            label3.Name = "label3";
-            label3.Size = new Size(227, 38);
-            label3.TabIndex = 1;
-            label3.Text = "Nombre Científico";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -243,35 +269,9 @@
             label2.Font = new Font("Spectral", 15F);
             label2.Location = new Point(514, 93);
             label2.Name = "label2";
-            label2.Size = new Size(109, 38);
+            label2.Size = new Size(112, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(127, 115);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(330, 301);
-            pictureBox1.TabIndex = 17;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(403, 717);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(330, 301);
-            pictureBox2.TabIndex = 18;
-            pictureBox2.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Spectral", 10F);
-            button3.Location = new Point(497, 1041);
-            button3.Name = "button3";
-            button3.Size = new Size(143, 33);
-            button3.TabIndex = 19;
-            button3.Text = "Cargar Imagen";
-            button3.UseVisualStyleBackColor = true;
             // 
             // Agregar_Animal
             // 
@@ -288,8 +288,8 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
