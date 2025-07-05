@@ -223,6 +223,7 @@
             pbAgImagen2.Location = new Point(415, 1102);
             pbAgImagen2.Name = "pbAgImagen2";
             pbAgImagen2.Size = new Size(330, 301);
+            pbAgImagen2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbAgImagen2.TabIndex = 18;
             pbAgImagen2.TabStop = false;
             // 
