@@ -59,12 +59,18 @@ namespace VBI
             Conexion Rconexion = new Conexion();
             string nombreAnimal = txtAgNombre.Text;
             string nombreCientifico = txtAgCientifico.Text;
-            string ecosistem
+            string ecosistema =
+
 
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
