@@ -14,6 +14,7 @@ namespace VBI
 {
     public partial class Agregar_Animal : Form
     {
+        byte[] imagenByte;
         public Agregar_Animal()
         {
             InitializeComponent();
@@ -71,6 +72,27 @@ namespace VBI
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgImagen1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog selectorImagen = new OpenFileDialog();
+            selectorImagen.Title = "Seleccionar imagen";
+
+            if (selectorImagen.ShowDialog() == DialogResult.OK)
+            {
+                pbAgImagen1.Image = Image.FromStream(selectorImagen.OpenFile());
+                MemoryStream memoria = new MemoryStream();
+                pbAgImagen1.Image.Save(memoria, System.Drawing.Imaging.ImageFormat.Png);
+
+                imagenByte = memoria.ToArray();
+            }
+
+        }
+
+        private void txtAgCientifico_TextChanged(object sender, EventArgs e)
         {
 
         }

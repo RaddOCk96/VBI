@@ -31,6 +31,7 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
+            txtAgHabitat = new ComboBox();
             panel2 = new Panel();
             txtAgReDescripcion = new TextBox();
             txtAgAlDescripcion = new TextBox();
@@ -53,7 +54,6 @@
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
-            txtAgHabitat = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).BeginInit();
@@ -116,11 +116,19 @@
             panel1.Size = new Size(1171, 559);
             panel1.TabIndex = 2;
             // 
+            // txtAgHabitat
+            // 
+            txtAgHabitat.FormattingEnabled = true;
+            txtAgHabitat.Location = new Point(826, 1102);
+            txtAgHabitat.Name = "txtAgHabitat";
+            txtAgHabitat.Size = new Size(279, 28);
+            txtAgHabitat.TabIndex = 28;
+            // 
             // panel2
             // 
-            panel2.Location = new Point(21, 1635);
+            panel2.Location = new Point(3, 1635);
             panel2.Name = "panel2";
-            panel2.Size = new Size(117, 26);
+            panel2.Size = new Size(1144, 26);
             panel2.TabIndex = 27;
             // 
             // txtAgReDescripcion
@@ -136,11 +144,11 @@
             // txtAgAlDescripcion
             // 
             txtAgAlDescripcion.Font = new Font("Spectral", 12F);
-            txtAgAlDescripcion.Location = new Point(737, 322);
+            txtAgAlDescripcion.Location = new Point(767, 325);
             txtAgAlDescripcion.Multiline = true;
             txtAgAlDescripcion.Name = "txtAgAlDescripcion";
             txtAgAlDescripcion.PlaceholderText = "Agrega la descripción ";
-            txtAgAlDescripcion.Size = new Size(345, 138);
+            txtAgAlDescripcion.Size = new Size(280, 138);
             txtAgAlDescripcion.TabIndex = 25;
             // 
             // txtAgReproduccion
@@ -183,7 +191,7 @@
             // txtAgEcosistema
             // 
             txtAgEcosistema.FormattingEnabled = true;
-            txtAgEcosistema.Location = new Point(792, 858);
+            txtAgEcosistema.Location = new Point(792, 848);
             txtAgEcosistema.Name = "txtAgEcosistema";
             txtAgEcosistema.Size = new Size(248, 28);
             txtAgEcosistema.TabIndex = 21;
@@ -193,9 +201,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Spectral", 15F);
-            label8.Location = new Point(507, 848);
+            label8.Location = new Point(523, 848);
             label8.Name = "label8";
-            label8.Size = new Size(154, 38);
+            label8.Size = new Size(150, 38);
             label8.TabIndex = 20;
             label8.Text = "Ecosistema ";
             // 
@@ -223,6 +231,7 @@
             pbAgImagen1.Location = new Point(127, 115);
             pbAgImagen1.Name = "pbAgImagen1";
             pbAgImagen1.Size = new Size(330, 301);
+            pbAgImagen1.SizeMode = PictureBoxSizeMode.StretchImage;
             pbAgImagen1.TabIndex = 17;
             pbAgImagen1.TabStop = false;
             // 
@@ -235,6 +244,7 @@
             btnAgImagen1.TabIndex = 15;
             btnAgImagen1.Text = "Cargar Imagen";
             btnAgImagen1.UseVisualStyleBackColor = true;
+            btnAgImagen1.Click += btnAgImagen1_Click;
             // 
             // label3
             // 
@@ -242,7 +252,7 @@
             label3.Font = new Font("Spectral", 15F);
             label3.Location = new Point(513, 174);
             label3.Name = "label3";
-            label3.Size = new Size(233, 38);
+            label3.Size = new Size(227, 38);
             label3.TabIndex = 1;
             label3.Text = "Nombre Científico";
             label3.Click += label3_Click;
@@ -285,7 +295,7 @@
             label7.Font = new Font("Spectral", 15F);
             label7.Location = new Point(909, 1042);
             label7.Name = "label7";
-            label7.Size = new Size(107, 38);
+            label7.Size = new Size(101, 38);
             label7.TabIndex = 5;
             label7.Text = "Hábitat";
             // 
@@ -295,7 +305,7 @@
             label6.Font = new Font("Spectral", 15F);
             label6.Location = new Point(95, 1042);
             label6.Name = "label6";
-            label6.Size = new Size(190, 38);
+            label6.Size = new Size(183, 38);
             label6.TabIndex = 4;
             label6.Text = "Características";
             label6.Click += label6_Click;
@@ -306,7 +316,7 @@
             label5.Font = new Font("Spectral", 15F);
             label5.Location = new Point(523, 541);
             label5.Name = "label5";
-            label5.Size = new Size(178, 38);
+            label5.Size = new Size(173, 38);
             label5.TabIndex = 3;
             label5.Text = "Reproducción";
             // 
@@ -316,7 +326,7 @@
             label4.Font = new Font("Spectral", 15F);
             label4.Location = new Point(513, 257);
             label4.Name = "label4";
-            label4.Size = new Size(174, 38);
+            label4.Size = new Size(170, 38);
             label4.TabIndex = 2;
             label4.Text = "Alimentación";
             // 
@@ -326,17 +336,9 @@
             label2.Font = new Font("Spectral", 15F);
             label2.Location = new Point(514, 93);
             label2.Name = "label2";
-            label2.Size = new Size(112, 38);
+            label2.Size = new Size(109, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
-            // 
-            // txtAgHabitat
-            // 
-            txtAgHabitat.FormattingEnabled = true;
-            txtAgHabitat.Location = new Point(826, 1102);
-            txtAgHabitat.Name = "txtAgHabitat";
-            txtAgHabitat.Size = new Size(279, 28);
-            txtAgHabitat.TabIndex = 28;
             // 
             // Agregar_Animal
             // 
