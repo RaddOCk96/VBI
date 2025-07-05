@@ -54,16 +54,25 @@ namespace VBI
 
         private void btnAgImagen2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog selectorImagen2 = new OpenFileDialog();
-            selectorImagen2.Title = "Seleccionar imagen";
-
-            if (selectorImagen2.ShowDialog() == DialogResult.OK)
+            try
             {
-                pbAgImagen2.Image = Image.FromStream(selectorImagen2.OpenFile());
-                MemoryStream memoria2 = new MemoryStream();
-                pbAgImagen2.Image.Save(memoria2, System.Drawing.Imaging.ImageFormat.Png);
 
-                imagenByte2 = memoria2.ToArray();
+                OpenFileDialog selectorImagen2 = new OpenFileDialog();
+                selectorImagen2.Title = "Seleccionar imagen";
+
+                if (selectorImagen2.ShowDialog() == DialogResult.OK)
+                {
+                    pbAgImagen2.Image = Image.FromStream(selectorImagen2.OpenFile());
+                    MemoryStream memoria2 = new MemoryStream();
+                    pbAgImagen2.Image.Save(memoria2, System.Drawing.Imaging.ImageFormat.Png);
+
+                    imagenByte2 = memoria2.ToArray();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al cargar la imagen 2: \n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -91,16 +100,26 @@ namespace VBI
 
         private void btnAgImagen1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog selectorImagen1 = new OpenFileDialog();
-            selectorImagen1.Title = "Seleccionar imagen";
-
-            if (selectorImagen1.ShowDialog() == DialogResult.OK)
+            try
             {
-                pbAgImagen1.Image = Image.FromStream(selectorImagen1.OpenFile());
-                MemoryStream memoria1 = new MemoryStream();
-                pbAgImagen1.Image.Save(memoria1, System.Drawing.Imaging.ImageFormat.Png);
 
-                imagenByte1 = memoria1.ToArray();
+
+                OpenFileDialog selectorImagen1 = new OpenFileDialog();
+                selectorImagen1.Title = "Seleccionar imagen";
+
+                if (selectorImagen1.ShowDialog() == DialogResult.OK)
+                {
+                    pbAgImagen1.Image = Image.FromStream(selectorImagen1.OpenFile());
+                    MemoryStream memoria1 = new MemoryStream();
+                    pbAgImagen1.Image.Save(memoria1, System.Drawing.Imaging.ImageFormat.Png);
+
+                    imagenByte1 = memoria1.ToArray();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al cargar la imagen 1: \n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
