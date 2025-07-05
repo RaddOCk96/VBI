@@ -134,7 +134,7 @@
             // txtAgReDescripcion
             // 
             txtAgReDescripcion.Font = new Font("Spectral", 12F);
-            txtAgReDescripcion.Location = new Point(737, 630);
+            txtAgReDescripcion.Location = new Point(767, 623);
             txtAgReDescripcion.Multiline = true;
             txtAgReDescripcion.Name = "txtAgReDescripcion";
             txtAgReDescripcion.PlaceholderText = "Agrega la descripción ";
@@ -154,10 +154,11 @@
             // txtAgReproduccion
             // 
             txtAgReproduccion.FormattingEnabled = true;
-            txtAgReproduccion.Location = new Point(792, 551);
+            txtAgReproduccion.Location = new Point(767, 548);
             txtAgReproduccion.Name = "txtAgReproduccion";
             txtAgReproduccion.Size = new Size(248, 28);
             txtAgReproduccion.TabIndex = 24;
+            txtAgReproduccion.SelectedIndexChanged += txtAgReproduccion_SelectedIndexChanged;
             // 
             // txtAgAlimentacion
             // 

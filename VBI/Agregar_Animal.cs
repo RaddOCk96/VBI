@@ -128,5 +128,10 @@ namespace VBI
         {
 
         }
+
+        private void txtAgReproduccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
