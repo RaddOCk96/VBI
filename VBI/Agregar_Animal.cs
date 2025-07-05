@@ -14,7 +14,9 @@ namespace VBI
 {
     public partial class Agregar_Animal : Form
     {
-        byte[] imagenByte;
+        byte[] imagenByte1;
+        byte[] imagenByte2;
+
         public Agregar_Animal()
         {
             InitializeComponent();
@@ -52,6 +54,17 @@ namespace VBI
 
         private void btnAgImagen2_Click(object sender, EventArgs e)
         {
+            OpenFileDialog selectorImagen2 = new OpenFileDialog();
+            selectorImagen2.Title = "Seleccionar imagen";
+
+            if (selectorImagen2.ShowDialog() == DialogResult.OK)
+            {
+                pbAgImagen2.Image = Image.FromStream(selectorImagen2.OpenFile());
+                MemoryStream memoria2 = new MemoryStream();
+                pbAgImagen2.Image.Save(memoria2, System.Drawing.Imaging.ImageFormat.Png);
+
+                imagenByte2 = memoria2.ToArray();
+            }
 
         }
 
@@ -78,16 +91,16 @@ namespace VBI
 
         private void btnAgImagen1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog selectorImagen = new OpenFileDialog();
-            selectorImagen.Title = "Seleccionar imagen";
+            OpenFileDialog selectorImagen1 = new OpenFileDialog();
+            selectorImagen1.Title = "Seleccionar imagen";
 
-            if (selectorImagen.ShowDialog() == DialogResult.OK)
+            if (selectorImagen1.ShowDialog() == DialogResult.OK)
             {
-                pbAgImagen1.Image = Image.FromStream(selectorImagen.OpenFile());
-                MemoryStream memoria = new MemoryStream();
-                pbAgImagen1.Image.Save(memoria, System.Drawing.Imaging.ImageFormat.Png);
+                pbAgImagen1.Image = Image.FromStream(selectorImagen1.OpenFile());
+                MemoryStream memoria1 = new MemoryStream();
+                pbAgImagen1.Image.Save(memoria1, System.Drawing.Imaging.ImageFormat.Png);
 
-                imagenByte = memoria.ToArray();
+                imagenByte1 = memoria1.ToArray();
             }
 
         }
