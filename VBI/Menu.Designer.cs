@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             label2 = new Label();
             button1 = new Button();
             button2 = new Button();
@@ -109,6 +110,7 @@
             Controls.Add(label2);
             ForeColor = Color.DarkOliveGreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;

@@ -34,14 +34,11 @@
             btnAgImagen2 = new Button();
             pbAgImagen2 = new PictureBox();
             pbAgImagen1 = new PictureBox();
-            panel2 = new Panel();
             btnAgImagen1 = new Button();
             btnAgGuardar = new Button();
             txtAgHabitat = new TextBox();
             label3 = new Label();
             txtAgCaracteristicas = new TextBox();
-            txtAgReproduccion = new TextBox();
-            txtAgAlimentacion = new TextBox();
             txtAgCientifico = new TextBox();
             txtAgNombre = new TextBox();
             label7 = new Label();
@@ -49,6 +46,13 @@
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
+            label8 = new Label();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).BeginInit();
@@ -83,17 +87,21 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(btnAgGuardar);
+            panel1.Controls.Add(txtAgHabitat);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(btnAgImagen2);
             panel1.Controls.Add(pbAgImagen2);
             panel1.Controls.Add(pbAgImagen1);
-            panel1.Controls.Add(panel2);
             panel1.Controls.Add(btnAgImagen1);
-            panel1.Controls.Add(btnAgGuardar);
-            panel1.Controls.Add(txtAgHabitat);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtAgCaracteristicas);
-            panel1.Controls.Add(txtAgReproduccion);
-            panel1.Controls.Add(txtAgAlimentacion);
             panel1.Controls.Add(txtAgCientifico);
             panel1.Controls.Add(txtAgNombre);
             panel1.Controls.Add(label7);
@@ -109,16 +117,17 @@
             // btnAgImagen2
             // 
             btnAgImagen2.Font = new Font("Spectral", 10F);
-            btnAgImagen2.Location = new Point(497, 1041);
+            btnAgImagen2.Location = new Point(496, 1447);
             btnAgImagen2.Name = "btnAgImagen2";
             btnAgImagen2.Size = new Size(162, 33);
             btnAgImagen2.TabIndex = 19;
             btnAgImagen2.Text = "Cargar Imagen";
             btnAgImagen2.UseVisualStyleBackColor = true;
+            btnAgImagen2.Click += btnAgImagen2_Click;
             // 
             // pbAgImagen2
             // 
-            pbAgImagen2.Location = new Point(403, 717);
+            pbAgImagen2.Location = new Point(415, 1102);
             pbAgImagen2.Name = "pbAgImagen2";
             pbAgImagen2.Size = new Size(330, 301);
             pbAgImagen2.TabIndex = 18;
@@ -131,13 +140,6 @@
             pbAgImagen1.Size = new Size(330, 301);
             pbAgImagen1.TabIndex = 17;
             pbAgImagen1.TabStop = false;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(3, 1290);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1144, 30);
-            panel2.TabIndex = 16;
             // 
             // btnAgImagen1
             // 
@@ -152,17 +154,18 @@
             // btnAgGuardar
             // 
             btnAgGuardar.Font = new Font("Spectral", 13F);
-            btnAgGuardar.Location = new Point(497, 1215);
+            btnAgGuardar.Location = new Point(495, 1546);
             btnAgGuardar.Name = "btnAgGuardar";
             btnAgGuardar.Size = new Size(163, 50);
             btnAgGuardar.TabIndex = 14;
             btnAgGuardar.Text = "Guardar";
             btnAgGuardar.UseVisualStyleBackColor = true;
+            btnAgGuardar.Click += btnAgGuardar_Click;
             // 
             // txtAgHabitat
             // 
             txtAgHabitat.Font = new Font("Spectral", 12F);
-            txtAgHabitat.Location = new Point(807, 717);
+            txtAgHabitat.Location = new Point(814, 1102);
             txtAgHabitat.Multiline = true;
             txtAgHabitat.Name = "txtAgHabitat";
             txtAgHabitat.Size = new Size(279, 301);
@@ -174,7 +177,7 @@
             label3.Font = new Font("Spectral", 15F);
             label3.Location = new Point(513, 174);
             label3.Name = "label3";
-            label3.Size = new Size(227, 38);
+            label3.Size = new Size(233, 38);
             label3.TabIndex = 1;
             label3.Text = "Nombre Científico";
             label3.Click += label3_Click;
@@ -182,54 +185,41 @@
             // txtAgCaracteristicas
             // 
             txtAgCaracteristicas.Font = new Font("Spectral", 12F);
-            txtAgCaracteristicas.Location = new Point(70, 726);
+            txtAgCaracteristicas.Location = new Point(59, 1121);
             txtAgCaracteristicas.Multiline = true;
             txtAgCaracteristicas.Name = "txtAgCaracteristicas";
             txtAgCaracteristicas.Size = new Size(269, 282);
             txtAgCaracteristicas.TabIndex = 12;
             txtAgCaracteristicas.TextChanged += textBox5_TextChanged;
             // 
-            // txtAgReproduccion
-            // 
-            txtAgReproduccion.Font = new Font("Spectral", 12F);
-            txtAgReproduccion.Location = new Point(767, 403);
-            txtAgReproduccion.Multiline = true;
-            txtAgReproduccion.Name = "txtAgReproduccion";
-            txtAgReproduccion.Size = new Size(248, 101);
-            txtAgReproduccion.TabIndex = 11;
-            // 
-            // txtAgAlimentacion
-            // 
-            txtAgAlimentacion.Font = new Font("Spectral", 12F);
-            txtAgAlimentacion.Location = new Point(767, 264);
-            txtAgAlimentacion.Multiline = true;
-            txtAgAlimentacion.Name = "txtAgAlimentacion";
-            txtAgAlimentacion.Size = new Size(248, 91);
-            txtAgAlimentacion.TabIndex = 10;
-            // 
             // txtAgCientifico
             // 
             txtAgCientifico.Font = new Font("Spectral", 12F);
-            txtAgCientifico.Location = new Point(767, 181);
+            txtAgCientifico.Location = new Point(767, 176);
+            txtAgCientifico.Multiline = true;
             txtAgCientifico.Name = "txtAgCientifico";
-            txtAgCientifico.Size = new Size(248, 38);
+            txtAgCientifico.PlaceholderText = "Agrega un nombre";
+            txtAgCientifico.Size = new Size(248, 27);
             txtAgCientifico.TabIndex = 9;
             // 
             // txtAgNombre
             // 
             txtAgNombre.Font = new Font("Spectral", 12F);
             txtAgNombre.Location = new Point(767, 100);
+            txtAgNombre.Multiline = true;
             txtAgNombre.Name = "txtAgNombre";
-            txtAgNombre.Size = new Size(248, 38);
+            txtAgNombre.PlaceholderText = "Agrega un nombre ";
+            txtAgNombre.Size = new Size(248, 27);
             txtAgNombre.TabIndex = 8;
+            txtAgNombre.TextChanged += txtAgNombre_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Spectral", 15F);
-            label7.Location = new Point(896, 663);
+            label7.Location = new Point(896, 1030);
             label7.Name = "label7";
-            label7.Size = new Size(101, 38);
+            label7.Size = new Size(107, 38);
             label7.TabIndex = 5;
             label7.Text = "Hábitat";
             // 
@@ -237,9 +227,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Spectral", 15F);
-            label6.Location = new Point(118, 663);
+            label6.Location = new Point(88, 1030);
             label6.Name = "label6";
-            label6.Size = new Size(183, 38);
+            label6.Size = new Size(190, 38);
             label6.TabIndex = 4;
             label6.Text = "Características";
             // 
@@ -247,9 +237,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Spectral", 15F);
-            label5.Location = new Point(514, 392);
+            label5.Location = new Point(523, 541);
             label5.Name = "label5";
-            label5.Size = new Size(173, 38);
+            label5.Size = new Size(178, 38);
             label5.TabIndex = 3;
             label5.Text = "Reproducción";
             // 
@@ -259,7 +249,7 @@
             label4.Font = new Font("Spectral", 15F);
             label4.Location = new Point(513, 257);
             label4.Name = "label4";
-            label4.Size = new Size(170, 38);
+            label4.Size = new Size(174, 38);
             label4.TabIndex = 2;
             label4.Text = "Alimentación";
             // 
@@ -269,9 +259,71 @@
             label2.Font = new Font("Spectral", 15F);
             label2.Location = new Point(514, 93);
             label2.Name = "label2";
-            label2.Size = new Size(109, 38);
+            label2.Size = new Size(112, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Spectral", 15F);
+            label8.Location = new Point(507, 848);
+            label8.Name = "label8";
+            label8.Size = new Size(154, 38);
+            label8.TabIndex = 20;
+            label8.Text = "Ecosistema ";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(792, 858);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(248, 28);
+            comboBox1.TabIndex = 21;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(767, 257);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(248, 28);
+            comboBox2.TabIndex = 23;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(792, 551);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(248, 28);
+            comboBox3.TabIndex = 24;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Spectral", 12F);
+            textBox2.Location = new Point(737, 322);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Agrega la descripción ";
+            textBox2.Size = new Size(345, 138);
+            textBox2.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Spectral", 12F);
+            textBox3.Location = new Point(737, 630);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Agrega la descripción ";
+            textBox3.Size = new Size(345, 138);
+            textBox3.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(21, 1635);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(117, 26);
+            panel2.TabIndex = 27;
             // 
             // Agregar_Animal
             // 
@@ -305,11 +357,8 @@
         private Label label6;
         private Button btnAgImagen1;
         private Button btnAgGuardar;
-        private Panel panel2;
         private PictureBox pbAgImagen1;
         private Label label3;
-        private TextBox txtAgReproduccion;
-        private TextBox txtAgAlimentacion;
         private TextBox txtAgCientifico;
         private TextBox txtAgNombre;
         private Label label5;
@@ -317,5 +366,12 @@
         private Label label2;
         private PictureBox pbAgImagen2;
         private Button btnAgImagen2;
+        private ComboBox comboBox1;
+        private Label label8;
+        private Panel panel2;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private ComboBox comboBox3;
+        private ComboBox comboBox2;
     }
 }

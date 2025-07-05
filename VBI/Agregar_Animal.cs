@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using VBI.Clase;
 
 namespace VBI
 {
@@ -38,6 +40,31 @@ namespace VBI
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtAgNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgImagen2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgGuardar_Click(object sender, EventArgs e)
+        {
+            Conexion Rconexion = new Conexion();
+            string nombreAnimal = txtAgNombre.Text;
+            string nombreCientifico = txtAgCientifico.Text;
+            string ecosistem
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

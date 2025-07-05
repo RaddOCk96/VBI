@@ -80,3 +80,4 @@ C:\Users\fksam\source\repos\VB\VBI\obj\Debug\net8.0-windows\refint\VBI.dll
 C:\Users\fksam\source\repos\VB\VBI\obj\Debug\net8.0-windows\VBI.pdb
 C:\Users\fksam\source\repos\VB\VBI\obj\Debug\net8.0-windows\VBI.genruntimeconfig.cache
 C:\Users\fksam\source\repos\VB\VBI\obj\Debug\net8.0-windows\ref\VBI.dll
+C:\Users\fksam\source\repos\VB\VBI\obj\Debug\net8.0-windows\VBI.Editar_Animal.resources
