@@ -82,7 +82,7 @@ namespace VBI
             Conexion Rconexion = new Conexion();
             string nombreAnimal = txtAgNombre.Text;
             string nombreCientifico = txtAgCientifico.Text;
-            string ecosistema =
+            string ecosistema = 
 
 
 
