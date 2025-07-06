@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button1 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 15F);
+            button1.Location = new Point(775, 434);
+            button1.Name = "button1";
+            button1.Size = new Size(393, 152);
+            button1.TabIndex = 0;
+            button1.Text = "Agregar un animal (prueba)";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Animales_Terrestres
             // 
@@ -36,11 +48,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
+            Controls.Add(button1);
             Name = "Animales_Terrestres";
             Text = "Animales_Terrestres";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }

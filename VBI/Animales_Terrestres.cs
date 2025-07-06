@@ -16,5 +16,14 @@ namespace VBI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Agregar_Animal ventanaAA = new Agregar_Animal(); //Crea un objeto
+            ventanaAA.StartPosition = this.StartPosition;  //Adquiere la posicion y tamaño de la ventana actual
+            ventanaAA.Size = this.Size;
+            ventanaAA.Show();       //Muestra el forms
+            this.Hide();           //Esconde el forms actual
+        }
     }
 }

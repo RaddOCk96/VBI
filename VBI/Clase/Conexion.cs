@@ -10,7 +10,7 @@ namespace VBI.Clase
     internal class Conexion
     {
         MySqlConnection conexion = new MySqlConnection();   //Se crea un objeto para representar la conexion a la BD
-        string CadenaConexion = "server = 127.0.0.1; user id =root; password = FRDKCU96; database = integradoravibio"; //Contiene datos necesarios para conexion 
+        string CadenaConexion = "server = 127.0.0.1; user id =root; password = FRDKCU96; database = vbi"; //Contiene datos necesarios para conexion 
 
         public MySqlConnection EstablecerConexion()    //Crea un método para iniciar conexion 
         {
@@ -27,7 +27,7 @@ namespace VBI.Clase
 
         }
 
-        public void CerrarConexion()
+        public void CerrarConexion()          //Cierra la conexion 
         {
             conexion.Close();
         }
