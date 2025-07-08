@@ -31,5 +31,13 @@ namespace VBI
         {
 
         }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            Agregar_Animal ventanaS = new Agregar_Animal();
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Show();
+            this.Hide();
+        }
     }
 }

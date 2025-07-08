@@ -16,5 +16,13 @@ namespace VBI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres();
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Show();
+            this.Hide();
+        }
     }
 }

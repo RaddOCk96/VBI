@@ -35,6 +35,7 @@
             iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
@@ -60,6 +61,8 @@
             panel1.AutoScroll = true;
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(iconPictureBox4);
+            panel1.Controls.Add(iconPictureBox3);
             panel1.Location = new Point(280, 186);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 505);
@@ -83,12 +86,13 @@
             iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
             iconPictureBox2.IconColor = SystemColors.ControlText;
             iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox2.IconSize = 93;
-            iconPictureBox2.Location = new Point(124, 120);
+            iconPictureBox2.IconSize = 55;
+            iconPictureBox2.Location = new Point(177, 135);
             iconPictureBox2.Name = "iconPictureBox2";
-            iconPictureBox2.Size = new Size(93, 96);
+            iconPictureBox2.Size = new Size(59, 55);
             iconPictureBox2.TabIndex = 3;
             iconPictureBox2.TabStop = false;
+            iconPictureBox2.Click += iconPictureBox2_Click;
             // 
             // iconPictureBox3
             // 
@@ -98,9 +102,9 @@
             iconPictureBox3.IconColor = SystemColors.ControlText;
             iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox3.IconSize = 40;
-            iconPictureBox3.Location = new Point(1071, 218);
+            iconPictureBox3.Location = new Point(610, 31);
             iconPictureBox3.Name = "iconPictureBox3";
-            iconPictureBox3.Size = new Size(40, 40);
+            iconPictureBox3.Size = new Size(44, 40);
             iconPictureBox3.TabIndex = 4;
             iconPictureBox3.TabStop = false;
             // 
@@ -112,7 +116,7 @@
             iconPictureBox4.IconColor = SystemColors.ControlText;
             iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox4.IconSize = 40;
-            iconPictureBox4.Location = new Point(1145, 218);
+            iconPictureBox4.Location = new Point(687, 31);
             iconPictureBox4.Name = "iconPictureBox4";
             iconPictureBox4.Size = new Size(40, 40);
             iconPictureBox4.TabIndex = 5;
@@ -124,15 +128,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
-            Controls.Add(iconPictureBox4);
             Controls.Add(label1);
-            Controls.Add(iconPictureBox3);
             Controls.Add(panel1);
             Controls.Add(iconPictureBox2);
             Controls.Add(iconPictureBox1);
             Name = "Lista_Animales_Terrestres";
             Text = "Lista_Animales_Terrestres";
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
