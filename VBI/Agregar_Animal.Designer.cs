@@ -103,13 +103,13 @@
             panel1.Controls.Add(label2);
             panel1.Location = new Point(44, 157);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1171, 559);
+            panel1.Size = new Size(1171, 509);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 1332);
+            panel2.Location = new Point(3, 1277);
             panel2.Name = "panel2";
             panel2.Size = new Size(1144, 26);
             panel2.TabIndex = 27;
@@ -138,7 +138,7 @@
             // btnAgGuardar
             // 
             btnAgGuardar.Font = new Font("Spectral", 13F);
-            btnAgGuardar.Location = new Point(496, 1251);
+            btnAgGuardar.Location = new Point(496, 1221);
             btnAgGuardar.Name = "btnAgGuardar";
             btnAgGuardar.Size = new Size(163, 50);
             btnAgGuardar.TabIndex = 14;

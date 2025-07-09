@@ -82,44 +82,66 @@ namespace VBI
             Conexion Rconexion = new Conexion();                             //Se crea un objeto para la conexión
             using (MySqlConnection conexion = Rconexion.EstablecerConexion())   //Se inicia la conexión 
             {
-                try
+
+
+                if(!string.IsNullOrWhiteSpace(txtAgAlDescripcion.Text) &&
+                  !string.IsNullOrWhiteSpace(txtAgCaracteristicas.Text) &&
+                  !string.IsNullOrWhiteSpace(txtAgCientifico.Text) &&      //Si todos los campos seleccionados están llenados
+                  !string.IsNullOrWhiteSpace(txtAgHaDescripcion.Text)&&   //procede con el registro
+                  !string.IsNullOrWhiteSpace(txtAgNombre.Text)&&
+                  !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text))
                 {
-                    //Concatena los valores en una variable donde se envían a la tabla 
-                    string consultaI = @"INSERT INTO animales_terrestres
+
+
+
+                    try
+                    {
+                        //Concatena los valores en una variable donde se envían a la tabla 
+                        string consultaI = @"INSERT INTO animales_terrestres
                      (Nombre, NombreCientifico, Reproduccion, Alimentacion, Habitat, Caracteristicas, Imagen, Imagen2)
                      VALUES 
                      (@Nombre, @NombreCientifico, @Reproduccion, @Alimentacion, @Habitat, @Caracteristicas, @Imagen, @Imagen2)";
 
 
-                    using (MySqlCommand comando = new MySqlCommand(consultaI, conexion))
-                    {
-
-                        //Se asignan los valores de los TextBox
-                        comando.Parameters.AddWithValue("@Nombre", txtAgNombre.Text);
-                        comando.Parameters.AddWithValue("@NombreCientifico", txtAgCientifico.Text);
-                        comando.Parameters.AddWithValue("@Reproduccion", txtAgReDescripcion.Text);
-                        comando.Parameters.AddWithValue("@Alimentacion", txtAgAlDescripcion.Text);
-                        comando.Parameters.AddWithValue("@Habitat", txtAgHaDescripcion.Text);
-                        comando.Parameters.AddWithValue("@Caracteristicas", txtAgCaracteristicas.Text);
-                        comando.Parameters.AddWithValue("@Imagen", imagenByte1 ?? new byte[0]);   //En caso que no se seleccione una imagen
-                        comando.Parameters.AddWithValue("@Imagen2", imagenByte2 ?? new byte[0]);   //Crea un arreglo vacio para no generar errores
-
-                        //Ejecuga la consulta y devulve el número de filas afectadas 
-                        int resultado = comando.ExecuteNonQuery();
-                        if (resultado > 0) //1 si todo está bien
+                        using (MySqlCommand comando = new MySqlCommand(consultaI, conexion))
                         {
-                            MessageBox.Show("Animal registrado");
-                            Limpiar();  //Limpia todos los campos 
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se pudo registrar el animal"); //Mensaje de error
+
+                            //Se asignan los valores de los TextBox
+                            comando.Parameters.AddWithValue("@Nombre", txtAgNombre.Text);
+                            comando.Parameters.AddWithValue("@NombreCientifico", txtAgCientifico.Text);
+                            comando.Parameters.AddWithValue("@Reproduccion", txtAgReDescripcion.Text);
+                            comando.Parameters.AddWithValue("@Alimentacion", txtAgAlDescripcion.Text);
+                            comando.Parameters.AddWithValue("@Habitat", txtAgHaDescripcion.Text);
+                            comando.Parameters.AddWithValue("@Caracteristicas", txtAgCaracteristicas.Text);
+                            comando.Parameters.AddWithValue("@Imagen", imagenByte1 ?? new byte[0]);   //En caso que no se seleccione una imagen
+                            comando.Parameters.AddWithValue("@Imagen2", imagenByte2 ?? new byte[0]);   //Crea un arreglo vacio para no generar errores
+
+                            //Ejecuga la consulta y devulve el número de filas afectadas 
+                            int resultado = comando.ExecuteNonQuery();
+                            if (resultado > 0) //1 si todo está bien
+                            {
+                                MessageBox.Show("Animal registrado");
+                                Limpiar();  //Limpia todos los campos 
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo registrar el animal"); //Mensaje de error
+                            }
                         }
                     }
+
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al guardar    Error:{ex}");
+                    }
                 }
-                catch (Exception ex)
+
+
+
+                else
                 {
-                    MessageBox.Show($"Error al guardar    Error:{ex}");
+                    MessageBox.Show("Completa los campos obligatorios");
                 }
             }
 

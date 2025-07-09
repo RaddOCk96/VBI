@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\clase\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\clase\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\clase\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\clase\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Conexion.cs",
               "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Clase\\Conexion.cs",
               "RelativeDocumentMoniker": "VBI\\Clase\\Conexion.cs",
@@ -79,8 +79,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T17:44:17.199Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -110,22 +109,10 @@
               "RelativeDocumentMoniker": "VBI\\Agregar_Animal.cs",
               "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
               "RelativeToolTip": "VBI\\Agregar_Animal.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAxwEoAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv04AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T13:05:39.531Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Animales_Terrestres.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
-              "RelativeDocumentMoniker": "VBI\\Animales_Terrestres.cs",
-              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
-              "RelativeToolTip": "VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T20:51:49.778Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -136,8 +123,18 @@
               "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs [Dise\u00F1o]",
               "RelativeToolTip": "VBI\\Agregar_Animal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T21:20:47.362Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-02T21:20:47.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Animales_Terrestres.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
+              "RelativeDocumentMoniker": "VBI\\Animales_Terrestres.cs",
+              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
+              "RelativeToolTip": "VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T20:51:49.778Z"
             },
             {
               "$type": "Document",
@@ -162,8 +159,7 @@
               "RelativeToolTip": "VBI\\Animales_Terrestres.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:18:45.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T12:18:45.505Z"
             },
             {
               "$type": "Document",
@@ -174,8 +170,7 @@
               "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs [Dise\u00F1o]",
               "RelativeToolTip": "VBI\\Lista_Animales_Terrestres.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T20:14:43.475Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-05T20:14:43.475Z"
             },
             {
               "$type": "Document",
