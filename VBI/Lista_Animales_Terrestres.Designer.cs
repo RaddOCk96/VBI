@@ -30,15 +30,17 @@
         {
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
+            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // iconPictureBox1
@@ -61,12 +63,39 @@
             panel1.AutoScroll = true;
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(iconPictureBox4);
-            panel1.Controls.Add(iconPictureBox3);
+            panel1.Controls.Add(dataGridView1);
             panel1.Location = new Point(280, 186);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 505);
             panel1.TabIndex = 1;
+            // 
+            // iconPictureBox4
+            // 
+            iconPictureBox4.BackColor = Color.SpringGreen;
+            iconPictureBox4.ForeColor = SystemColors.ControlText;
+            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            iconPictureBox4.IconColor = SystemColors.ControlText;
+            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox4.IconSize = 40;
+            iconPictureBox4.Location = new Point(1140, 218);
+            iconPictureBox4.Name = "iconPictureBox4";
+            iconPictureBox4.Size = new Size(40, 40);
+            iconPictureBox4.TabIndex = 5;
+            iconPictureBox4.TabStop = false;
+            // 
+            // iconPictureBox3
+            // 
+            iconPictureBox3.BackColor = Color.SpringGreen;
+            iconPictureBox3.ForeColor = SystemColors.ControlText;
+            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Pencil;
+            iconPictureBox3.IconColor = SystemColors.ControlText;
+            iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox3.IconSize = 40;
+            iconPictureBox3.Location = new Point(1072, 218);
+            iconPictureBox3.Name = "iconPictureBox3";
+            iconPictureBox3.Size = new Size(44, 40);
+            iconPictureBox3.TabIndex = 4;
+            iconPictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -94,33 +123,14 @@
             iconPictureBox2.TabStop = false;
             iconPictureBox2.Click += iconPictureBox2_Click;
             // 
-            // iconPictureBox3
+            // dataGridView1
             // 
-            iconPictureBox3.BackColor = Color.SpringGreen;
-            iconPictureBox3.ForeColor = SystemColors.ControlText;
-            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Pencil;
-            iconPictureBox3.IconColor = SystemColors.ControlText;
-            iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox3.IconSize = 40;
-            iconPictureBox3.Location = new Point(610, 31);
-            iconPictureBox3.Name = "iconPictureBox3";
-            iconPictureBox3.Size = new Size(44, 40);
-            iconPictureBox3.TabIndex = 4;
-            iconPictureBox3.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            iconPictureBox4.BackColor = Color.SpringGreen;
-            iconPictureBox4.ForeColor = SystemColors.ControlText;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            iconPictureBox4.IconColor = SystemColors.ControlText;
-            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox4.IconSize = 40;
-            iconPictureBox4.Location = new Point(687, 31);
-            iconPictureBox4.Name = "iconPictureBox4";
-            iconPictureBox4.Size = new Size(40, 40);
-            iconPictureBox4.TabIndex = 5;
-            iconPictureBox4.TabStop = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(710, 618);
+            dataGridView1.TabIndex = 0;
             // 
             // Lista_Animales_Terrestres
             // 
@@ -128,7 +138,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
+            Controls.Add(iconPictureBox4);
             Controls.Add(label1);
+            Controls.Add(iconPictureBox3);
             Controls.Add(panel1);
             Controls.Add(iconPictureBox2);
             Controls.Add(iconPictureBox1);
@@ -136,9 +148,10 @@
             Text = "Lista_Animales_Terrestres";
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,5 +164,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private DataGridView dataGridView1;
     }
 }
