@@ -30,17 +30,17 @@
         {
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
+            dgvAt = new DataGridView();
             iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // iconPictureBox1
@@ -63,11 +63,20 @@
             panel1.AutoScroll = true;
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(dgvAt);
             panel1.Location = new Point(280, 186);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 505);
             panel1.TabIndex = 1;
+            // 
+            // dgvAt
+            // 
+            dgvAt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAt.Location = new Point(3, 3);
+            dgvAt.Name = "dgvAt";
+            dgvAt.RowHeadersWidth = 51;
+            dgvAt.Size = new Size(710, 618);
+            dgvAt.TabIndex = 0;
             // 
             // iconPictureBox4
             // 
@@ -101,11 +110,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Croissant One", 30F);
-            label1.Location = new Point(237, 36);
+            label1.Location = new Point(376, 26);
             label1.Name = "label1";
-            label1.Size = new Size(787, 71);
+            label1.Size = new Size(503, 71);
             label1.TabIndex = 2;
-            label1.Text = "Lista de Animales Terrestres";
+            label1.Text = "Lista de Animales";
             label1.Click += label1_Click;
             // 
             // iconPictureBox2
@@ -123,15 +132,6 @@
             iconPictureBox2.TabStop = false;
             iconPictureBox2.Click += iconPictureBox2_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(710, 618);
-            dataGridView1.TabIndex = 0;
-            // 
             // Lista_Animales_Terrestres
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -148,10 +148,10 @@
             Text = "Lista_Animales_Terrestres";
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvAt).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -164,6 +164,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private DataGridView dataGridView1;
+        private DataGridView dgvAt;
     }
 }

@@ -202,7 +202,7 @@
             label3.Font = new Font("Spectral", 15F);
             label3.Location = new Point(514, 206);
             label3.Name = "label3";
-            label3.Size = new Size(233, 38);
+            label3.Size = new Size(227, 38);
             label3.TabIndex = 1;
             label3.Text = "Nombre Científico";
             label3.Click += label3_Click;
@@ -245,7 +245,7 @@
             label7.Font = new Font("Spectral", 15F);
             label7.Location = new Point(889, 736);
             label7.Name = "label7";
-            label7.Size = new Size(107, 38);
+            label7.Size = new Size(101, 38);
             label7.TabIndex = 5;
             label7.Text = "Hábitat";
             // 
@@ -255,7 +255,7 @@
             label6.Font = new Font("Spectral", 15F);
             label6.Location = new Point(108, 736);
             label6.Name = "label6";
-            label6.Size = new Size(190, 38);
+            label6.Size = new Size(183, 38);
             label6.TabIndex = 4;
             label6.Text = "Características";
             label6.Click += label6_Click;
@@ -266,7 +266,7 @@
             label5.Font = new Font("Spectral", 15F);
             label5.Location = new Point(514, 499);
             label5.Name = "label5";
-            label5.Size = new Size(178, 38);
+            label5.Size = new Size(173, 38);
             label5.TabIndex = 3;
             label5.Text = "Reproducción";
             // 
@@ -276,7 +276,7 @@
             label4.Font = new Font("Spectral", 15F);
             label4.Location = new Point(514, 301);
             label4.Name = "label4";
-            label4.Size = new Size(174, 38);
+            label4.Size = new Size(170, 38);
             label4.TabIndex = 2;
             label4.Text = "Alimentación";
             label4.Click += label4_Click;
@@ -287,7 +287,7 @@
             label2.Font = new Font("Spectral", 15F);
             label2.Location = new Point(514, 115);
             label2.Name = "label2";
-            label2.Size = new Size(112, 38);
+            label2.Size = new Size(109, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
             // 
