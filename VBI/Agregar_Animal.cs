@@ -17,6 +17,8 @@ namespace VBI
         byte[] imagenByte1;
         byte[] imagenByte2;
         int id_ecosistema;
+        string Tipo_reproduccion;
+        string Tipo_alimentacion;
 
         public Agregar_Animal()
         {
@@ -24,6 +26,16 @@ namespace VBI
             cbEcosistema.Items.Add("Terrestres");
             cbEcosistema.Items.Add("Acuáticos");
             cbEcosistema.Items.Add("Aéreos");
+
+            cbAlimentacion.Items.Add("Herbivoro");
+            cbAlimentacion.Items.Add("Carnivoro");
+            cbAlimentacion.Items.Add("Omnivoro");
+            cbAlimentacion.Items.Add("Insectivoro");
+
+            cbReproduccion.Items.Add("Viviparo");
+            cbReproduccion.Items.Add("Oviparo");
+            cbReproduccion.Items.Add("Ovoviviparo");
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -89,11 +101,13 @@ namespace VBI
 
 
                 if (!string.IsNullOrWhiteSpace(txtAgAlDescripcion.Text) &&
+                  !string.IsNullOrWhiteSpace(cbAlimentacion.Text) &&
                   !string.IsNullOrWhiteSpace(txtAgCaracteristicas.Text) &&
                   !string.IsNullOrWhiteSpace(txtAgCientifico.Text) &&      //Si todos los campos seleccionados están llenados
                   !string.IsNullOrWhiteSpace(txtAgHaDescripcion.Text) &&   //procede con el registro
                   !string.IsNullOrWhiteSpace(txtAgNombre.Text) &&
-                  !string.IsNullOrWhiteSpace(cbEcosistema.Text)&&
+                  !string.IsNullOrWhiteSpace(cbEcosistema.Text) &&
+                  !string.IsNullOrWhiteSpace(cbReproduccion.Text)&&
                   !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text) &&
                    id_ecosistema != 0)
                 {
@@ -104,9 +118,9 @@ namespace VBI
                     {
                         //Concatena los valores en una variable donde se envían a la tabla 
                         string consultaI = @"INSERT INTO animales
-                     (Nombre, NombreCientifico, Reproduccion, Alimentacion, Habitat, Caracteristicas, Imagen, Imagen2, id_ecosistema)
+                     (Nombre, NombreCientifico, Tipo_reproduccion, Reproduccion_carac, Tipo_alimentacion, Comida, Habitat, Caracteristicas, Imagen, Imagen2, id_ecosistema)
                      VALUES 
-                     (@Nombre, @NombreCientifico, @Reproduccion, @Alimentacion, @Habitat, @Caracteristicas, @Imagen, @Imagen2, @id_ecosistema)";
+                     (@Nombre, @NombreCientifico, @Tipo_reproduccion, @Reproduccion_carac, @Tipo_alimentacion, @Comida, @Habitat, @Caracteristicas, @Imagen, @Imagen2, @id_ecosistema)";
 
 
                         using (MySqlCommand comando = new MySqlCommand(consultaI, conexion))
@@ -115,8 +129,10 @@ namespace VBI
                             //Se asignan los valores de los TextBox
                             comando.Parameters.AddWithValue("@Nombre", txtAgNombre.Text);
                             comando.Parameters.AddWithValue("@NombreCientifico", txtAgCientifico.Text);
-                            comando.Parameters.AddWithValue("@Reproduccion", txtAgReDescripcion.Text);
-                            comando.Parameters.AddWithValue("@Alimentacion", txtAgAlDescripcion.Text);
+                            comando.Parameters.AddWithValue("@Tipo_Reproduccion", Tipo_reproduccion);
+                            comando.Parameters.AddWithValue("@Reproduccion_carac", txtAgReDescripcion.Text);
+                            comando.Parameters.AddWithValue("@Tipo_alimentacion", Tipo_alimentacion);
+                            comando.Parameters.AddWithValue("@Comida", txtAgAlDescripcion.Text);
                             comando.Parameters.AddWithValue("@Habitat", txtAgHaDescripcion.Text);
                             comando.Parameters.AddWithValue("@Caracteristicas", txtAgCaracteristicas.Text);
                             comando.Parameters.AddWithValue("@id_ecosistema", id_ecosistema);
@@ -223,9 +239,12 @@ namespace VBI
             txtAgHaDescripcion.Clear();
             txtAgAlDescripcion.Clear();
             txtAgCaracteristicas.Clear();
+            cbEcosistema.Items.Clear();
+            cbAlimentacion.Items.Clear();
+            cbReproduccion.Items.Clear(); 
             pbAgImagen1.Image = null;
             pbAgImagen2.Image = null;
-           
+
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -235,7 +254,7 @@ namespace VBI
 
         private void cbEcosistema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(cbEcosistema.Text)
+            switch (cbEcosistema.Text)
             {
                 case "Terrestres":
                     id_ecosistema = 1;
@@ -249,7 +268,47 @@ namespace VBI
                 default:
                     id_ecosistema = 0;
                     break;
-            }    
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbAlimentacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbAlimentacion.Text)
+            {
+                case "Herbivoro":
+                    Tipo_alimentacion = "Herbivoro";
+                    break;
+                case "Carnivoros":
+                    Tipo_alimentacion = "Carnivoro";
+                    break;
+                case "Omnivoro":
+                    Tipo_alimentacion = "Omnivoro";
+                    break;
+                case "Insectivoro":
+                    Tipo_alimentacion = "Insectivoro";
+                    break;
+            }
+        }
+
+        private void cbReproduccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(cbReproduccion.Text)
+            {
+                case "Viviparo":
+                    Tipo_reproduccion = "Viviparo";
+                    break;
+                case "Oviparo":
+                    Tipo_reproduccion = "Oviparo";
+                    break;
+                case "Ovoviviparo":
+                    Tipo_reproduccion = "Ovoviviparo";
+                    break;
+            }
         }
     }
 }

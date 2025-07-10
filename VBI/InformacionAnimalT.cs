@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace VBI
 {
-    public partial class Editar_Animal : Form
+    public partial class InformacionAnimalT : Form
     {
-        public Editar_Animal()
+        public InformacionAnimalT()
         {
             InitializeComponent();
-        }
-
-        private void Editar_Animal_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
