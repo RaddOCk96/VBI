@@ -31,6 +31,8 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
+            cbEcosistema = new ComboBox();
+            label8 = new Label();
             panel2 = new Panel();
             txtAgReDescripcion = new TextBox();
             txtAgAlDescripcion = new TextBox();
@@ -49,8 +51,6 @@
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
-            label8 = new Label();
-            cbEcosistema = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).BeginInit();
@@ -110,6 +110,27 @@
             panel1.Size = new Size(1171, 509);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // cbEcosistema
+            // 
+            cbEcosistema.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cbEcosistema.FormattingEnabled = true;
+            cbEcosistema.Location = new Point(767, 700);
+            cbEcosistema.Name = "cbEcosistema";
+            cbEcosistema.Size = new Size(315, 38);
+            cbEcosistema.TabIndex = 29;
+            cbEcosistema.SelectedIndexChanged += cbEcosistema_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Spectral", 15F);
+            label8.Location = new Point(514, 700);
+            label8.Name = "label8";
+            label8.Size = new Size(148, 38);
+            label8.TabIndex = 28;
+            label8.Text = "Ecosistema";
+            label8.Click += label8_Click;
             // 
             // panel2
             // 
@@ -294,26 +315,6 @@
             label2.Size = new Size(112, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Spectral", 15F);
-            label8.Location = new Point(525, 687);
-            label8.Name = "label8";
-            label8.Size = new Size(148, 38);
-            label8.TabIndex = 28;
-            label8.Text = "Ecosistema";
-            label8.Click += label8_Click;
-            // 
-            // cbEcosistema
-            // 
-            cbEcosistema.FormattingEnabled = true;
-            cbEcosistema.Location = new Point(767, 697);
-            cbEcosistema.Name = "cbEcosistema";
-            cbEcosistema.Size = new Size(315, 28);
-            cbEcosistema.TabIndex = 29;
-            cbEcosistema.SelectedIndexChanged += cbEcosistema_SelectedIndexChanged;
             // 
             // Agregar_Animal
             // 

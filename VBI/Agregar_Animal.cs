@@ -225,8 +225,7 @@ namespace VBI
             txtAgCaracteristicas.Clear();
             pbAgImagen1.Image = null;
             pbAgImagen2.Image = null;
-            imagenByte1 = null;
-            imagenByte2 = null;
+           
         }
 
         private void label8_Click(object sender, EventArgs e)
