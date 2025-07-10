@@ -1,57 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\axjmi\\source\\repos\\VBI\\",
+  "WorkspaceRootPath": "C:\\Users\\fksam\\source\\repos\\VBI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\axjmi\\source\\repos\\vbi\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\fuentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\fuentes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\agregar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|c:\\users\\fksam\\source\\repos\\vbi\\vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\lista_animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\animales_terrestres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\catalogo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\axjmi\\source\\repos\\VBI\\vbi\\editar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|C:\\Users\\fksam\\source\\repos\\VBI\\vbi\\editar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3160EB78-17FD-4CB4-B0CE-EAEBCD614425}|VBI\\VBI.csproj|solutionrelative:vbi\\editar_animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -62,8 +38,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -77,139 +61,58 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Creditos.cs",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Creditos.cs",
-              "RelativeDocumentMoniker": "VBI\\Creditos.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Creditos.cs",
-              "RelativeToolTip": "VBI\\Creditos.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAIwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T17:48:22.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lista_Animales_Terrestres.cs",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs",
-              "RelativeDocumentMoniker": "VBI\\Lista_Animales_Terrestres.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs",
-              "RelativeToolTip": "VBI\\Lista_Animales_Terrestres.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwCcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:21:18.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Animales_Terrestres.cs",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
-              "RelativeDocumentMoniker": "VBI\\Animales_Terrestres.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
-              "RelativeToolTip": "VBI\\Animales_Terrestres.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T12:18:45.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Program.cs",
-              "RelativeDocumentMoniker": "VBI\\Program.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Program.cs",
-              "RelativeToolTip": "VBI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-06T04:16:23.652Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Creditos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Creditos.cs",
-              "RelativeDocumentMoniker": "VBI\\Creditos.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Creditos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "VBI\\Creditos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T17:37:57.524Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Menu.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Menu.cs",
-              "RelativeDocumentMoniker": "VBI\\Menu.cs",
-              "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Menu.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:48:49.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Lista_Animales_Terrestres.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs",
-              "RelativeDocumentMoniker": "VBI\\Lista_Animales_Terrestres.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs [Dise\u00F1o]",
-              "RelativeToolTip": "VBI\\Lista_Animales_Terrestres.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T20:14:43.475Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Agregar_Animal.cs",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
               "RelativeDocumentMoniker": "VBI\\Agregar_Animal.cs",
-              "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
+              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
               "RelativeToolTip": "VBI\\Agregar_Animal.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAA2wE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAqwHkAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T13:05:39.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Fuentes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Fuentes.cs",
-              "RelativeDocumentMoniker": "VBI\\Fuentes.cs",
-              "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Fuentes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\Fuentes.cs [Dise\u00F1o]",
+              "DocumentIndex": 2,
+              "Title": "Creditos.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Creditos.cs",
+              "RelativeDocumentMoniker": "VBI\\Creditos.cs",
+              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Creditos.cs",
+              "RelativeToolTip": "VBI\\Creditos.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T17:38:11.254Z"
+              "WhenOpened": "2025-07-09T17:48:22.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "Lista_Animales_Terrestres.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs",
+              "RelativeDocumentMoniker": "VBI\\Lista_Animales_Terrestres.cs",
+              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Lista_Animales_Terrestres.cs",
+              "RelativeToolTip": "VBI\\Lista_Animales_Terrestres.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T12:21:18.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Agregar_Animal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs",
               "RelativeDocumentMoniker": "VBI\\Agregar_Animal.cs",
-              "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Agregar_Animal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "VBI\\Agregar_Animal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T21:20:47.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Animales_Terrestres.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs",
               "RelativeDocumentMoniker": "VBI\\Animales_Terrestres.cs",
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\Animales_Terrestres.cs [Dise\u00F1o]",
@@ -218,9 +121,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "catalogo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\catalogo.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\catalogo.cs",
               "RelativeDocumentMoniker": "VBI\\catalogo.cs",
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\catalogo.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\catalogo.cs [Dise\u00F1o]",
@@ -229,9 +132,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "Editar_Animal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Editar_Animal.cs",
+              "DocumentMoniker": "C:\\Users\\fksam\\source\\repos\\VBI\\VBI\\Editar_Animal.cs",
               "RelativeDocumentMoniker": "VBI\\Editar_Animal.cs",
               "ToolTip": "C:\\Users\\981013390\\source\\repos\\VBI\\VBI\\Editar_Animal.cs [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\..\\..\\981013390\\source\\repos\\VBI\\VBI\\Editar_Animal.cs [Dise\u00F1o]",

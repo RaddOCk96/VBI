@@ -16,10 +16,14 @@ namespace VBI
     {
         byte[] imagenByte1;
         byte[] imagenByte2;
+        int id_ecosistema;
 
         public Agregar_Animal()
         {
             InitializeComponent();
+            cbEcosistema.Items.Add("Terrestres");
+            cbEcosistema.Items.Add("Acuáticos");
+            cbEcosistema.Items.Add("Aéreos");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -84,12 +88,14 @@ namespace VBI
             {
 
 
-                if(!string.IsNullOrWhiteSpace(txtAgAlDescripcion.Text) &&
+                if (!string.IsNullOrWhiteSpace(txtAgAlDescripcion.Text) &&
                   !string.IsNullOrWhiteSpace(txtAgCaracteristicas.Text) &&
                   !string.IsNullOrWhiteSpace(txtAgCientifico.Text) &&      //Si todos los campos seleccionados están llenados
-                  !string.IsNullOrWhiteSpace(txtAgHaDescripcion.Text)&&   //procede con el registro
-                  !string.IsNullOrWhiteSpace(txtAgNombre.Text)&&
-                  !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text))
+                  !string.IsNullOrWhiteSpace(txtAgHaDescripcion.Text) &&   //procede con el registro
+                  !string.IsNullOrWhiteSpace(txtAgNombre.Text) &&
+                  !string.IsNullOrWhiteSpace(cbEcosistema.Text)&&
+                  !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text) &&
+                   id_ecosistema != 0)
                 {
 
 
@@ -97,10 +103,10 @@ namespace VBI
                     try
                     {
                         //Concatena los valores en una variable donde se envían a la tabla 
-                        string consultaI = @"INSERT INTO animales_terrestres
-                     (Nombre, NombreCientifico, Reproduccion, Alimentacion, Habitat, Caracteristicas, Imagen, Imagen2)
+                        string consultaI = @"INSERT INTO animales
+                     (Nombre, NombreCientifico, Reproduccion, Alimentacion, Habitat, Caracteristicas, Imagen, Imagen2, id_ecosistema)
                      VALUES 
-                     (@Nombre, @NombreCientifico, @Reproduccion, @Alimentacion, @Habitat, @Caracteristicas, @Imagen, @Imagen2)";
+                     (@Nombre, @NombreCientifico, @Reproduccion, @Alimentacion, @Habitat, @Caracteristicas, @Imagen, @Imagen2, @id_ecosistema)";
 
 
                         using (MySqlCommand comando = new MySqlCommand(consultaI, conexion))
@@ -113,6 +119,7 @@ namespace VBI
                             comando.Parameters.AddWithValue("@Alimentacion", txtAgAlDescripcion.Text);
                             comando.Parameters.AddWithValue("@Habitat", txtAgHaDescripcion.Text);
                             comando.Parameters.AddWithValue("@Caracteristicas", txtAgCaracteristicas.Text);
+                            comando.Parameters.AddWithValue("@id_ecosistema", id_ecosistema);
                             comando.Parameters.AddWithValue("@Imagen", imagenByte1 ?? new byte[0]);   //En caso que no se seleccione una imagen
                             comando.Parameters.AddWithValue("@Imagen2", imagenByte2 ?? new byte[0]);   //Crea un arreglo vacio para no generar errores
 
@@ -220,6 +227,30 @@ namespace VBI
             pbAgImagen2.Image = null;
             imagenByte1 = null;
             imagenByte2 = null;
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEcosistema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(cbEcosistema.Text)
+            {
+                case "Terrestres":
+                    id_ecosistema = 1;
+                    break;
+                case "Acuáticos":
+                    id_ecosistema = 2;
+                    break;
+                case "Aéreos":
+                    id_ecosistema = 3;
+                    break;
+                default:
+                    id_ecosistema = 0;
+                    break;
+            }    
         }
     }
 }

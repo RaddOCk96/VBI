@@ -118,3 +118,4 @@ C:\Users\fksam\Source\Repos\VBI\VBI\bin\Debug\net8.0-windows\runtimes\browser\li
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Agregar_Animal.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Editar_Animal.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Lista_Animales_Terrestres.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Properties.Resources.resources

@@ -49,6 +49,8 @@
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
+            label8 = new Label();
+            cbEcosistema = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).BeginInit();
@@ -83,6 +85,8 @@
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(cbEcosistema);
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtAgReDescripcion);
             panel1.Controls.Add(txtAgAlDescripcion);
@@ -109,9 +113,9 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 1277);
+            panel2.Location = new Point(3, 1376);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1144, 26);
+            panel2.Size = new Size(1144, 104);
             panel2.TabIndex = 27;
             panel2.Paint += panel2_Paint;
             // 
@@ -138,7 +142,7 @@
             // btnAgGuardar
             // 
             btnAgGuardar.Font = new Font("Spectral", 13F);
-            btnAgGuardar.Location = new Point(496, 1221);
+            btnAgGuardar.Location = new Point(496, 1308);
             btnAgGuardar.Name = "btnAgGuardar";
             btnAgGuardar.Size = new Size(163, 50);
             btnAgGuardar.TabIndex = 14;
@@ -149,7 +153,7 @@
             // txtAgHaDescripcion
             // 
             txtAgHaDescripcion.Font = new Font("Spectral", 12F);
-            txtAgHaDescripcion.Location = new Point(805, 789);
+            txtAgHaDescripcion.Location = new Point(803, 890);
             txtAgHaDescripcion.Multiline = true;
             txtAgHaDescripcion.Name = "txtAgHaDescripcion";
             txtAgHaDescripcion.PlaceholderText = "Agrega una descripción";
@@ -159,7 +163,7 @@
             // btnAgImagen2
             // 
             btnAgImagen2.Font = new Font("Spectral", 10F);
-            btnAgImagen2.Location = new Point(496, 1150);
+            btnAgImagen2.Location = new Point(497, 1215);
             btnAgImagen2.Name = "btnAgImagen2";
             btnAgImagen2.Size = new Size(162, 33);
             btnAgImagen2.TabIndex = 19;
@@ -169,7 +173,7 @@
             // 
             // pbAgImagen2
             // 
-            pbAgImagen2.Location = new Point(408, 789);
+            pbAgImagen2.Location = new Point(411, 890);
             pbAgImagen2.Name = "pbAgImagen2";
             pbAgImagen2.Size = new Size(330, 301);
             pbAgImagen2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -202,7 +206,7 @@
             label3.Font = new Font("Spectral", 15F);
             label3.Location = new Point(514, 206);
             label3.Name = "label3";
-            label3.Size = new Size(227, 38);
+            label3.Size = new Size(233, 38);
             label3.TabIndex = 1;
             label3.Text = "Nombre Científico";
             label3.Click += label3_Click;
@@ -210,11 +214,11 @@
             // txtAgCaracteristicas
             // 
             txtAgCaracteristicas.Font = new Font("Spectral", 12F);
-            txtAgCaracteristicas.Location = new Point(70, 789);
+            txtAgCaracteristicas.Location = new Point(82, 890);
             txtAgCaracteristicas.Multiline = true;
             txtAgCaracteristicas.Name = "txtAgCaracteristicas";
             txtAgCaracteristicas.PlaceholderText = "Agrega las características";
-            txtAgCaracteristicas.Size = new Size(269, 282);
+            txtAgCaracteristicas.Size = new Size(269, 301);
             txtAgCaracteristicas.TabIndex = 12;
             txtAgCaracteristicas.TextChanged += textBox5_TextChanged;
             // 
@@ -243,9 +247,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Spectral", 15F);
-            label7.Location = new Point(889, 736);
+            label7.Location = new Point(899, 807);
             label7.Name = "label7";
-            label7.Size = new Size(101, 38);
+            label7.Size = new Size(107, 38);
             label7.TabIndex = 5;
             label7.Text = "Hábitat";
             // 
@@ -253,9 +257,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Spectral", 15F);
-            label6.Location = new Point(108, 736);
+            label6.Location = new Point(126, 807);
             label6.Name = "label6";
-            label6.Size = new Size(183, 38);
+            label6.Size = new Size(190, 38);
             label6.TabIndex = 4;
             label6.Text = "Características";
             label6.Click += label6_Click;
@@ -266,7 +270,7 @@
             label5.Font = new Font("Spectral", 15F);
             label5.Location = new Point(514, 499);
             label5.Name = "label5";
-            label5.Size = new Size(173, 38);
+            label5.Size = new Size(178, 38);
             label5.TabIndex = 3;
             label5.Text = "Reproducción";
             // 
@@ -276,7 +280,7 @@
             label4.Font = new Font("Spectral", 15F);
             label4.Location = new Point(514, 301);
             label4.Name = "label4";
-            label4.Size = new Size(170, 38);
+            label4.Size = new Size(174, 38);
             label4.TabIndex = 2;
             label4.Text = "Alimentación";
             label4.Click += label4_Click;
@@ -287,9 +291,29 @@
             label2.Font = new Font("Spectral", 15F);
             label2.Location = new Point(514, 115);
             label2.Name = "label2";
-            label2.Size = new Size(109, 38);
+            label2.Size = new Size(112, 38);
             label2.TabIndex = 0;
             label2.Text = "Nombre";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Spectral", 15F);
+            label8.Location = new Point(525, 687);
+            label8.Name = "label8";
+            label8.Size = new Size(148, 38);
+            label8.TabIndex = 28;
+            label8.Text = "Ecosistema";
+            label8.Click += label8_Click;
+            // 
+            // cbEcosistema
+            // 
+            cbEcosistema.FormattingEnabled = true;
+            cbEcosistema.Location = new Point(767, 697);
+            cbEcosistema.Name = "cbEcosistema";
+            cbEcosistema.Size = new Size(315, 28);
+            cbEcosistema.TabIndex = 29;
+            cbEcosistema.SelectedIndexChanged += cbEcosistema_SelectedIndexChanged;
             // 
             // Agregar_Animal
             // 
@@ -335,5 +359,7 @@
         private Panel panel2;
         private TextBox txtAgReDescripcion;
         private TextBox txtAgAlDescripcion;
+        private Label label8;
+        private ComboBox cbEcosistema;
     }
 }
