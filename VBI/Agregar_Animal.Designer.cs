@@ -73,6 +73,7 @@
             iconPictureBox1.Size = new Size(54, 51);
             iconPictureBox1.TabIndex = 0;
             iconPictureBox1.TabStop = false;
+            iconPictureBox1.Click += iconPictureBox1_Click;
             // 
             // label1
             // 

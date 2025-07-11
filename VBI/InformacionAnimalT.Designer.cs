@@ -29,18 +29,42 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            label2 = new Label();
+            pbImagen = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbImagen).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Croissant One", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(456, 44);
+            label1.Font = new Font("Croissant One", 40F);
+            label1.Location = new Point(281, 35);
             label1.Name = "label1";
-            label1.Size = new Size(308, 114);
+            label1.Size = new Size(674, 95);
             label1.TabIndex = 0;
             label1.Text = "label1";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Spectral SemiBold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(403, 130);
+            label2.Name = "label2";
+            label2.Size = new Size(417, 50);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
+            // 
+            // pbImagen
+            // 
+            pbImagen.Location = new Point(403, 207);
+            pbImagen.Name = "pbImagen";
+            pbImagen.Size = new Size(443, 326);
+            pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbImagen.TabIndex = 2;
+            pbImagen.TabStop = false;
+            pbImagen.Click += pbImagen_Click;
             // 
             // InformacionAnimalT
             // 
@@ -48,15 +72,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1250, 713);
+            Controls.Add(pbImagen);
+            Controls.Add(label2);
             Controls.Add(label1);
             Name = "InformacionAnimalT";
             Text = "InformacionAnimalT";
+            Load += InformacionAnimalT_Load;
+            ((System.ComponentModel.ISupportInitialize)pbImagen).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private Label label2;
+        private PictureBox pbImagen;
     }
 }

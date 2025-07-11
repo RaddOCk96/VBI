@@ -107,7 +107,7 @@ namespace VBI
                   !string.IsNullOrWhiteSpace(txtAgHaDescripcion.Text) &&   //procede con el registro
                   !string.IsNullOrWhiteSpace(txtAgNombre.Text) &&
                   !string.IsNullOrWhiteSpace(cbEcosistema.Text) &&
-                  !string.IsNullOrWhiteSpace(cbReproduccion.Text)&&
+                  !string.IsNullOrWhiteSpace(cbReproduccion.Text) &&
                   !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text) &&
                    id_ecosistema != 0)
                 {
@@ -241,7 +241,7 @@ namespace VBI
             txtAgCaracteristicas.Clear();
             cbEcosistema.Items.Clear();
             cbAlimentacion.Items.Clear();
-            cbReproduccion.Items.Clear(); 
+            cbReproduccion.Items.Clear();
             pbAgImagen1.Image = null;
             pbAgImagen2.Image = null;
 
@@ -297,7 +297,7 @@ namespace VBI
 
         private void cbReproduccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(cbReproduccion.Text)
+            switch (cbReproduccion.Text)
             {
                 case "Viviparo":
                     Tipo_reproduccion = "Viviparo";
@@ -309,6 +309,14 @@ namespace VBI
                     Tipo_reproduccion = "Ovoviviparo";
                     break;
             }
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
         }
     }
 }

@@ -35,7 +35,9 @@ namespace VBI
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             int idSeleccionado = 2;
             InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
