@@ -33,6 +33,9 @@
             label2 = new Label();
             pbImagen = new PictureBox();
             panel1 = new Panel();
+            pbImagen2 = new PictureBox();
+            label8 = new Label();
+            label7 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -44,6 +47,7 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)pbImagen).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbImagen2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -77,9 +81,9 @@
             // pbImagen
             // 
             pbImagen.BackColor = SystemColors.Window;
-            pbImagen.Location = new Point(534, 346);
+            pbImagen.Location = new Point(505, 428);
             pbImagen.Name = "pbImagen";
-            pbImagen.Size = new Size(417, 326);
+            pbImagen.Size = new Size(478, 370);
             pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImagen.TabIndex = 2;
             pbImagen.TabStop = false;
@@ -89,6 +93,9 @@
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(pbImagen2);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
@@ -106,11 +113,43 @@
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
+            // pbImagen2
+            // 
+            pbImagen2.BackColor = SystemColors.Window;
+            pbImagen2.Location = new Point(897, 1067);
+            pbImagen2.Name = "pbImagen2";
+            pbImagen2.Size = new Size(541, 412);
+            pbImagen2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbImagen2.TabIndex = 14;
+            pbImagen2.TabStop = false;
+            pbImagen2.Click += pictureBox4_Click;
+            // 
+            // label8
+            // 
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
+            label8.Location = new Point(67, 1067);
+            label8.Name = "label8";
+            label8.Size = new Size(800, 395);
+            label8.TabIndex = 13;
+            label8.Text = "label8";
+            label8.Click += label8_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
+            label7.Location = new Point(67, 997);
+            label7.Name = "label7";
+            label7.Size = new Size(196, 41);
+            label7.TabIndex = 12;
+            label7.Text = "Reproducción ";
+            // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(69, 726);
+            pictureBox3.Location = new Point(67, 932);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(1351, 21);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -142,9 +181,9 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(18, 1382);
+            panel3.Location = new Point(27, 1634);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1322, 36);
+            panel3.Size = new Size(1322, 22);
             panel3.TabIndex = 8;
             // 
             // label6
@@ -159,20 +198,22 @@
             // 
             // label5
             // 
+            label5.BorderStyle = BorderStyle.FixedSingle;
             label5.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
             label5.Location = new Point(1022, 346);
             label5.Name = "label5";
-            label5.Size = new Size(398, 326);
+            label5.Size = new Size(398, 504);
             label5.TabIndex = 5;
             label5.Text = "label5";
             label5.Click += label5_Click;
             // 
             // label4
             // 
+            label4.BorderStyle = BorderStyle.FixedSingle;
             label4.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
             label4.Location = new Point(69, 346);
             label4.Name = "label4";
-            label4.Size = new Size(398, 326);
+            label4.Size = new Size(398, 504);
             label4.TabIndex = 4;
             label4.Text = "label4";
             label4.Click += label4_Click;
@@ -191,6 +232,7 @@
             // iconPictureBox1
             // 
             iconPictureBox1.BackColor = Color.FromArgb(3, 225, 132);
+            iconPictureBox1.Cursor = Cursors.Hand;
             iconPictureBox1.ForeColor = SystemColors.ControlText;
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             iconPictureBox1.IconColor = SystemColors.ControlText;
@@ -217,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)pbImagen).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbImagen2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -239,5 +282,8 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Label label7;
+        private PictureBox pbImagen2;
+        private Label label8;
     }
 }

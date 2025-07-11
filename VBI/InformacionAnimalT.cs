@@ -100,8 +100,10 @@ namespace VBI
             ActualizarNombreAnimal(idAnimalActual);
             ActualizarNombreCientifico(idAnimalActual);
             MostrarImagen(idAnimalActual);
+            MostrarImagen2(idAnimalActual);
             AgregarHabitat(idAnimalActual);
             AgregarAlimentacion(idAnimalActual);
+            AgregarReproduccion(idAnimalActual);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -148,6 +150,43 @@ namespace VBI
         private void pbImagen_Click(object sender, EventArgs e)
         {
             MostrarImagen(idAnimalActual);
+        }
+
+
+        private void MostrarImagen2(int idAnimal)     //Método para mostrar la segunda imagen
+        {
+            try
+            {
+                Conexion Rconexion = new Conexion();
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())
+                {
+                    string consulta = "SELECT Imagen2 FROM animales WHERE ID_animal = @id";
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", idAnimal);
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read() && reader["Imagen2"] != DBNull.Value)
+                            {
+                                byte[] datosImagen = (byte[])reader["Imagen2"];
+                                using (MemoryStream ms = new MemoryStream(datosImagen))
+                                {
+                                    pbImagen2.Image = Image.FromStream(ms); // Asignar imagen al PictureBox
+                                }
+                            }
+                            else
+                            {
+                                pbImagen2.Image = null;
+                                MessageBox.Show("No se encontró imagen para este animal.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -242,6 +281,48 @@ namespace VBI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MostrarImagen2(idAnimalActual);
+        }
+
+
+        private void AgregarReproduccion(int id)
+        {
+            try
+            {
+                Conexion Rconexion = new Conexion();
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())     //Crea un objeto y lo guarda en una variable para la conexion 
+                {
+                    string consulta = "SELECT Reproduccion_carac FROM animales WHERE ID_animal =@id";    //Se guarda la consulta en una variable
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);                            //Se realiza la consulta 
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                label8.Text = reader["Reproduccion_carac"].ToString();         //Se reemplaza el texto del label 
+                            }
+                            else
+                            {
+                                label8.Text = "Animal no encontrado";
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            AgregarReproduccion(idAnimalActual);
         }
     }
 }
