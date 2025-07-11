@@ -99,6 +99,7 @@ namespace VBI
         {
             ActualizarNombreAnimal(idAnimalActual);
             ActualizarNombreCientifico(idAnimalActual);
+            MostrarImagen(idAnimalActual);
 
         }
 
@@ -124,7 +125,7 @@ namespace VBI
                                 byte[] datosImagen = (byte[])reader["Imagen"];
                                 using (MemoryStream ms = new MemoryStream(datosImagen))
                                 {
-                                    pbImagen.Image = Image.FromStream(ms); // ✅ Asignar imagen al PictureBox
+                                    pbImagen.Image = Image.FromStream(ms); // Asignar imagen al PictureBox
                                 }
                             }
                             else
