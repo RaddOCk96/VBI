@@ -34,23 +34,23 @@ namespace VBI
         {
             try
             {
-                Conexion Rconexion = new Conexion();
+                Conexion Rconexion = new Conexion();                                 //Crea un objeto y el metodo para establecer conexion 
                 using (MySqlConnection conexion = Rconexion.EstablecerConexion())
                 {
-                    string consulta = "SELECT Nombre FROM animales WHERE ID_animal = @id";
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    string consulta = "SELECT Nombre FROM animales WHERE ID_animal = @id";    //Se almacena la consulta dentro de una variable 
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))      //Se envian de parametros la consulta y la conexion 
                     {
                         comando.Parameters.AddWithValue("@id", id);
 
-                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        using (MySqlDataReader reader = comando.ExecuteReader())          //Lee la información de la base de datos 
                         {
                             if (reader.Read())
                             {
-                                label1.Text = reader["Nombre"].ToString();
+                                label1.Text = reader["Nombre"].ToString();             //Agrega el texto leido al label 
                             }
                             else
                             {
-                                label1.Text = "Animal no encontrado.";
+                                label1.Text = "Animal no encontrado.";               //Sustituye el label en caso de no encontrar el animal 
                             }
                         }
                     }
@@ -58,7 +58,7 @@ namespace VBI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar el nombre: " + ex.Message);
+                MessageBox.Show("Error al consultar el nombre: " + ex.Message);         //Muestra un error 
             }
         }
 
@@ -69,17 +69,17 @@ namespace VBI
             try
             {
                 Conexion Rconexion = new Conexion();
-                using (MySqlConnection conexion = Rconexion.EstablecerConexion())
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())     //Crea un objeto y lo guarda en una variable para la conexion 
                 {
-                    string consulta = "SELECT NombreCientifico FROM animales WHERE ID_animal =@id";
+                    string consulta = "SELECT NombreCientifico FROM animales WHERE ID_animal =@id";    //Se guarda la consulta en una variable
                     using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
                     {
-                        comando.Parameters.AddWithValue("@id", id);
+                        comando.Parameters.AddWithValue("@id", id);                            //Se realiza la consulta 
                         using (MySqlDataReader reader = comando.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                label2.Text = reader["NombreCientifico"].ToString();
+                                label2.Text = reader["NombreCientifico"].ToString();         //Se reemplaza el texto del label 
                             }
                             else
                             {
@@ -95,12 +95,13 @@ namespace VBI
             }
         }
 
-        private void InformacionAnimalT_Load(object sender, EventArgs e)
+        private void InformacionAnimalT_Load(object sender, EventArgs e)     //Cambia todos los valores en cuanto se inicia 
         {
             ActualizarNombreAnimal(idAnimalActual);
             ActualizarNombreCientifico(idAnimalActual);
             MostrarImagen(idAnimalActual);
-
+            AgregarHabitat(idAnimalActual);
+            AgregarAlimentacion(idAnimalActual);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -147,6 +148,100 @@ namespace VBI
         private void pbImagen_Click(object sender, EventArgs e)
         {
             MostrarImagen(idAnimalActual);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Animales_Terrestres ventanaAa = new Animales_Terrestres();
+            ventanaAa.StartPosition = this.StartPosition;
+            ventanaAa.Show();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            AgregarHabitat(idAnimalActual);
+        }
+        private void AgregarHabitat(int id)
+        {
+            try
+            {
+                Conexion Rconexion = new Conexion();
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())     //Crea un objeto y lo guarda en una variable para la conexion 
+                {
+                    string consulta = "SELECT Habitat FROM animales WHERE ID_animal =@id";    //Se guarda la consulta en una variable
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);                            //Se realiza la consulta 
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                label4.Text = reader["Habitat"].ToString();         //Se reemplaza el texto del label 
+                            }
+                            else
+                            {
+                                label4.Text = "Animal no encontrado";
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+
+        private void AgregarAlimentacion(int id)
+        {
+            try
+            {
+                Conexion Rconexion = new Conexion();
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())     //Crea un objeto y lo guarda en una variable para la conexion 
+                {
+                    string consulta = "SELECT Comida FROM animales WHERE ID_animal =@id";    //Se guarda la consulta en una variable
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);                            //Se realiza la consulta 
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                label5.Text = reader["Comida"].ToString();         //Se reemplaza el texto del label 
+                            }
+                            else
+                            {
+                                label5.Text = "Animal no encontrado";
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            AgregarAlimentacion(idAnimalActual);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
