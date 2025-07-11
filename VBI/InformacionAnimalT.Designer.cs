@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Croissant One", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(456, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(308, 114);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            label1.Click += label1_Click;
             // 
             // InformacionAnimalT
             // 
@@ -36,11 +48,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1250, 713);
+            Controls.Add(label1);
             Name = "InformacionAnimalT";
             Text = "InformacionAnimalT";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(1016, 66);
+            button1.Location = new Point(1126, 12);
             button1.Name = "button1";
             button1.Size = new Size(110, 63);
             button1.TabIndex = 0;
@@ -41,12 +42,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(1126, 273);
+            button2.Name = "button2";
+            button2.Size = new Size(110, 63);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Animales_Terrestres
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
+            Controls.Add(button2);
             Controls.Add(button1);
             Name = "Animales_Terrestres";
             Text = "Animales_Terrestres";
@@ -56,5 +68,6 @@
         #endregion
 
         private Button button1;
+        private Button button2;
     }
 }

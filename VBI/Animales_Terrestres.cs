@@ -24,5 +24,23 @@ namespace VBI
             ventanaS.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int idSeleccionado = 1;
+            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
+            ventanaIA.StartPosition = this.StartPosition;
+            ventanaIA.Show();
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int idSeleccionado = 2;
+            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
+            ventanaIA.StartPosition = this.StartPosition;
+            ventanaIA.Show();
+        }
     }
 }
