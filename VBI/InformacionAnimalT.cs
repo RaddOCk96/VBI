@@ -104,6 +104,7 @@ namespace VBI
             AgregarHabitat(idAnimalActual);
             AgregarAlimentacion(idAnimalActual);
             AgregarReproduccion(idAnimalActual);
+            AgregarCaracteristicas(idAnimalActual);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -323,6 +324,41 @@ namespace VBI
         private void label8_Click(object sender, EventArgs e)
         {
             AgregarReproduccion(idAnimalActual);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            AgregarCaracteristicas(idAnimalActual);
+        }
+        private void AgregarCaracteristicas(int id)
+        {
+            try
+            {
+                Conexion Rconexion = new Conexion();
+                using (MySqlConnection conexion = Rconexion.EstablecerConexion())     //Crea un objeto y lo guarda en una variable para la conexion 
+                {
+                    string consulta = "SELECT Caracteristicas FROM animales WHERE ID_animal =@id";    //Se guarda la consulta en una variable
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@id", id);                            //Se realiza la consulta 
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                label10.Text = reader["Caracteristicas"].ToString();         //Se reemplaza el texto del label 
+                            }
+                            else
+                            {
+                                label10.Text = "Animal no encontrado";
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

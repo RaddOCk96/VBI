@@ -33,6 +33,8 @@
             label2 = new Label();
             pbImagen = new PictureBox();
             panel1 = new Panel();
+            label10 = new Label();
+            label9 = new Label();
             pbImagen2 = new PictureBox();
             label8 = new Label();
             label7 = new Label();
@@ -93,6 +95,8 @@
             // 
             panel1.AutoScroll = true;
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
             panel1.Controls.Add(pbImagen2);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
@@ -112,6 +116,27 @@
             panel1.Size = new Size(1490, 657);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
+            // 
+            // label10
+            // 
+            label10.BorderStyle = BorderStyle.FixedSingle;
+            label10.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
+            label10.Location = new Point(67, 1563);
+            label10.Name = "label10";
+            label10.Size = new Size(1371, 274);
+            label10.TabIndex = 16;
+            label10.Text = "label10";
+            label10.Click += label10_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
+            label9.Location = new Point(67, 1506);
+            label9.Name = "label9";
+            label9.Size = new Size(177, 41);
+            label9.TabIndex = 15;
+            label9.Text = "Cacterísticas";
             // 
             // pbImagen2
             // 
@@ -181,9 +206,9 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(27, 1634);
+            panel3.Location = new Point(66, 1949);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1322, 22);
+            panel3.Size = new Size(1322, 29);
             panel3.TabIndex = 8;
             // 
             // label6
@@ -285,5 +310,7 @@
         private Label label7;
         private PictureBox pbImagen2;
         private Label label8;
+        private Label label10;
+        private Label label9;
     }
 }
