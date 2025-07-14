@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionAnimalT));
-            label1 = new Label();
-            label2 = new Label();
-            pbImagen = new PictureBox();
             panel1 = new Panel();
             label10 = new Label();
             label9 = new Label();
@@ -46,50 +43,18 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            pbImagen = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            ((System.ComponentModel.ISupportInitialize)pbImagen).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbImagen2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbImagen).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Croissant One", 40F);
-            label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(408, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(674, 93);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Spectral SemiBold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(534, 127);
-            label2.Name = "label2";
-            label2.Size = new Size(417, 43);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
-            // 
-            // pbImagen
-            // 
-            pbImagen.BackColor = SystemColors.Window;
-            pbImagen.Location = new Point(505, 428);
-            pbImagen.Name = "pbImagen";
-            pbImagen.Size = new Size(478, 370);
-            pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbImagen.TabIndex = 2;
-            pbImagen.TabStop = false;
-            pbImagen.Click += pbImagen_Click;
             // 
             // panel1
             // 
@@ -111,28 +76,26 @@
             panel1.Controls.Add(pbImagen);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(26, 64);
+            panel1.Location = new Point(24, 48);
             panel1.Name = "panel1";
             panel1.Size = new Size(1490, 657);
-            panel1.TabIndex = 3;
-            panel1.Paint += panel1_Paint;
+            panel1.TabIndex = 7;
             // 
             // label10
             // 
             label10.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
-            label10.Location = new Point(67, 1563);
+            label10.Location = new Point(58, 1877);
             label10.Name = "label10";
             label10.Size = new Size(1371, 274);
             label10.TabIndex = 16;
             label10.Text = "label10";
-            label10.Click += label10_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
             label9.ForeColor = Color.DarkGreen;
-            label9.Location = new Point(67, 1506);
+            label9.Location = new Point(58, 1807);
             label9.Name = "label9";
             label9.Size = new Size(177, 41);
             label9.TabIndex = 15;
@@ -141,30 +104,28 @@
             // pbImagen2
             // 
             pbImagen2.BackColor = SystemColors.Window;
-            pbImagen2.Location = new Point(897, 1039);
+            pbImagen2.Location = new Point(891, 1327);
             pbImagen2.Name = "pbImagen2";
             pbImagen2.Size = new Size(541, 412);
             pbImagen2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbImagen2.TabIndex = 14;
             pbImagen2.TabStop = false;
-            pbImagen2.Click += pictureBox4_Click;
             // 
             // label8
             // 
             label8.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
-            label8.Location = new Point(67, 1067);
+            label8.Location = new Point(58, 1391);
             label8.Name = "label8";
-            label8.Size = new Size(800, 395);
+            label8.Size = new Size(800, 308);
             label8.TabIndex = 13;
             label8.Text = "label8";
-            label8.Click += label8_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
             label7.ForeColor = Color.DarkGreen;
-            label7.Location = new Point(67, 997);
+            label7.Location = new Point(58, 1309);
             label7.Name = "label7";
             label7.Size = new Size(196, 41);
             label7.TabIndex = 12;
@@ -174,7 +135,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(67, 932);
+            pictureBox3.Location = new Point(72, 1194);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(1351, 21);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -191,7 +152,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -206,9 +166,9 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(66, 1949);
+            panel3.Location = new Point(58, 2391);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1322, 29);
+            panel3.Size = new Size(1322, 42);
             panel3.TabIndex = 8;
             // 
             // label6
@@ -216,7 +176,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
             label6.ForeColor = Color.DarkGreen;
-            label6.Location = new Point(1131, 284);
+            label6.Location = new Point(72, 853);
             label6.Name = "label6";
             label6.Size = new Size(186, 41);
             label6.TabIndex = 6;
@@ -225,34 +185,63 @@
             // label5
             // 
             label5.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
-            label5.Location = new Point(1022, 346);
+            label5.Location = new Point(72, 922);
             label5.Name = "label5";
-            label5.Size = new Size(398, 504);
+            label5.Size = new Size(1360, 169);
             label5.TabIndex = 5;
             label5.Text = "label5";
-            label5.Click += label5_Click;
             // 
             // label4
             // 
             label4.Font = new Font("Spectral SemiBold", 14F, FontStyle.Bold);
-            label4.Location = new Point(69, 346);
+            label4.Location = new Point(604, 415);
             label4.Name = "label4";
-            label4.Size = new Size(398, 504);
+            label4.Size = new Size(785, 245);
             label4.TabIndex = 4;
             label4.Text = "label4";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Spectral SemiBold", 16F, FontStyle.Bold);
             label3.ForeColor = Color.DarkGreen;
-            label3.Location = new Point(182, 284);
+            label3.Location = new Point(604, 337);
             label3.Name = "label3";
             label3.Size = new Size(119, 41);
             label3.TabIndex = 3;
             label3.Text = "Hábitat ";
-            label3.Click += label3_Click;
+            // 
+            // pbImagen
+            // 
+            pbImagen.BackColor = SystemColors.Window;
+            pbImagen.Location = new Point(72, 337);
+            pbImagen.Name = "pbImagen";
+            pbImagen.Size = new Size(478, 370);
+            pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbImagen.TabIndex = 2;
+            pbImagen.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Croissant One", 40F);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(408, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(674, 94);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Spectral SemiBold", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ControlDark;
+            label2.Location = new Point(534, 129);
+            label2.Name = "label2";
+            label2.Size = new Size(417, 41);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // iconPictureBox1
             // 
@@ -262,13 +251,12 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 46;
-            iconPictureBox1.Location = new Point(26, 12);
+            iconPictureBox1.IconSize = 39;
+            iconPictureBox1.Location = new Point(24, 3);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(66, 46);
-            iconPictureBox1.TabIndex = 4;
+            iconPictureBox1.Size = new Size(41, 39);
+            iconPictureBox1.TabIndex = 8;
             iconPictureBox1.TabStop = false;
-            iconPictureBox1.Click += iconPictureBox1_Click;
             // 
             // InformacionAnimalT
             // 
@@ -283,36 +271,35 @@
             Name = "InformacionAnimalT";
             Text = "InformacionAnimalT";
             Load += InformacionAnimalT_Load;
-            ((System.ComponentModel.ISupportInitialize)pbImagen).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbImagen2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbImagen).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
-        private PictureBox pbImagen;
         private Panel panel1;
-        private Label label3;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Label label4;
-        private Label label6;
-        private Label label5;
-        private Panel panel3;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private Label label7;
-        private PictureBox pbImagen2;
-        private Label label8;
         private Label label10;
         private Label label9;
+        private PictureBox pbImagen2;
+        private Label label8;
+        private Label label7;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private Panel panel3;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private PictureBox pbImagen;
+        private Label label1;
+        private Label label2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
