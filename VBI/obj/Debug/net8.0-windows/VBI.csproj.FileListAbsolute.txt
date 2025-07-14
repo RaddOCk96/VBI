@@ -120,3 +120,5 @@ C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Editar_Animal.r
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Lista_Animales_Terrestres.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Properties.Resources.resources
 C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.InformacionAnimalT.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.Animales_Acuaticos.resources
+C:\Users\fksam\Source\Repos\VBI\VBI\obj\Debug\net8.0-windows\VBI.InformacionAnimalA.resources

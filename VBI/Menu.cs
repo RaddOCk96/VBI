@@ -1,7 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.Reflection.Emit;
-using System.Windows.Forms;
-
 namespace VBI
 {
     public partial class Menu : Form
@@ -9,6 +5,7 @@ namespace VBI
         public Menu()
         {
             InitializeComponent();
+            
 
         }
 
@@ -17,6 +14,7 @@ namespace VBI
 
         }
 
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -24,7 +22,7 @@ namespace VBI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            catalogo ventana1 = new catalogo();
+            Catalogo ventana1 = new Catalogo();
             ventana1.StartPosition = this.StartPosition;
             ventana1.Size = this.Size;
             ventana1.Show();

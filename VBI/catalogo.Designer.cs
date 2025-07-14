@@ -1,6 +1,6 @@
 ﻿namespace VBI
 {
-    partial class catalogo
+    partial class Catalogo
     {
         /// <summary>
         /// Required designer variable.

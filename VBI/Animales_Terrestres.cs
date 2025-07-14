@@ -35,7 +35,7 @@ namespace VBI
 
         }
 
-        
+
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -43,6 +43,11 @@ namespace VBI
             InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
             ventanaIA.StartPosition = this.StartPosition;
             ventanaIA.Show();
+        }
+
+        private void Animales_Terrestres_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,25 +12,38 @@ using VBI.Clase;
 
 namespace VBI
 {
-    public partial class InformacionAnimalT : Form
+    public partial class InformacionAnimalA : Form
     {
-
         private int idAnimalActual;
 
-        public InformacionAnimalT(int id)
+        public InformacionAnimalA(int id)
         {
             InitializeComponent();
             idAnimalActual = id;
-
+            this.Load += new EventHandler(InformacionAnimalA_Load);
 
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
+        private void InformacionAnimalA_Load(object sender, EventArgs e)     //Cambia todos los valores en cuanto se inicia 
         {
             ActualizarNombreAnimal(idAnimalActual);
+            ActualizarNombreCientifico(idAnimalActual);
+            MostrarImagen(idAnimalActual);
+            MostrarImagen2(idAnimalActual);
+            AgregarHabitat(idAnimalActual);
+            AgregarAlimentacion(idAnimalActual);
+            AgregarReproduccion(idAnimalActual);
+            AgregarCaracteristicas(idAnimalActual);
         }
 
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Animales_Acuaticos ventanaA = new Animales_Acuaticos();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
+        }
         private void ActualizarNombreAnimal(int id)
         {
             try
@@ -62,9 +75,6 @@ namespace VBI
                 MessageBox.Show("Error al consultar el nombre: " + ex.Message);         //Muestra un error 
             }
         }
-
-
-
         private void ActualizarNombreCientifico(int id)
         {
             try
@@ -94,23 +104,6 @@ namespace VBI
             {
 
             }
-        }
-
-        private void InformacionAnimalT_Load(object sender, EventArgs e)     //Cambia todos los valores en cuanto se inicia 
-        {
-            ActualizarNombreAnimal(idAnimalActual);
-            ActualizarNombreCientifico(idAnimalActual);
-            MostrarImagen(idAnimalActual);
-            MostrarImagen2(idAnimalActual);
-            AgregarHabitat(idAnimalActual);
-            AgregarAlimentacion(idAnimalActual);
-            AgregarReproduccion(idAnimalActual);
-            AgregarCaracteristicas(idAnimalActual);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            ActualizarNombreCientifico(idAnimalActual);
         }
         private void MostrarImagen(int idAnimal)
         {
@@ -147,14 +140,6 @@ namespace VBI
                 MessageBox.Show("Error al cargar la imagen: " + ex.Message);
             }
         }
-
-
-        private void pbImagen_Click(object sender, EventArgs e)
-        {
-            MostrarImagen(idAnimalActual);
-        }
-
-
         private void MostrarImagen2(int idAnimal)     //Método para mostrar la segunda imagen
         {
             try
@@ -190,29 +175,6 @@ namespace VBI
                 MessageBox.Show("Error al cargar la imagen: " + ex.Message);
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-            Animales_Terrestres ventanaAa = new Animales_Terrestres();
-            ventanaAa.StartPosition = this.StartPosition;
-            ventanaAa.Show();
-            this.Close();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            AgregarHabitat(idAnimalActual);
-        }
         private void AgregarHabitat(int id)
         {
             try
@@ -243,8 +205,6 @@ namespace VBI
 
             }
         }
-
-
         private void AgregarAlimentacion(int id)
         {
             try
@@ -275,22 +235,6 @@ namespace VBI
 
             }
         }
-        private void label5_Click(object sender, EventArgs e)
-        {
-            AgregarAlimentacion(idAnimalActual);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            MostrarImagen2(idAnimalActual);
-        }
-
-
         private void AgregarReproduccion(int id)
         {
             try
@@ -322,15 +266,6 @@ namespace VBI
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-            AgregarReproduccion(idAnimalActual);
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            AgregarCaracteristicas(idAnimalActual);
-        }
         private void AgregarCaracteristicas(int id)
         {
             try
@@ -360,6 +295,50 @@ namespace VBI
             {
 
             }
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ActualizarNombreAnimal(idAnimalActual);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ActualizarNombreCientifico(idAnimalActual);
+        }
+
+        private void pbImagen_Click(object sender, EventArgs e)
+        {
+            MostrarImagen(idAnimalActual);
+        }
+
+        private void pbImagen2_Click(object sender, EventArgs e)
+        {
+            MostrarImagen2(idAnimalActual);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            AgregarHabitat(idAnimalActual);
+        }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            AgregarAlimentacion(idAnimalActual);
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            AgregarReproduccion(idAnimalActual);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            AgregarCaracteristicas(idAnimalActual);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

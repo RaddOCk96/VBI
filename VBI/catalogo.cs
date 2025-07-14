@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace VBI
 {
-    public partial class catalogo : Form
+    public partial class Catalogo : Form
     {
-        public catalogo()
+        public Catalogo()
         {
             InitializeComponent();
+            
         }
+
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Animales_Acuaticos ventanaAA = new Animales_Acuaticos();
+            ventanaAA.StartPosition = this.StartPosition;
+            ventanaAA.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
