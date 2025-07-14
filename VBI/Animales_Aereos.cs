@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace VBI
 {
-    public partial class Animales_Acuaticos : Form
+    public partial class Animales_Aereos : Form
     {
-        public Animales_Acuaticos()
+        public Animales_Aereos()
         {
             InitializeComponent();
         }
 
-        private void Animales_Acuaticos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            int idAnimalActual = 3;
-            InformacionAnimalA ventanaS = new InformacionAnimalA(idAnimalActual);
+            int idAnimalActual = 4;
+            InformacionAnimalAE ventanaS = new InformacionAnimalAE(idAnimalActual);
             ventanaS.StartPosition = this.StartPosition;
             ventanaS.Show();
             this.Hide();
-
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)

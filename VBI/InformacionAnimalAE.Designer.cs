@@ -1,6 +1,6 @@
 ﻿namespace VBI
 {
-    partial class InformacionAnimalA
+    partial class InformacionAnimalAE
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionAnimalA));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionAnimalAE));
             panel1 = new Panel();
             label10 = new Label();
             label9 = new Label();
@@ -79,7 +79,7 @@
             panel1.Location = new Point(24, 48);
             panel1.Name = "panel1";
             panel1.Size = new Size(1490, 657);
-            panel1.TabIndex = 4;
+            panel1.TabIndex = 5;
             // 
             // label10
             // 
@@ -215,7 +215,6 @@
             label3.Size = new Size(119, 41);
             label3.TabIndex = 3;
             label3.Text = "Hábitat ";
-            label3.Click += label3_Click;
             // 
             // pbImagen
             // 
@@ -254,7 +253,7 @@
             // 
             // iconPictureBox1
             // 
-            iconPictureBox1.BackColor = Color.DodgerBlue;
+            iconPictureBox1.BackColor = Color.FromArgb(255, 189, 89);
             iconPictureBox1.Cursor = Cursors.Hand;
             iconPictureBox1.ForeColor = SystemColors.ControlText;
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
@@ -264,22 +263,21 @@
             iconPictureBox1.Location = new Point(24, 3);
             iconPictureBox1.Name = "iconPictureBox1";
             iconPictureBox1.Size = new Size(41, 39);
-            iconPictureBox1.TabIndex = 5;
+            iconPictureBox1.TabIndex = 6;
             iconPictureBox1.TabStop = false;
             iconPictureBox1.Click += iconPictureBox1_Click;
             // 
-            // InformacionAnimalA
+            // InformacionAnimalAE
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DodgerBlue;
+            BackColor = Color.FromArgb(255, 189, 89);
             ClientSize = new Size(1539, 753);
             Controls.Add(iconPictureBox1);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            Name = "InformacionAnimalA";
-            Text = "InformacionAnimalA";
+            Name = "InformacionAnimalAE";
+            Text = "InformacionAnimalAE";
+            Load += InformacionAnimalAE_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbImagen2).EndInit();

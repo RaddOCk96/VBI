@@ -31,7 +31,7 @@ namespace VBI
             InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
             ventanaIA.StartPosition = this.StartPosition;
             ventanaIA.Show();
-
+            this.Hide();
 
         }
 
@@ -43,11 +43,20 @@ namespace VBI
             InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
             ventanaIA.StartPosition = this.StartPosition;
             ventanaIA.Show();
+            this.Hide();
         }
 
         private void Animales_Terrestres_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Catalogo ventanaA = new Catalogo();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
         }
     }
 }

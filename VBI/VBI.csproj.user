@@ -7,6 +7,9 @@
     <Compile Update="Animales_Acuaticos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Animales_Aereos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Animales_Terrestres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="InformacionAnimalA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InformacionAnimalAE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="InformacionAnimalT.cs">

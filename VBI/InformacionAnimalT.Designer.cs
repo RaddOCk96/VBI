@@ -278,6 +278,8 @@
             ClientSize = new Size(1539, 753);
             Controls.Add(iconPictureBox1);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "InformacionAnimalT";
             Text = "InformacionAnimalT";
             Load += InformacionAnimalT_Load;

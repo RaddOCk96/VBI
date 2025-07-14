@@ -77,6 +77,7 @@
             button3.TabIndex = 3;
             button3.Text = "Aéreos ";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -90,7 +91,7 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // catalogo
+            // Catalogo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -103,7 +104,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "catalogo";
+            Name = "Catalogo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "catalogo";
             Load += catalogo_Load;

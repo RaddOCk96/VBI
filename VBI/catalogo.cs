@@ -15,7 +15,7 @@ namespace VBI
         public Catalogo()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -51,6 +51,14 @@ namespace VBI
         private void catalogo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Animales_Aereos ventanaS = new Animales_Aereos();
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Show();
+            this.Hide();
         }
     }
 }
