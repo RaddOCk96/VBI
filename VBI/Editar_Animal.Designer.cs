@@ -31,6 +31,10 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
+            label8 = new Label();
+            cbEdEcosistema = new ComboBox();
+            cbEdReproduccion = new ComboBox();
+            cbEdAlimentacion = new ComboBox();
             btnEdImagen2 = new Button();
             pbEdImagen2 = new PictureBox();
             pbEdImagen1 = new PictureBox();
@@ -40,8 +44,8 @@
             txtEdHabitat = new TextBox();
             label3 = new Label();
             txtEdCaracteristicas = new TextBox();
-            txtEdReproduccion = new TextBox();
-            txtEdAlimentacion = new TextBox();
+            txtEdReDescripcion = new TextBox();
+            txtEdAlDescripcion = new TextBox();
             txtEdCientifico = new TextBox();
             txtEdNombre = new TextBox();
             label7 = new Label();
@@ -49,10 +53,6 @@
             label5 = new Label();
             label4 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbEdImagen2).BeginInit();
@@ -87,9 +87,9 @@
             // 
             panel1.AutoScroll = true;
             panel1.Controls.Add(label8);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cbEdEcosistema);
+            panel1.Controls.Add(cbEdReproduccion);
+            panel1.Controls.Add(cbEdAlimentacion);
             panel1.Controls.Add(btnEdImagen2);
             panel1.Controls.Add(pbEdImagen2);
             panel1.Controls.Add(pbEdImagen1);
@@ -99,8 +99,8 @@
             panel1.Controls.Add(txtEdHabitat);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtEdCaracteristicas);
-            panel1.Controls.Add(txtEdReproduccion);
-            panel1.Controls.Add(txtEdAlimentacion);
+            panel1.Controls.Add(txtEdReDescripcion);
+            panel1.Controls.Add(txtEdAlDescripcion);
             panel1.Controls.Add(txtEdCientifico);
             panel1.Controls.Add(txtEdNombre);
             panel1.Controls.Add(label7);
@@ -113,6 +113,43 @@
             panel1.Size = new Size(1171, 559);
             panel1.TabIndex = 3;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Spectral", 15F);
+            label8.Location = new Point(556, 970);
+            label8.Name = "label8";
+            label8.Size = new Size(144, 38);
+            label8.TabIndex = 23;
+            label8.Text = "Ecosistema";
+            // 
+            // cbEdEcosistema
+            // 
+            cbEdEcosistema.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
+            cbEdEcosistema.FormattingEnabled = true;
+            cbEdEcosistema.Location = new Point(767, 972);
+            cbEdEcosistema.Name = "cbEdEcosistema";
+            cbEdEcosistema.Size = new Size(315, 38);
+            cbEdEcosistema.TabIndex = 22;
+            // 
+            // cbEdReproduccion
+            // 
+            cbEdReproduccion.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
+            cbEdReproduccion.FormattingEnabled = true;
+            cbEdReproduccion.Location = new Point(765, 703);
+            cbEdReproduccion.Name = "cbEdReproduccion";
+            cbEdReproduccion.Size = new Size(315, 38);
+            cbEdReproduccion.TabIndex = 21;
+            // 
+            // cbEdAlimentacion
+            // 
+            cbEdAlimentacion.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
+            cbEdAlimentacion.FormattingEnabled = true;
+            cbEdAlimentacion.Location = new Point(769, 420);
+            cbEdAlimentacion.Name = "cbEdAlimentacion";
+            cbEdAlimentacion.Size = new Size(315, 38);
+            cbEdAlimentacion.TabIndex = 20;
+            // 
             // btnEdImagen2
             // 
             btnEdImagen2.Font = new Font("Spectral", 10F);
@@ -122,6 +159,7 @@
             btnEdImagen2.TabIndex = 19;
             btnEdImagen2.Text = "Cargar Imagen";
             btnEdImagen2.UseVisualStyleBackColor = true;
+            btnEdImagen2.Click += btnEdImagen2_Click;
             // 
             // pbEdImagen2
             // 
@@ -155,6 +193,7 @@
             btnEdImagen.TabIndex = 15;
             btnEdImagen.Text = "Cargar Imagen";
             btnEdImagen.UseVisualStyleBackColor = true;
+            btnEdImagen.Click += btnEdImagen_Click;
             // 
             // btnEdGuardar
             // 
@@ -165,6 +204,7 @@
             btnEdGuardar.TabIndex = 14;
             btnEdGuardar.Text = "Guardar";
             btnEdGuardar.UseVisualStyleBackColor = true;
+            btnEdGuardar.Click += btnEdGuardar_Click;
             // 
             // txtEdHabitat
             // 
@@ -194,23 +234,23 @@
             txtEdCaracteristicas.Size = new Size(269, 282);
             txtEdCaracteristicas.TabIndex = 12;
             // 
-            // txtEdReproduccion
+            // txtEdReDescripcion
             // 
-            txtEdReproduccion.Font = new Font("Spectral", 12F);
-            txtEdReproduccion.Location = new Point(765, 765);
-            txtEdReproduccion.Multiline = true;
-            txtEdReproduccion.Name = "txtEdReproduccion";
-            txtEdReproduccion.Size = new Size(317, 138);
-            txtEdReproduccion.TabIndex = 11;
+            txtEdReDescripcion.Font = new Font("Spectral", 12F);
+            txtEdReDescripcion.Location = new Point(765, 765);
+            txtEdReDescripcion.Multiline = true;
+            txtEdReDescripcion.Name = "txtEdReDescripcion";
+            txtEdReDescripcion.Size = new Size(317, 138);
+            txtEdReDescripcion.TabIndex = 11;
             // 
-            // txtEdAlimentacion
+            // txtEdAlDescripcion
             // 
-            txtEdAlimentacion.Font = new Font("Spectral", 12F);
-            txtEdAlimentacion.Location = new Point(767, 486);
-            txtEdAlimentacion.Multiline = true;
-            txtEdAlimentacion.Name = "txtEdAlimentacion";
-            txtEdAlimentacion.Size = new Size(317, 138);
-            txtEdAlimentacion.TabIndex = 10;
+            txtEdAlDescripcion.Font = new Font("Spectral", 12F);
+            txtEdAlDescripcion.Location = new Point(767, 486);
+            txtEdAlDescripcion.Multiline = true;
+            txtEdAlDescripcion.Name = "txtEdAlDescripcion";
+            txtEdAlDescripcion.Size = new Size(317, 138);
+            txtEdAlDescripcion.TabIndex = 10;
             // 
             // txtEdCientifico
             // 
@@ -278,43 +318,6 @@
             label2.TabIndex = 0;
             label2.Text = "Nombre";
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(769, 420);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(315, 38);
-            comboBox1.TabIndex = 20;
-            // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(765, 703);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(315, 38);
-            comboBox2.TabIndex = 21;
-            // 
-            // comboBox3
-            // 
-            comboBox3.Font = new Font("Spectral SemiBold", 11.999999F, FontStyle.Bold);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(767, 972);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(315, 38);
-            comboBox3.TabIndex = 22;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Spectral", 15F);
-            label8.Location = new Point(556, 970);
-            label8.Name = "label8";
-            label8.Size = new Size(144, 38);
-            label8.TabIndex = 23;
-            label8.Text = "Ecosistema";
-            // 
             // Editar_Animal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -350,8 +353,8 @@
         private TextBox txtEdHabitat;
         private Label label3;
         private TextBox txtEdCaracteristicas;
-        private TextBox txtEdReproduccion;
-        private TextBox txtEdAlimentacion;
+        private TextBox txtEdReDescripcion;
+        private TextBox txtEdAlDescripcion;
         private TextBox txtEdCientifico;
         private TextBox txtEdNombre;
         private Label label7;
@@ -360,8 +363,8 @@
         private Label label4;
         private Label label2;
         private Label label8;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cbEdEcosistema;
+        private ComboBox cbEdReproduccion;
+        private ComboBox cbEdAlimentacion;
     }
 }
