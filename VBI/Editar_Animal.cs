@@ -29,9 +29,9 @@ namespace VBI
 
 
             // Carga de opciones al iniciar
-            cbEdEcosistema.Items.Add("Terrestres");
-            cbEdEcosistema.Items.Add("Acuáticos");
-            cbEdEcosistema.Items.Add("Aéreos");
+            cbEcosistema.Items.Add("Terrestres");
+            cbEcosistema.Items.Add("Acuáticos");
+            cbEcosistema.Items.Add("Aéreos");
 
             cbEdAlimentacion.Items.Add("Herbivoro");
             cbEdAlimentacion.Items.Add("Carnivoro");
@@ -81,7 +81,7 @@ namespace VBI
                             cbEdReproduccion.Text = reader["Tipo_reproduccion"].ToString();
                             cbEdAlimentacion.Text = reader["Tipo_Alimentacion"].ToString();
                             id_ecosistema = Convert.ToInt32(reader["id_ecosistema"]);
-                            cbEdEcosistema.SelectedIndex = id_ecosistema - 1;
+                            cbEcosistema.SelectedIndex = id_ecosistema - 1;
 
                         }
 
@@ -123,15 +123,7 @@ namespace VBI
 
         private void btnEdGuardar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtEdNombre.Text) &&
-            !string.IsNullOrWhiteSpace(txtEdCientifico.Text) &&
-            !string.IsNullOrWhiteSpace(EdTipo_Alimentacion) &&
-            !string.IsNullOrWhiteSpace(txtEdAlDescripcion.Text) &&
-            !string.IsNullOrWhiteSpace(EdTipo_reproduccion) &&
-            !string.IsNullOrWhiteSpace(txtEdReDescripcion.Text) &&
-            !string.IsNullOrWhiteSpace(txtEdHabitat.Text) &&
-            !string.IsNullOrWhiteSpace(txtEdCaracteristicas.Text) &&
-            id_ecosistema != 0)
+            if (!string.IsNullOrWhiteSpace(txtEdNombre.Text))
 
             {
                 Conexion reconexion3 = new Conexion();
@@ -249,6 +241,73 @@ namespace VBI
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Show();
             this.Close();
+        }
+        private void cbEcosistema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbEcosistema.Text)
+            {
+                case "Terrestres":
+                    id_ecosistema = 1;
+                    break;
+                case "Acuáticos":
+                    id_ecosistema = 2;
+                    break;
+                case "Aéreos":
+                    id_ecosistema = 3;
+                    break;
+                default:
+                    id_ecosistema = 0;
+                    break;
+            }
+        }
+        private void cbAlimentacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbEdAlimentacion.Text)
+            {
+                case "Herbivoro":
+                    EdTipo_Alimentacion = "Herbivoro";
+                    break;
+                case "Carnivoros":
+                    EdTipo_Alimentacion = "Carnivoro";
+                    break;
+                case "Omnivoro":
+                    EdTipo_Alimentacion = "Omnivoro";
+                    break;
+                case "Insectivoro":
+                    EdTipo_Alimentacion = "Insectivoro";
+                    break;
+            }
+        }
+
+        private void cbReproduccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbEdReproduccion.Text)
+            {
+                case "Viviparo":
+                    EdTipo_reproduccion = "Viviparo";
+                    break;
+                case "Oviparo":
+                    EdTipo_reproduccion = "Oviparo";
+                    break;
+                case "Ovoviviparo":
+                    EdTipo_reproduccion = "Ovoviviparo";
+                    break;
+            }
+        }
+
+        private void cbEdReproduccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EdTipo_reproduccion = cbEdReproduccion.Text;
+        }
+
+        private void cbEdAlimentacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EdTipo_Alimentacion = cbEdAlimentacion.Text;
+        }
+
+        private void cbEcosistema_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
