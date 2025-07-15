@@ -77,6 +77,7 @@
             dgvAt.RowHeadersWidth = 51;
             dgvAt.Size = new Size(710, 618);
             dgvAt.TabIndex = 0;
+            dgvAt.CellContentClick += dgvAt_CellContentClick;
             // 
             // iconPictureBox4
             // 
@@ -146,6 +147,7 @@
             Controls.Add(iconPictureBox1);
             Name = "Lista_Animales_Terrestres";
             Text = "Lista_Animales_Terrestres";
+            Load += Lista_Animales_Terrestres_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvAt).EndInit();
