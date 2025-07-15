@@ -257,6 +257,7 @@
             iconPictureBox1.Size = new Size(41, 39);
             iconPictureBox1.TabIndex = 8;
             iconPictureBox1.TabStop = false;
+            iconPictureBox1.Click += iconPictureBox1_Click_1;
             // 
             // InformacionAnimalT
             // 
