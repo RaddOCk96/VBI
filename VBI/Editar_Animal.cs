@@ -242,5 +242,13 @@ namespace VBI
                 MessageBox.Show("Ocurrió un error al cargar la imagen 1: \n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
+        }
     }
 }

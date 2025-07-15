@@ -72,6 +72,7 @@
             iconPictureBox1.Size = new Size(54, 51);
             iconPictureBox1.TabIndex = 0;
             iconPictureBox1.TabStop = false;
+            iconPictureBox1.Click += iconPictureBox1_Click;
             // 
             // label1
             // 
@@ -166,6 +167,7 @@
             pbEdImagen2.Location = new Point(421, 1181);
             pbEdImagen2.Name = "pbEdImagen2";
             pbEdImagen2.Size = new Size(330, 301);
+            pbEdImagen2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEdImagen2.TabIndex = 18;
             pbEdImagen2.TabStop = false;
             // 
@@ -174,6 +176,7 @@
             pbEdImagen1.Location = new Point(127, 115);
             pbEdImagen1.Name = "pbEdImagen1";
             pbEdImagen1.Size = new Size(330, 301);
+            pbEdImagen1.SizeMode = PictureBoxSizeMode.StretchImage;
             pbEdImagen1.TabIndex = 17;
             pbEdImagen1.TabStop = false;
             // 

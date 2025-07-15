@@ -75,17 +75,42 @@ namespace VBI
             if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAt.Rows.Count)
                 return;
 
-            if (dgvAt.Columns[e.ColumnIndex].Name == "Editar")
+            string col = dgvAt.Columns[e.ColumnIndex].Name;
+
+            if (col == "Editar")
             {
                 dgvAt.Rows[e.RowIndex].Cells["Editar"].Value =
                     new Bitmap(Properties.Resources.boligrafo_hover, new Size(40, 40));
             }
-            else if (dgvAt.Columns[e.ColumnIndex].Name == "Eliminar")
+            else if (col == "Eliminar")
             {
                 dgvAt.Rows[e.RowIndex].Cells["Eliminar"].Value =
                     new Bitmap(Properties.Resources.basura_hover, new Size(40, 40));
             }
+        }
 
+
+
+        private void dgvAt_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvAt.Rows)
+            {
+                bool seleccionado = row.Selected;
+
+                if (row.Cells["Editar"] is DataGridViewImageCell editarCell &&
+                    row.Cells["Eliminar"] is DataGridViewImageCell eliminarCell)
+                {
+                    editarCell.Tag = seleccionado ? "blanco" : "verde"; // guardar estado
+                    editarCell.Value = seleccionado
+                        ? new Bitmap(Properties.Resources.boligrafo_blanco, new Size(40, 40))
+                        : new Bitmap(Properties.Resources.boligrafo_cuadrado, new Size(40, 40));
+
+                    eliminarCell.Tag = seleccionado ? "blanco" : "verde";
+                    eliminarCell.Value = seleccionado
+                        ? new Bitmap(Properties.Resources.basura_blanco, new Size(40, 40))
+                        : new Bitmap(Properties.Resources.basura_circular, new Size(40, 40));
+                }
+            }
         }
 
         //Al pasar el cursor a los iconos se le cambia el color
@@ -94,18 +119,22 @@ namespace VBI
             if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAt.Rows.Count)
                 return;
 
-            if (dgvAt.Columns[e.ColumnIndex].Name == "Editar")
+            DataGridViewRow row = dgvAt.Rows[e.RowIndex];
+            string col = dgvAt.Columns[e.ColumnIndex].Name;
+
+            if (col == "Editar" && row.Cells["Editar"] is DataGridViewImageCell editarCell)
             {
-                dgvAt.Rows[e.RowIndex].Cells["Editar"].Value =
-                    new Bitmap(Properties.Resources.boligrafo_cuadrado, new Size(40, 40));
-            }
-            else if (dgvAt.Columns[e.ColumnIndex].Name == "Eliminar")
-            {
-                dgvAt.Rows[e.RowIndex].Cells["Eliminar"].Value =
-                    new Bitmap(Properties.Resources.basura_circular, new Size(40, 40));
+                editarCell.Value = editarCell.Tag?.ToString() == "blanco"
+                    ? new Bitmap(Properties.Resources.boligrafo_blanco, new Size(40, 40))
+                    : new Bitmap(Properties.Resources.boligrafo_cuadrado, new Size(40, 40));
             }
 
-
+            else if (col == "Eliminar" && row.Cells["Eliminar"] is DataGridViewImageCell eliminarCell)
+            {
+                eliminarCell.Value = eliminarCell.Tag?.ToString() == "blanco"
+                    ? new Bitmap(Properties.Resources.basura_blanco, new Size(40, 40))
+                    : new Bitmap(Properties.Resources.basura_circular, new Size(40, 40));
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -227,6 +256,7 @@ namespace VBI
         {
             dgvAt.CellMouseEnter += dgvAt_CellMouseEnter;
             dgvAt.CellMouseLeave += dgvAt_CellMouseLeave;
+            dgvAt.SelectionChanged += dgvAt_SelectionChanged;
         }
     }
 }

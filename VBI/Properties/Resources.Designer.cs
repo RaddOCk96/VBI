@@ -63,6 +63,16 @@ namespace VBI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap basura_blanco {
+            get {
+                object obj = ResourceManager.GetObject("basura_blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap basura_circular {
             get {
                 object obj = ResourceManager.GetObject("basura_circular", resourceCulture);
@@ -76,6 +86,16 @@ namespace VBI.Properties {
         internal static System.Drawing.Bitmap basura_hover {
             get {
                 object obj = ResourceManager.GetObject("basura_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boligrafo_blanco {
+            get {
+                object obj = ResourceManager.GetObject("boligrafo_blanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
