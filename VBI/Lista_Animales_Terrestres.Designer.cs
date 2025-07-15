@@ -31,15 +31,11 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
             dgvAt = new DataGridView();
-            iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAt).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +60,7 @@
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(dgvAt);
-            panel1.Location = new Point(280, 186);
+            panel1.Location = new Point(300, 135);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 505);
             panel1.TabIndex = 1;
@@ -72,40 +68,12 @@
             // dgvAt
             // 
             dgvAt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAt.Location = new Point(3, 3);
+            dgvAt.Location = new Point(-1, -1);
             dgvAt.Name = "dgvAt";
             dgvAt.RowHeadersWidth = 51;
-            dgvAt.Size = new Size(710, 618);
+            dgvAt.Size = new Size(719, 618);
             dgvAt.TabIndex = 0;
             dgvAt.CellContentClick += dgvAt_CellContentClick;
-            // 
-            // iconPictureBox4
-            // 
-            iconPictureBox4.BackColor = Color.SpringGreen;
-            iconPictureBox4.ForeColor = SystemColors.ControlText;
-            iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            iconPictureBox4.IconColor = SystemColors.ControlText;
-            iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox4.IconSize = 40;
-            iconPictureBox4.Location = new Point(1140, 218);
-            iconPictureBox4.Name = "iconPictureBox4";
-            iconPictureBox4.Size = new Size(40, 40);
-            iconPictureBox4.TabIndex = 5;
-            iconPictureBox4.TabStop = false;
-            // 
-            // iconPictureBox3
-            // 
-            iconPictureBox3.BackColor = Color.SpringGreen;
-            iconPictureBox3.ForeColor = SystemColors.ControlText;
-            iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Pencil;
-            iconPictureBox3.IconColor = SystemColors.ControlText;
-            iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox3.IconSize = 40;
-            iconPictureBox3.Location = new Point(1072, 218);
-            iconPictureBox3.Name = "iconPictureBox3";
-            iconPictureBox3.Size = new Size(44, 40);
-            iconPictureBox3.TabIndex = 4;
-            iconPictureBox3.TabStop = false;
             // 
             // label1
             // 
@@ -139,9 +107,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
-            Controls.Add(iconPictureBox4);
             Controls.Add(label1);
-            Controls.Add(iconPictureBox3);
             Controls.Add(panel1);
             Controls.Add(iconPictureBox2);
             Controls.Add(iconPictureBox1);
@@ -151,8 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvAt).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -164,8 +128,6 @@
         private Panel panel1;
         private Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private DataGridView dgvAt;
     }
 }
