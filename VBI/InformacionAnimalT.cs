@@ -364,7 +364,10 @@ namespace VBI
 
         private void iconPictureBox1_Click_1(object sender, EventArgs e)
         {
-
+            Animales_Terrestres ventanaA = new Animales_Terrestres();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
         }
     }
 }
