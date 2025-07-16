@@ -369,5 +369,15 @@ namespace VBI
             ventanaA.Show();
             this.Close();
         }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
