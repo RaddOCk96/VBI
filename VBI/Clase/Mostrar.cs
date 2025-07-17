@@ -14,15 +14,15 @@ namespace VBI.Clase
         {
             try
             {
-                Conexion reconexion2 = new Conexion();
+                Conexion conexionMostrar = new Conexion();
 
-                String query = "select Nombre from animales";
+                String consultaNombre = "select Nombre from animales";
                 tablaAnimales.DataSource = null;
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, reconexion2.EstablecerConexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(consultaNombre, conexionMostrar.EstablecerConexion());
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 tablaAnimales.DataSource = dt;
-                reconexion2.CerrarConexion();
+                conexionMostrar.CerrarConexion();
             }
 
             catch (Exception ex)
@@ -31,5 +31,33 @@ namespace VBI.Clase
             }
 
         }
+
+        public void MostrarNombresEcosistemas(DataGridView tablaAnimales, int idEcosistemas)
+        {
+            try
+            {
+                Conexion conexionEco = new Conexion();
+
+                String consulIdEco = "SELECT Nombre FROM animales WHERE id_ecosistema = @id";
+                tablaAnimales.DataSource = null;
+
+                using (MySqlCommand cmd = new MySqlCommand(consulIdEco, conexionEco.EstablecerConexion()))
+                {
+                    cmd.Parameters.AddWithValue("@id", idEcosistemas);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    tablaAnimales.DataSource = dt;
+                }
+
+                conexionEco.CerrarConexion();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar animales por ecosistema:\n" + ex.ToString());
+            }
+        }
+
     }
 }
