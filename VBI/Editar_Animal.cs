@@ -143,7 +143,7 @@ namespace VBI
                      id_ecosistema = @nuevoIdEco
                      WHERE Nombre = @nombreOriginal"; //Actualiza la información
 
-
+                //Se guardan todos los cambios
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nuevoNombre", txtEdNombre.Text);
@@ -155,28 +155,72 @@ namespace VBI
                     cmd.Parameters.AddWithValue("@nuevaHabitat", txtEdHabitat.Text);
                     cmd.Parameters.AddWithValue("@nuevaCaracteristica", txtEdCaracteristicas.Text);
                     cmd.Parameters.AddWithValue("@nuevoIdEco", id_ecosistema);
-                    cmd.Parameters.AddWithValue("@nuevaImagen", imagenByte1 ?? new byte[0]);   //En caso que no se seleccione una imagen
-                    cmd.Parameters.AddWithValue("@nuevaImagen2", imagenByte2 ?? new byte[0]);   //Crea un arreglo vacio para no generar errores
                     cmd.Parameters.AddWithValue("@nombreOriginal", nombreOriginal);
 
-                    try
-                    {
-                        int resultado = cmd.ExecuteNonQuery();
 
-                        if (resultado > 0)
-                        {
-                            MessageBox.Show("Animal actualizado correctamente.");
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se pudo actualizar el animal.");
-                        }
-                    }
-                    catch (Exception ex)
+                    //Imagen 1
+
+                    //En caso de que el usuario no selecciona nada en imagen 1 se guardará el anterior registrado
+                    if (imagenByte1 != null && imagenByte1.Length > 0)
                     {
-                        MessageBox.Show("Error al actualizar el animal:\n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cmd.Parameters.AddWithValue("@nuevaImagen", imagenByte1);
                     }
+
+                    else if (pbEdImagen1.Image != null)
+                    {
+                        using (MemoryStream ms1 = new MemoryStream())
+                        {
+                            pbEdImagen1.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Png);
+                            cmd.Parameters.AddWithValue("@nuevaImagen", ms1.ToArray());
+                        }
+                    }
+
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@nuevaImagen", DBNull.Value);
+                    }
+
+                    //Imagen 2
+
+                    //En caso de que el usuario no se seleccione nada en imagen 2, se guardará el anterior registrado
+                    if (imagenByte2 != null && imagenByte2.Length > 0)
+                    {
+                        cmd.Parameters.AddWithValue("@nuevaImagen2", imagenByte2);
+                    }
+
+                    else if (pbEdImagen2.Image != null)
+                    {
+                        using (MemoryStream ms2 = new MemoryStream())
+                        {
+                            pbEdImagen2.Image.Save(ms2, System.Drawing.Imaging.ImageFormat.Png);
+                            cmd.Parameters.AddWithValue("@nuevaImagen2", ms2.ToArray());
+                        }
+                    }
+
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@nuevaImagen2", imagenByte2);
+                    }
+
+
+                        try
+                        {
+                            int resultado = cmd.ExecuteNonQuery();
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Animal actualizado correctamente.");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo actualizar el animal.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al actualizar el animal:\n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
                     reconexion3.CerrarConexion();
                 }
@@ -189,6 +233,7 @@ namespace VBI
             }
         }
 
+        //Cargar Imagen 1
         private void btnEdImagen_Click(object sender, EventArgs e)
         {
             try
@@ -212,6 +257,7 @@ namespace VBI
             }
         }
 
+        //Cargar Imagen 2
         private void btnEdImagen2_Click(object sender, EventArgs e)
         {
             try
@@ -235,6 +281,8 @@ namespace VBI
             }
         }
 
+
+        //Botón para regresar a la sección de "Animales Terrestres"
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres();
@@ -242,24 +290,11 @@ namespace VBI
             ventanaA.Show();
             this.Close();
         }
-        private void cbEcosistema_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (cbEcosistema.Text)
-            {
-                case "Terrestres":
-                    id_ecosistema = 1;
-                    break;
-                case "Acuáticos":
-                    id_ecosistema = 2;
-                    break;
-                case "Aéreos":
-                    id_ecosistema = 3;
-                    break;
-                default:
-                    id_ecosistema = 0;
-                    break;
-            }
-        }
+
+       
+        
+
+        //Información de los tipos de alimentación
         private void cbAlimentacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbEdAlimentacion.Text)
@@ -279,6 +314,7 @@ namespace VBI
             }
         }
 
+        //Información de tipos de reproducción
         private void cbReproduccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbEdReproduccion.Text)
@@ -295,19 +331,36 @@ namespace VBI
             }
         }
 
+        //Muestra la información en el comboBox de "Tipo de Reproducción"
         private void cbEdReproduccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             EdTipo_reproduccion = cbEdReproduccion.Text;
         }
 
+        //Muestra la información en ek comboBox de "Tipo de Alimentación"
         private void cbEdAlimentacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             EdTipo_Alimentacion = cbEdAlimentacion.Text;
         }
 
+        //Id de los ecosistemas y sus opciones
         private void cbEcosistema_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+            switch (cbEcosistema.Text)
+            {
+                case "Terrestres":
+                    id_ecosistema = 1;
+                    break;
+                case "Acuáticos":
+                    id_ecosistema = 2;
+                    break;
+                case "Aéreos":
+                    id_ecosistema = 3;
+                    break;
+                default:
+                    id_ecosistema = 0;
+                    break;
+            }
         }
     }
 }
