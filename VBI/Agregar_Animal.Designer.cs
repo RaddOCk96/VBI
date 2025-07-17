@@ -31,6 +31,7 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             cbAlimentacion = new ComboBox();
             cbReproduccion = new ComboBox();
             label9 = new Label();
@@ -56,6 +57,7 @@
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen1).BeginInit();
             SuspendLayout();
@@ -79,16 +81,18 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Croissant One", 30F);
-            label1.Location = new Point(347, 66);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(171, 56);
             label1.Name = "label1";
-            label1.Size = new Size(511, 71);
+            label1.Size = new Size(903, 71);
             label1.TabIndex = 1;
-            label1.Text = "Agrega un Animal";
+            label1.Text = "¿Agregamos a un nuevo animal?";
             label1.Click += label1_Click;
             // 
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(cbAlimentacion);
             panel1.Controls.Add(cbReproduccion);
             panel1.Controls.Add(label9);
@@ -117,6 +121,14 @@
             panel1.Size = new Size(1171, 509);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(295, 1094);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // cbAlimentacion
             // 
@@ -369,6 +381,7 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbAgImagen1).EndInit();
             ResumeLayout(false);
@@ -403,5 +416,6 @@
         private Label label9;
         private ComboBox cbAlimentacion;
         private ComboBox cbReproduccion;
+        private PictureBox pictureBox1;
     }
 }
