@@ -12,15 +12,19 @@ namespace VBI
 {
     public partial class Animales_Aereos : Form
     {
-        public Animales_Aereos()
+        private int ecosistemaActual;
+        public Animales_Aereos(int idEcosistemas)
         {
             InitializeComponent();
+
+            ecosistemaActual = idEcosistemas;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int idAnimalActual = 4;
-            InformacionAnimalAE ventanaS = new InformacionAnimalAE(idAnimalActual);
+            InformacionAnimalAE ventanaS = new InformacionAnimalAE(idAnimalActual, ecosistemaActual);
             ventanaS.StartPosition = this.StartPosition;
             ventanaS.Show();
             this.Hide();
@@ -32,6 +36,14 @@ namespace VBI
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Show();
             this.Close();
+        }
+
+        private void btnListaAnimalesAe_Click(object sender, EventArgs e)
+        {
+            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres(ecosistemaActual);
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Show();
+            this.Hide();
         }
     }
 }

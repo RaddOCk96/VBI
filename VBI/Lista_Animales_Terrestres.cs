@@ -14,33 +14,63 @@ namespace VBI
 {
     public partial class Lista_Animales_Terrestres : Form
     {
-        public Lista_Animales_Terrestres()
+        private int ecosistemaSeleccionado;
+        public Lista_Animales_Terrestres(int idEcosistemas)
         {
             InitializeComponent();
 
-            dgvAt.AutoGenerateColumns = false; //Evitar columnas duplicadas
+            dgvAnimales.AutoGenerateColumns = false; //Evitar columnas duplicadas
             CrearColumnasPersonalizadas(); // Se agregan las columnas
 
-            Clase.Mostrar mostrar = new Clase.Mostrar();
-            mostrar.MostrarAnimales(dgvAt); //Llena la tabla
+            ecosistemaSeleccionado = idEcosistemas;
 
+            AplicarEstiloVisual();
+            MostrarAnimalesFiltrados();
         }
+
+        private void AplicarEstiloVisual()
+        {
+            switch (ecosistemaSeleccionado)
+            {
+                case 1:
+                    this.BackColor = Color.ForestGreen;
+                    lblTituloAnimal.Text = "🐾 Animales Terrestres";
+                    break;
+                case 2:
+                    this.BackColor = Color.SkyBlue;
+                    lblTituloAnimal.Text = "🐟 Animales Acuáticos";
+                    break;
+                case 3:
+                    this.BackColor = Color.Orange;
+                    lblTituloAnimal.Text = "🕊️ Animales Aéreos";
+                    break;
+            }
+        }
+
+        private void MostrarAnimalesFiltrados()
+        {
+            Clase.Mostrar mostrar = new Clase.Mostrar();
+            mostrar.MostrarNombresEcosistemas(dgvAnimales, ecosistemaSeleccionado);
+        }
+
+
+
 
         private void CrearColumnasPersonalizadas()
         {
             // Configuración general del DataGridView
-            dgvAt.Dock = DockStyle.Fill; // Que ocupe todo el contenedor
-            dgvAt.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Repartir columnas proporcionalmente
-            dgvAt.RowTemplate.Height = 52; // Altura para íconos grandes
-            dgvAt.AllowUserToAddRows = false;
-            dgvAt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAt.RowHeadersVisible = false; //  Esto elimina la columna lateral
-            dgvAt.BackgroundColor = Color.WhiteSmoke;
-            dgvAt.BorderStyle = BorderStyle.None;
-            dgvAt.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvAt.ColumnHeadersVisible = false;
-            dgvAt.DefaultCellStyle.Font = new Font("Spectral", 12);
-            dgvAt.Columns.Clear(); // Por si se ejecuta más de una vez
+            dgvAnimales.Dock = DockStyle.Fill; // Que ocupe todo el contenedor
+            dgvAnimales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Repartir columnas proporcionalmente
+            dgvAnimales.RowTemplate.Height = 52; // Altura para íconos grandes
+            dgvAnimales.AllowUserToAddRows = false;
+            dgvAnimales.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAnimales.RowHeadersVisible = false; //  Esto elimina la columna lateral
+            dgvAnimales.BackgroundColor = Color.WhiteSmoke;
+            dgvAnimales.BorderStyle = BorderStyle.None;
+            dgvAnimales.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvAnimales.ColumnHeadersVisible = false;
+            dgvAnimales.DefaultCellStyle.Font = new Font("Spectral", 12);
+            dgvAnimales.Columns.Clear(); // Por si se ejecuta más de una vez
 
             // Columna de Nombre del Animal
             DataGridViewTextBoxColumn columnaNombre = new DataGridViewTextBoxColumn();
@@ -49,7 +79,7 @@ namespace VBI
             columnaNombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             columnaNombre.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             columnaNombre.DefaultCellStyle.Padding = new Padding(6, 6, 16, 6);
-            dgvAt.Columns.Add(columnaNombre);
+            dgvAnimales.Columns.Add(columnaNombre);
 
             // Columna Editar
             DataGridViewImageColumn columnaEditar = new DataGridViewImageColumn();
@@ -58,7 +88,7 @@ namespace VBI
             columnaEditar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             columnaEditar.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             columnaEditar.DefaultCellStyle.Padding = new Padding(10, 6, 10, 6);
-            dgvAt.Columns.Add(columnaEditar);
+            dgvAnimales.Columns.Add(columnaEditar);
 
             // Columna Eliminar
             DataGridViewImageColumn columnaEliminar = new DataGridViewImageColumn();
@@ -67,33 +97,41 @@ namespace VBI
             columnaEliminar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             columnaEliminar.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             columnaEliminar.DefaultCellStyle.Padding = new Padding(10, 6, 10, 6);
-            dgvAt.Columns.Add(columnaEliminar);
+            dgvAnimales.Columns.Add(columnaEliminar);
+
+            //Tabla
+            dgvAnimales.ReadOnly = true; //Evita que el usuario  edite directamente
+
+            //Evita que el usuario cambie el tamaño de las columnas o filas
+            dgvAnimales.AllowUserToResizeColumns = false;
+            dgvAnimales.AllowUserToResizeRows = false;
+
         }
 
-        private void dgvAt_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        private void dgvAnimales_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAt.Rows.Count)
+            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAnimales.Rows.Count)
                 return;
 
-            string col = dgvAt.Columns[e.ColumnIndex].Name;
+            string col = dgvAnimales.Columns[e.ColumnIndex].Name;
 
             if (col == "Editar")
             {
-                dgvAt.Rows[e.RowIndex].Cells["Editar"].Value =
+                dgvAnimales.Rows[e.RowIndex].Cells["Editar"].Value =
                     new Bitmap(Properties.Resources.boligrafo_hover, new Size(40, 40));
             }
             else if (col == "Eliminar")
             {
-                dgvAt.Rows[e.RowIndex].Cells["Eliminar"].Value =
+                dgvAnimales.Rows[e.RowIndex].Cells["Eliminar"].Value =
                     new Bitmap(Properties.Resources.basura_hover, new Size(40, 40));
             }
         }
 
 
 
-        private void dgvAt_SelectionChanged(object sender, EventArgs e)
+        private void dgvAnimales_SelectionChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvAt.Rows)
+            foreach (DataGridViewRow row in dgvAnimales.Rows)
             {
                 bool seleccionado = row.Selected;
 
@@ -114,13 +152,13 @@ namespace VBI
         }
 
         //Al pasar el cursor a los iconos se le cambia el color
-        private void dgvAt_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        private void dgvAnimales_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAt.Rows.Count)
+            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex >= dgvAnimales.Rows.Count)
                 return;
 
-            DataGridViewRow row = dgvAt.Rows[e.RowIndex];
-            string col = dgvAt.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = dgvAnimales.Rows[e.RowIndex];
+            string col = dgvAnimales.Columns[e.ColumnIndex].Name;
 
             if (col == "Editar" && row.Cells["Editar"] is DataGridViewImageCell editarCell)
             {
@@ -149,15 +187,34 @@ namespace VBI
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Animales_Terrestres ventanaA = new Animales_Terrestres();
-            ventanaA.StartPosition = this.StartPosition;
-            ventanaA.Show();
+            Form ventanaAnimal;
+
+            switch (ecosistemaSeleccionado)
+            {
+                case 1: // Terrestres
+                   ventanaAnimal = new Animales_Terrestres(ecosistemaSeleccionado);
+                    break;
+                case 2: // Acuáticos
+                    ventanaAnimal = new Animales_Acuaticos(ecosistemaSeleccionado);
+                    break;
+                case 3: // Aéreos
+                    ventanaAnimal = new Animales_Aereos(ecosistemaSeleccionado);
+                    break;
+                default:
+                    MessageBox.Show("Ecosistema no reconocido.");
+                    return;
+            }
+
+            ventanaAnimal.StartPosition = this.StartPosition;
+            ventanaAnimal.Show();
             this.Close();
+
+
         }
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
-            Agregar_Animal ventanaS = new Agregar_Animal();
+            Agregar_Animal ventanaS = new Agregar_Animal(ecosistemaSeleccionado);
             ventanaS.StartPosition = this.StartPosition;
             ventanaS.Show();
             this.Hide();
@@ -169,9 +226,9 @@ namespace VBI
             Conexion conexion = new Conexion();
             MySqlConnection conn = conexion.EstablecerConexion();
 
-            string query = "SELECT COUNT(*) FROM animales WHERE Nombre = @nombre";
+            string consulNomUnico = "SELECT COUNT(*) FROM animales WHERE Nombre = @nombre";
 
-            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            using (MySqlCommand cmd = new MySqlCommand(consulNomUnico, conn))
             {
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 int cantidad = Convert.ToInt32(cmd.ExecuteScalar());
@@ -182,14 +239,14 @@ namespace VBI
         }
 
         private bool bloqueoEvento = false;
-        private void dgvAt_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAnimales_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (bloqueoEvento || e.RowIndex < 0 || e.ColumnIndex < 0) //Verifica que no haya errores al dar clic varias veces
                 return;
 
             bloqueoEvento = true;
 
-            string nombreAnimal = dgvAt.Rows[e.RowIndex].Cells["Nombre"].Value?.ToString();
+            string nombreAnimal = dgvAnimales.Rows[e.RowIndex].Cells["Nombre"].Value?.ToString();
 
             if (string.IsNullOrWhiteSpace(nombreAnimal))
             {
@@ -198,27 +255,32 @@ namespace VBI
                 return;
             }
 
-            if (dgvAt.Columns[e.ColumnIndex].Name == "Eliminar")
+            if (dgvAnimales.Columns[e.ColumnIndex].Name == "Eliminar")
             {
                 DialogResult confirmacion = MessageBox.Show("¿Eliminar este animal?", "Confirmar", MessageBoxButtons.YesNo);
                 if (confirmacion == DialogResult.Yes)
                 {
                     Eliminar_Animal(nombreAnimal);
                     Clase.Mostrar mostrar = new Clase.Mostrar();
-                    mostrar.MostrarAnimales(dgvAt); // Actualiza lista después de eliminar
+                    mostrar.MostrarNombresEcosistemas(dgvAnimales, ecosistemaSeleccionado); // Actualiza lista después de eliminar
                 }
             }
-            else if (dgvAt.Columns[e.ColumnIndex].Name == "Editar")
+            else if (dgvAnimales.Columns[e.ColumnIndex].Name == "Editar")
             {
                 if (NombreEsUnico(nombreAnimal))
                 {
-                    Editar_Animal formEditar = new Editar_Animal(nombreAnimal);
+                    this.Hide(); // Oculta la ventana actual
+
+                    Editar_Animal formEditar = new Editar_Animal(nombreAnimal, ecosistemaSeleccionado);
                     DialogResult resultado = formEditar.ShowDialog();
+
+                    this.Show(); //Vuelve a mostrar la ventena de lista
 
                     if (resultado == DialogResult.OK)
                     {
+                        
                         Clase.Mostrar mostrar = new Clase.Mostrar();
-                        mostrar.MostrarAnimales(dgvAt); // Actualiza lista después de editar
+                        mostrar.MostrarNombresEcosistemas(dgvAnimales, ecosistemaSeleccionado); // Actualiza lista después de editar
                     }
                 }
                 else
@@ -235,8 +297,8 @@ namespace VBI
             Conexion conexion = new Conexion();
             MySqlConnection conn = conexion.EstablecerConexion();
 
-            string query = "DELETE FROM animales WHERE Nombre = @nombre"; //Elimina la información del animal de la base de datos
-            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            string consulEliminar = "DELETE FROM animales WHERE Nombre = @nombre"; //Elimina la información del animal de la base de datos
+            using (MySqlCommand cmd = new MySqlCommand(consulEliminar, conn))
             {
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.ExecuteNonQuery();
@@ -254,9 +316,16 @@ namespace VBI
 
         private void Lista_Animales_Terrestres_Load(object sender, EventArgs e)
         {
-            dgvAt.CellMouseEnter += dgvAt_CellMouseEnter;
-            dgvAt.CellMouseLeave += dgvAt_CellMouseLeave;
-            dgvAt.SelectionChanged += dgvAt_SelectionChanged;
+            dgvAnimales.CellMouseEnter += dgvAnimales_CellMouseEnter;
+            dgvAnimales.CellMouseLeave += dgvAnimales_CellMouseLeave;
+            dgvAnimales.SelectionChanged += dgvAnimales_SelectionChanged;
         }
+
+        
+
+       
+        
+
+        
     }
 }

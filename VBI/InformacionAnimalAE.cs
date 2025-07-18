@@ -16,10 +16,14 @@ namespace VBI
     {
 
         private int idAnimalActual;
-        public InformacionAnimalAE(int id)
+
+        private int ecosistemaActual;
+        public InformacionAnimalAE(int id, int idEcosistemas)
         {
             InitializeComponent();
             idAnimalActual = id;
+
+            ecosistemaActual = idEcosistemas;
         }
 
         private void InformacionAnimalAE_Load(object sender, EventArgs e)
@@ -36,7 +40,7 @@ namespace VBI
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Animales_Aereos ventanaA = new Animales_Aereos();
+            Animales_Aereos ventanaA = new Animales_Aereos(idAnimalActual);
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Show();
             this.Close();

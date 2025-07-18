@@ -21,11 +21,15 @@ namespace VBI
         string EdTipo_reproduccion;
         string nombreOriginal;
 
-        public Editar_Animal(string nombreAnimal)
+        private int ecosistemaActual;
+
+        public Editar_Animal(string nombreAnimal, int idEcosistemas)
         {
             InitializeComponent();
 
             nombreOriginal = nombreAnimal;
+
+            ecosistemaActual = idEcosistemas;
 
 
             // Carga de opciones al iniciar
@@ -55,18 +59,16 @@ namespace VBI
             Conexion reconexion3 = new Conexion();
             MySqlConnection conn = reconexion3.EstablecerConexion(); //Se conecta a la base de datos
 
-            string query = "SELECT Nombre, NombreCientifico, Tipo_reproduccion, Reproduccion_carac, Tipo_alimentacion, Comida, Habitat, Caracteristicas, Imagen, Imagen2, id_ecosistema FROM animales WHERE Nombre = @nombre"; //Busca el nombre del animal en la base de datos
+            string consultaCargar = "SELECT Nombre, NombreCientifico, Tipo_reproduccion, Reproduccion_carac, Tipo_alimentacion, Comida, Habitat, Caracteristicas, Imagen, Imagen2, id_ecosistema FROM animales WHERE Nombre = @nombre"; //Busca el nombre del animal en la base de datos
 
 
             //Carga toda la información almacenada en el formulario
-            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            using (MySqlCommand cmd = new MySqlCommand(consultaCargar, conn))
             {
                 cmd.Parameters.AddWithValue("@nombre", nombre);
 
                 try
                 {
-
-
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -124,12 +126,19 @@ namespace VBI
         private void btnEdGuardar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtEdNombre.Text))
-
             {
-                Conexion reconexion3 = new Conexion();
-                MySqlConnection conn = reconexion3.EstablecerConexion();
+                string nuevoNombre = txtEdNombre.Text.Trim();
 
-                string query = @"UPDATE animales SET  
+                if (nuevoNombre != nombreOriginal && Validar.NombreAnimalExiste(nuevoNombre))
+                {
+                    MessageBox.Show("Ya existe otro animal con ese nombre. No se puede guardar.", "Nombre duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Conexion conexionGuardar = new Conexion();
+                MySqlConnection conn = conexionGuardar.EstablecerConexion();
+
+                string consultActualizar = @"UPDATE animales SET  
                      Nombre = @nuevoNombre,
                      NombreCientifico = @nuevoCientifico,
                      Tipo_reproduccion = @nuevoTrepro,
@@ -144,7 +153,7 @@ namespace VBI
                      WHERE Nombre = @nombreOriginal"; //Actualiza la información
 
                 //Se guardan todos los cambios
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (MySqlCommand cmd = new MySqlCommand(consultActualizar, conn))
                 {
                     cmd.Parameters.AddWithValue("@nuevoNombre", txtEdNombre.Text);
                     cmd.Parameters.AddWithValue("@nuevoCientifico", txtEdCientifico.Text);
@@ -210,6 +219,7 @@ namespace VBI
                             if (resultado > 0)
                             {
                                 MessageBox.Show("Animal actualizado correctamente.");
+                            this.DialogResult = DialogResult.OK;
                                 this.Close();
                             }
                             else
@@ -222,7 +232,7 @@ namespace VBI
                             MessageBox.Show("Error al actualizar el animal:\n" + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
-                    reconexion3.CerrarConexion();
+                    conexionGuardar.CerrarConexion();
                 }
 
             }
@@ -285,7 +295,7 @@ namespace VBI
         //Botón para regresar a la sección de "Animales Terrestres"
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres();
+            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres(ecosistemaActual);
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Show();
             this.Close();

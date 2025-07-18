@@ -20,9 +20,14 @@ namespace VBI
         string Tipo_reproduccion;
         string Tipo_alimentacion;
 
-        public Agregar_Animal()
+        private int ecosistemaActual;
+
+        public Agregar_Animal(int idEcosistemas)
         {
             InitializeComponent();
+
+            ecosistemaActual = idEcosistemas;
+
             cbEcosistema.Items.Add("Terrestres");
             cbEcosistema.Items.Add("Acuáticos");
             cbEcosistema.Items.Add("Aéreos");
@@ -111,7 +116,13 @@ namespace VBI
                   !string.IsNullOrWhiteSpace(txtAgReDescripcion.Text) &&
                    id_ecosistema != 0)
                 {
+                    string nombreAnimal = txtAgNombre.Text.Trim();
 
+                    if (Clase.Validar.NombreAnimalExiste(nombreAnimal))
+                    {
+                        MessageBox.Show("Ya existe un animal con ese nombre. No se puede registrar.", "Nombre duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
 
                     try
@@ -139,7 +150,7 @@ namespace VBI
                             comando.Parameters.AddWithValue("@Imagen", imagenByte1 ?? new byte[0]);   //En caso que no se seleccione una imagen
                             comando.Parameters.AddWithValue("@Imagen2", imagenByte2 ?? new byte[0]);   //Crea un arreglo vacio para no generar errores
 
-                            //Ejecuga la consulta y devulve el número de filas afectadas 
+                            //Ejecuta la consulta y devulve el número de filas afectadas 
                             int resultado = comando.ExecuteNonQuery();
                             if (resultado > 0) //1 si todo está bien
                             {
@@ -313,7 +324,7 @@ namespace VBI
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres();
+            Lista_Animales_Terrestres ventanaA = new Lista_Animales_Terrestres(ecosistemaActual);
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Show();
             this.Close();

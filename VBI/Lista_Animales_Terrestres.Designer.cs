@@ -30,12 +30,12 @@
         {
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
-            dgvAt = new DataGridView();
-            label1 = new Label();
+            dgvAnimales = new DataGridView();
+            lblTituloAnimal = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvAt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAnimales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -59,32 +59,32 @@
             panel1.AutoScroll = true;
             panel1.BackColor = Color.SpringGreen;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(dgvAt);
+            panel1.Controls.Add(dgvAnimales);
             panel1.Location = new Point(300, 135);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 505);
             panel1.TabIndex = 1;
             // 
-            // dgvAt
+            // dgvAnimales
             // 
-            dgvAt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAt.Location = new Point(-1, -1);
-            dgvAt.Name = "dgvAt";
-            dgvAt.RowHeadersWidth = 51;
-            dgvAt.Size = new Size(719, 618);
-            dgvAt.TabIndex = 0;
-            dgvAt.CellContentClick += dgvAt_CellContentClick;
+            dgvAnimales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAnimales.Location = new Point(-1, -1);
+            dgvAnimales.Name = "dgvAnimales";
+            dgvAnimales.RowHeadersWidth = 51;
+            dgvAnimales.Size = new Size(719, 618);
+            dgvAnimales.TabIndex = 0;
+            dgvAnimales.CellContentClick += dgvAnimales_CellContentClick;
             // 
-            // label1
+            // lblTituloAnimal
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Croissant One", 30F);
-            label1.Location = new Point(376, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(503, 71);
-            label1.TabIndex = 2;
-            label1.Text = "Lista de Animales";
-            label1.Click += label1_Click;
+            lblTituloAnimal.AutoSize = true;
+            lblTituloAnimal.Font = new Font("Croissant One", 30F);
+            lblTituloAnimal.Location = new Point(367, 26);
+            lblTituloAnimal.Name = "lblTituloAnimal";
+            lblTituloAnimal.Size = new Size(503, 71);
+            lblTituloAnimal.TabIndex = 2;
+            lblTituloAnimal.Text = "Lista de Animales";
+            lblTituloAnimal.Click += label1_Click;
             // 
             // iconPictureBox2
             // 
@@ -107,7 +107,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SpringGreen;
             ClientSize = new Size(1283, 691);
-            Controls.Add(label1);
+            Controls.Add(lblTituloAnimal);
             Controls.Add(panel1);
             Controls.Add(iconPictureBox2);
             Controls.Add(iconPictureBox1);
@@ -116,7 +116,7 @@
             Load += Lista_Animales_Terrestres_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvAt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAnimales).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -126,8 +126,9 @@
 
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Panel panel1;
-        private Label label1;
+        private Label lblTituloAnimal;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private DataGridView dgvAt;
+        private DataGridView dgvAnimales;
+        private Label lblGuardado;
     }
 }

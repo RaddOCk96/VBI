@@ -24,7 +24,8 @@ namespace VBI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Animales_Acuaticos ventanaAA = new Animales_Acuaticos();
+            int id_ecosistema = 2;
+            Animales_Acuaticos ventanaAA = new Animales_Acuaticos(id_ecosistema);
             ventanaAA.StartPosition = this.StartPosition;
             ventanaAA.Show();
             this.Hide();
@@ -32,7 +33,8 @@ namespace VBI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Animales_Terrestres ventanaA = new Animales_Terrestres();
+            int id_ecosistema = 1;
+            Animales_Terrestres ventanaA = new Animales_Terrestres(id_ecosistema);
             ventanaA.StartPosition = this.StartPosition;
             ventanaA.Size = this.Size;
             ventanaA.Show();
@@ -55,7 +57,8 @@ namespace VBI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Animales_Aereos ventanaS = new Animales_Aereos();
+            int id_ecosistema = 3;
+            Animales_Aereos ventanaS = new Animales_Aereos(id_ecosistema);
             ventanaS.StartPosition = this.StartPosition;
             ventanaS.Show();
             this.Hide();

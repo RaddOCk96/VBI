@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            btnAnimalesAcua = new Button();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,12 +60,23 @@
             iconPictureBox1.TabStop = false;
             iconPictureBox1.Click += iconPictureBox1_Click;
             // 
+            // btnAnimalesAcua
+            // 
+            btnAnimalesAcua.Location = new Point(1088, 144);
+            btnAnimalesAcua.Name = "btnAnimalesAcua";
+            btnAnimalesAcua.Size = new Size(94, 29);
+            btnAnimalesAcua.TabIndex = 7;
+            btnAnimalesAcua.Text = "Ir a la lista";
+            btnAnimalesAcua.UseVisualStyleBackColor = true;
+            btnAnimalesAcua.Click += btnAnimalesAcua_Click;
+            // 
             // Animales_Acuaticos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DodgerBlue;
             ClientSize = new Size(1283, 691);
+            Controls.Add(btnAnimalesAcua);
             Controls.Add(iconPictureBox1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -81,5 +93,6 @@
 
         private Button button1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Button btnAnimalesAcua;
     }
 }

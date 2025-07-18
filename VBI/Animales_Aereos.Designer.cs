@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            btnListaAnimalesAe = new Button();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,12 +60,23 @@
             iconPictureBox1.TabStop = false;
             iconPictureBox1.Click += iconPictureBox1_Click;
             // 
+            // btnListaAnimalesAe
+            // 
+            btnListaAnimalesAe.Location = new Point(1133, 178);
+            btnListaAnimalesAe.Name = "btnListaAnimalesAe";
+            btnListaAnimalesAe.Size = new Size(94, 29);
+            btnListaAnimalesAe.TabIndex = 8;
+            btnListaAnimalesAe.Text = "Ir a la Lista";
+            btnListaAnimalesAe.UseVisualStyleBackColor = true;
+            btnListaAnimalesAe.Click += btnListaAnimalesAe_Click;
+            // 
             // Animales_Aereos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 189, 89);
             ClientSize = new Size(1283, 691);
+            Controls.Add(btnListaAnimalesAe);
             Controls.Add(iconPictureBox1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -79,5 +91,6 @@
 
         private Button button1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Button btnListaAnimalesAe;
     }
 }

@@ -12,14 +12,17 @@ namespace VBI
 {
     public partial class Animales_Terrestres : Form
     {
-        public Animales_Terrestres()
+        private int ecosistemaActual;
+        public Animales_Terrestres(int idEcosistemas)
         {
             InitializeComponent();
+
+            ecosistemaActual = idEcosistemas;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres();
+            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres(ecosistemaActual);
             ventanaS.StartPosition = this.StartPosition;
             ventanaS.Show();
             this.Hide();
@@ -27,8 +30,9 @@ namespace VBI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int id_ecosistema = 1;
             int idSeleccionado = 1;
-            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
+            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado, id_ecosistema);
             ventanaIA.StartPosition = this.StartPosition;
             ventanaIA.Show();
             this.Hide();
@@ -39,8 +43,9 @@ namespace VBI
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            int id_ecosistema = 1;
             int idSeleccionado = 2;
-            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado);
+            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado, id_ecosistema);
             ventanaIA.StartPosition = this.StartPosition;
             ventanaIA.Show();
             this.Hide();
