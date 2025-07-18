@@ -30,9 +30,9 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            button1 = new Button();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
-            button1 = new Button();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label1 = new Label();
             tabControl1.SuspendLayout();
@@ -64,6 +64,16 @@
             tabPage1.Text = "Terrestres";
             tabPage1.Click += tabPage1_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(252, 731);
+            button1.Name = "button1";
+            button1.Size = new Size(169, 151);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // tabPage2
             // 
             tabPage2.BackColor = Color.MediumAquamarine;
@@ -73,6 +83,7 @@
             tabPage2.Size = new Size(1188, 502);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Acuaticos";
+            tabPage2.Click += tabPage2_Click;
             // 
             // tabPage3
             // 
@@ -83,16 +94,7 @@
             tabPage3.Size = new Size(1188, 502);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Aereos";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(252, 731);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 151);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            tabPage3.Click += tabPage3_Click;
             // 
             // iconPictureBox1
             // 
