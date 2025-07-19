@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +43,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -82,7 +86,7 @@
               "RelativeDocumentMoniker": "VBI\\Animales_Aereos.cs",
               "ToolTip": "C:\\Users\\axjmi\\source\\repos\\VBI\\VBI\\Animales_Aereos.cs",
               "RelativeToolTip": "VBI\\Animales_Aereos.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAApwKEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAawEsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-18T10:38:15.649Z",
               "EditorCaption": ""
