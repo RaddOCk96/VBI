@@ -83,6 +83,7 @@
             MaximizeBox = false;
             Name = "Animales_Aereos";
             Text = "Animales_Aereos";
+            Load += Animales_Aereos_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
         }
