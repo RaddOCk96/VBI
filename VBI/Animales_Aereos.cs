@@ -51,7 +51,7 @@ namespace VBI
                 Name = "Nombre",
                 HeaderText = "Nombre",
                 DataPropertyName = "Nombre",
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
                 ReadOnly = true
             });
 
