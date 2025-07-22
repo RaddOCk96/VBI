@@ -157,7 +157,7 @@ namespace VBI
         private List<FuenteIEEE> ObtenerFuentes(int idEcosistema)
         {
             var lista = new List<FuenteIEEE>();
-            string connectionString = "server=127.0.0.1;user=root;password=root;database=vbi";
+            string connectionString = "server=127.0.0.1;user=root;password=FRDKCU96;database=vbi";
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
