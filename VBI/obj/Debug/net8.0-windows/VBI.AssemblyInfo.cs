@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VBI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a232f95c287b20d712600ee53c32aa30aefa9365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88455089e05576a84b69801ec6f6d97dfdcb794a")]
 [assembly: System.Reflection.AssemblyProductAttribute("VBI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VBI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

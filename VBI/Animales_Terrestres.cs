@@ -45,13 +45,7 @@ namespace VBI
             // Columnas: ID, Nombre y Botón
             dataGridViewTerrestre.Columns.Clear();
 
-            dataGridViewTerrestre.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "Id",
-                HeaderText = "ID",
-                DataPropertyName = "Id",
-                Width = 80
-            });
+          
 
             dataGridViewTerrestre.Columns.Add(new DataGridViewTextBoxColumn()
             {
@@ -79,7 +73,7 @@ namespace VBI
             // Evento de clic en el botón de cada fila
             dataGridViewTerrestre.CellClick += (s, e) =>
             {
-                // if (e.RowIndex >= 0 && dataGridViewTerrestre.Columns[e.ColumnIndex].Name == "VerInfo")
+                if (e.RowIndex >= 0 && dataGridViewTerrestre.Columns[e.ColumnIndex].Name == "VerInfo")
                 {
                     var fila = dataGridViewTerrestre.Rows[e.RowIndex];
                     int id_ecosistema = 1;
@@ -116,7 +110,7 @@ namespace VBI
                                 string nombreDelAnimal = reader["Nombre"].ToString();
 
 
-                                dataGridViewTerrestre.Rows.Add(idAnimalObtenido, nombreDelAnimal);
+                                dataGridViewTerrestre.Rows.Add(nombreDelAnimal);
                             }
 
 
