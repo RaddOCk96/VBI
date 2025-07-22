@@ -45,14 +45,7 @@ namespace VBI
             // Columnas: ID, Nombre y Botón
             dataGridViewAereos.Columns.Clear();
 
-            dataGridViewAereos.Columns.Add(new DataGridViewTextBoxColumn()
-            {
-                Name = "Id",
-                HeaderText = "ID",
-                DataPropertyName = "Id",
-                Width = 80
-            });
-
+          
             dataGridViewAereos.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "Nombre",
@@ -114,7 +107,7 @@ namespace VBI
                                 string nombreDelAnimal = reader["Nombre"].ToString();
 
 
-                                dataGridViewAereos.Rows.Add(idAnimalObtenido, nombreDelAnimal);
+                                dataGridViewAereos.Rows.Add(nombreDelAnimal);
                             }
 
 
