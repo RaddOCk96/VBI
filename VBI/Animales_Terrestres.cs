@@ -133,13 +133,6 @@ namespace VBI
         {
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres(ecosistemaActual);
-            ventanaS.StartPosition = this.StartPosition;
-            ventanaS.Show();
-            this.Hide();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -140,7 +140,6 @@ namespace VBI
             ventanaS.Show();
             this.Hide();
 
-        }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
