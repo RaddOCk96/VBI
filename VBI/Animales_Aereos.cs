@@ -52,6 +52,7 @@ namespace VBI
                 HeaderText = "Nombre",
                 DataPropertyName = "Nombre",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                ReadOnly = true
             });
 
             DataGridViewButtonColumn columnaBoton = new DataGridViewButtonColumn()
