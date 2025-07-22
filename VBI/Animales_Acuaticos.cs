@@ -45,13 +45,7 @@ namespace VBI
                 // Columnas: ID, Nombre y Botón
                 dataGridViewAcuaticos.Columns.Clear();
 
-                dataGridViewAcuaticos.Columns.Add(new DataGridViewTextBoxColumn()
-                {
-                    Name = "Id",
-                    HeaderText = "ID",
-                    DataPropertyName = "Id",
-                    Width = 80
-                });
+               
 
                 dataGridViewAcuaticos.Columns.Add(new DataGridViewTextBoxColumn()
                 {
@@ -104,23 +98,28 @@ namespace VBI
                     {
                         string query = "SELECT ID_animal, Nombre FROM animales WHERE id_ecosistema = 2 AND ID_animal = @idAnimal";
                         using (MySqlCommand comando = new MySqlCommand(query, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@idAnimal", idAnimal);
+                        using (MySqlDataReader reader = comando.ExecuteReader())
                         {
-                            comando.Parameters.AddWithValue("@idAnimal", idAnimal);
-                            using (MySqlDataReader reader = comando.ExecuteReader())
+                            if (reader.Read())
                             {
-                                if (reader.Read())
-                                {
-                                    int idAnimalObtenido = Convert.ToInt32(reader["ID_animal"]);
-                                    string nombreDelAnimal = reader["Nombre"].ToString();
+                                int idAnimalObtenido = Convert.ToInt32(reader["ID_animal"]);
+                                string nombreDelAnimal = reader["Nombre"].ToString();
 
 
-                                    dataGridViewAcuaticos.Rows.Add(idAnimalObtenido, nombreDelAnimal);
-                                }
-
-
+                                dataGridViewAcuaticos.Rows.Add(nombreDelAnimal);
                             }
                         }
+
                     }
+
+
+
+
+
+
+                }
                 }
                 catch (Exception ex)
                 {
@@ -131,6 +130,9 @@ namespace VBI
         {
 
         }
+       
+
+        
 
       
 
