@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animales_Acuaticos));
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             btnAnimalesAcua = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(688, 118);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // iconPictureBox1
             // 
@@ -62,7 +53,9 @@
             // 
             // btnAnimalesAcua
             // 
-            btnAnimalesAcua.Location = new Point(1088, 144);
+            btnAnimalesAcua.Image = (Image)resources.GetObject("btnAnimalesAcua.Image");
+            btnAnimalesAcua.ImageAlign = ContentAlignment.TopRight;
+            btnAnimalesAcua.Location = new Point(1095, 231);
             btnAnimalesAcua.Name = "btnAnimalesAcua";
             btnAnimalesAcua.Size = new Size(94, 29);
             btnAnimalesAcua.TabIndex = 7;
@@ -70,15 +63,29 @@
             btnAnimalesAcua.UseVisualStyleBackColor = true;
             btnAnimalesAcua.Click += btnAnimalesAcua_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century", 36F);
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.ImageAlign = ContentAlignment.TopRight;
+            label1.Location = new Point(479, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(576, 71);
+            label1.TabIndex = 8;
+            label1.Text = "Animales Acuaticos";
+            // 
             // Animales_Acuaticos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DodgerBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1283, 691);
+            Controls.Add(label1);
             Controls.Add(btnAnimalesAcua);
             Controls.Add(iconPictureBox1);
-            Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Animales_Acuaticos";
@@ -87,12 +94,12 @@
             Load += Animales_Acuaticos_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Button btnAnimalesAcua;
+        private Label label1;
     }
 }

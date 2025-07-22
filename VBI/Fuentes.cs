@@ -161,7 +161,7 @@ namespace VBI
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = @"SELECT Id_fuentes, Titulo, NombrePagina, FechadePublicacion, Url, FechaConsulta FROM fuentes_animales WHERE Id_ecosistema = @id";
+                string query = @"SELECT ID, Titulo, NombrePagina, FechaPublicacion, URL, FechaConsulta FROM referencias WHERE Id_ecosistema = @id";
 
                 using (var cmd = new MySqlCommand(query, conn))
                 {
@@ -176,10 +176,10 @@ namespace VBI
                                 {
                                     Titulo = reader.IsDBNull(reader.GetOrdinal("Titulo")) ? "" : reader.GetString("Titulo"),
                                     NombrePagina = reader.IsDBNull(reader.GetOrdinal("NombrePagina")) ? "" : reader.GetString("NombrePagina"),
-                                    FechadePublicacion = reader.IsDBNull(reader.GetOrdinal("FechadePublicacion")) ? "" : reader.GetDateTime(reader.GetOrdinal("FechadePublicacion")).ToString("yyyy-MM-dd"),
-                                    Url = reader.IsDBNull(reader.GetOrdinal("Url")) ? "" : reader.GetString("Url"),
+                                    FechadePublicacion = reader.IsDBNull(reader.GetOrdinal("FechaPublicacion")) ? "" : reader.GetDateTime(reader.GetOrdinal("FechaPublicacion")).ToString("yyyy-MM-dd"),
+                                    Url = reader.IsDBNull(reader.GetOrdinal("URL")) ? "" : reader.GetString("URL"),
                                     FechaConsulta = reader.IsDBNull(reader.GetOrdinal("FechaConsulta")) ? "" : reader.GetDateTime(reader.GetOrdinal("FechaConsulta")).ToString("yyyy-MM-dd"),
-                                    Id = reader.IsDBNull(reader.GetOrdinal("Id_fuentes")) ? 0 : reader.GetInt32(reader.GetOrdinal("Id_fuentes"))
+                                    Id = reader.IsDBNull(reader.GetOrdinal("ID")) ? 0 : reader.GetInt32(reader.GetOrdinal("ID"))
                                 });
 
                             }
@@ -229,6 +229,11 @@ namespace VBI
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void Fuentes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

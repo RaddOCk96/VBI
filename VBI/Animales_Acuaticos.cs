@@ -79,7 +79,7 @@ namespace VBI
                 // Evento de clic en el botón de cada fila
                 dataGridViewAcuaticos.CellClick += (s, e) =>
                 {
-                    if (e.RowIndex >= 0 && dataGridViewAcuaticos.Columns[e.ColumnIndex].Name == "VerInfo")
+                    //if (e.RowIndex >= 0 && dataGridViewAcuaticos.Columns[e.ColumnIndex].Name == "VerInfo")
                     {
                         var fila = dataGridViewAcuaticos.Rows[e.RowIndex];
                         int idAnimalActual = 3;
@@ -132,15 +132,9 @@ namespace VBI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int idAnimalActual = 3;
-            InformacionAnimalA ventanaS = new InformacionAnimalA(idAnimalActual, ecosistemaActual);
-            ventanaS.StartPosition = this.StartPosition;
-            ventanaS.Show();
-            this.Hide();
+      
 
-
+        
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             Catalogo ventanaA = new Catalogo();

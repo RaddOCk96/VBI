@@ -28,81 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Animales_Terrestres));
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(1133, 33);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 63);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(182, 220);
-            button2.Name = "button2";
-            button2.Size = new Size(110, 63);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(383, 220);
-            button3.Name = "button3";
-            button3.Size = new Size(110, 63);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click_1;
             // 
             // iconPictureBox1
             // 
-            iconPictureBox1.BackColor = Color.SpringGreen;
+            iconPictureBox1.BackColor = Color.ForestGreen;
+            iconPictureBox1.BackgroundImage = (Image)resources.GetObject("iconPictureBox1.BackgroundImage");
             iconPictureBox1.Cursor = Cursors.Hand;
             iconPictureBox1.ForeColor = SystemColors.ControlText;
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox1.IconSize = 39;
-            iconPictureBox1.Location = new Point(22, 12);
+            iconPictureBox1.Location = new Point(23, 12);
             iconPictureBox1.Name = "iconPictureBox1";
             iconPictureBox1.Size = new Size(41, 39);
             iconPictureBox1.TabIndex = 7;
             iconPictureBox1.TabStop = false;
             iconPictureBox1.Click += iconPictureBox1_Click;
             // 
+            // iconPictureBox2
+            // 
+            iconPictureBox2.BackColor = Color.ForestGreen;
+            iconPictureBox2.BackgroundImage = (Image)resources.GetObject("iconPictureBox2.BackgroundImage");
+            iconPictureBox2.ForeColor = SystemColors.ControlText;
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            iconPictureBox2.IconColor = SystemColors.ControlText;
+            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox2.IconSize = 52;
+            iconPictureBox2.Location = new Point(1152, 183);
+            iconPictureBox2.Name = "iconPictureBox2";
+            iconPictureBox2.Size = new Size(52, 52);
+            iconPictureBox2.TabIndex = 8;
+            iconPictureBox2.TabStop = false;
+            iconPictureBox2.Click += iconPictureBox2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.ImageAlign = ContentAlignment.TopCenter;
+            label1.Location = new Point(480, -1);
+            label1.Name = "label1";
+            label1.Size = new Size(571, 71);
+            label1.TabIndex = 9;
+            label1.Text = "Animales Terrestre";
+            label1.Click += label1_Click;
+            // 
             // Animales_Terrestres
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SpringGreen;
+            BackColor = Color.ForestGreen;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1283, 691);
+            Controls.Add(iconPictureBox2);
+            Controls.Add(label1);
             Controls.Add(iconPictureBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Name = "Animales_Terrestres";
             Text = "Animales_Terrestres";
             Load += Animales_Terrestres_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
-        private Button button3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private Label label1;
     }
 }

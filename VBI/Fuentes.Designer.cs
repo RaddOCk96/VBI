@@ -134,6 +134,7 @@
             Controls.Add(tabControl1);
             Name = "Fuentes";
             Text = "Fuentes";
+            Load += Fuentes_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();

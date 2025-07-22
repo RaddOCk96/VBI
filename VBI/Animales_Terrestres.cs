@@ -75,11 +75,11 @@ namespace VBI
             dataGridViewTerrestre.DefaultCellStyle.Font = new Font("Segoe UI", 9);
             dataGridViewTerrestre.RowsDefaultCellStyle.BackColor = Color.White;
             dataGridViewTerrestre.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
-                
+
             // Evento de clic en el botón de cada fila
             dataGridViewTerrestre.CellClick += (s, e) =>
             {
-                if (e.RowIndex >= 0 && dataGridViewTerrestre.Columns[e.ColumnIndex].Name == "VerInfo")
+                // if (e.RowIndex >= 0 && dataGridViewTerrestre.Columns[e.ColumnIndex].Name == "VerInfo")
                 {
                     var fila = dataGridViewTerrestre.Rows[e.RowIndex];
                     int id_ecosistema = 1;
@@ -134,26 +134,19 @@ namespace VBI
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            int id_ecosistema = 1;
-            int idSeleccionado = 1;
-            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado, id_ecosistema);
-            ventanaIA.StartPosition = this.StartPosition;
-            ventanaIA.Show();
-            this.Hide();
-
+            Catalogo ventanaA = new Catalogo();
+            ventanaA.StartPosition = this.StartPosition;
+            ventanaA.Show();
+            this.Close();
         }
 
-
-
-        private void button3_Click_1(object sender, EventArgs e)
+        private void iconPictureBox2_Click(object sender, EventArgs e)
         {
-            int id_ecosistema = 1;
-            int idSeleccionado = 2;
-            InformacionAnimalT ventanaIA = new InformacionAnimalT(idSeleccionado, id_ecosistema);
-            ventanaIA.StartPosition = this.StartPosition;
-            ventanaIA.Show();
+            Lista_Animales_Terrestres ventanaS = new Lista_Animales_Terrestres(ecosistemaActual);
+            ventanaS.StartPosition = this.StartPosition;
+            ventanaS.Show();
             this.Hide();
         }
 
@@ -162,12 +155,9 @@ namespace VBI
 
         }
 
-        private void iconPictureBox1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Catalogo ventanaA = new Catalogo();
-            ventanaA.StartPosition = this.StartPosition;
-            ventanaA.Show();
-            this.Close();
+
         }
     }
 }
