@@ -1639,23 +1639,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\axjmi\\.nuget\\packages\\": {},
+    "C:\\Users\\fksam\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axjmi\\Source\\Repos\\VBI\\VBI\\VBI.csproj",
+      "projectUniqueName": "C:\\Users\\fksam\\Source\\Repos\\VBI\\VBI\\VBI.csproj",
       "projectName": "VBI",
-      "projectPath": "C:\\Users\\axjmi\\Source\\Repos\\VBI\\VBI\\VBI.csproj",
-      "packagesPath": "C:\\Users\\axjmi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axjmi\\Source\\Repos\\VBI\\VBI\\obj\\",
+      "projectPath": "C:\\Users\\fksam\\Source\\Repos\\VBI\\VBI\\VBI.csproj",
+      "packagesPath": "C:\\Users\\fksam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fksam\\Source\\Repos\\VBI\\VBI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\axjmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fksam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1682,7 +1682,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1716,7 +1716,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
